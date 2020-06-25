@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# Custom Rofi Script
+
+BORDER="#292A29"
+SEPARATOR="#292A29"
+FOREGROUND="#E6E6E6"
+BACKGROUND="#292A29"
+BACKGROUND_ALT="#252525"
+HIGHLIGHT_BACKGROUND="#44475A"
+HIGHLIGHT_FOREGROUND="#FFFFFF"
+
+BLACK="#000000"
+WHITE="#ffffff"
+RED="#FF5555"
+GREEN="#50FA7B"
+YELLOW="#F1FA8C"
+PURPLE="#BD93F9"
+PINK="#FF79C6"
+CYAN="#8BE9FD"
+
+# Launch Rofi
+rofi -no-lazy-grab -show drun \
+-display-drun "Приложения " -drun-display-format "{name}" \
+-hide-scrollbar true \
+-bw 0 \
+-lines 10 \
+-line-padding 15 \
+-padding 60 \
+-width 30 \
+-xoffset 10 -yoffset 40 \
+-location 1 \
+-fullscreen \
+-columns 4 \
+-show-icons -icon-theme "Numix-Circle-Light" \
+-font "Droid Sans Regular 10" \
+-color-enabled true \
+-color-window "$BACKGROUND,$BORDER,$SEPARATOR" \
+-color-normal "$BACKGROUND_ALT,$FOREGROUND,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
+-color-active "$BACKGROUND,$PURPLE,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
+-color-urgent "$BACKGROUND,$YELLOW,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND"

@@ -1,0 +1,33 @@
+#!/bin/sh
+
+# Aliases
+
+alias e="$EDITOR"
+
+alias shutdown="shutdown -h now"
+alias starttmux="tmux -f $HOME/.config/tmux/tmux.conf new -s default"
+
+# colorize all the things
+alias \
+	grep="grep --color=auto" \
+	fgrep="fgrep --color=auto" \
+	egrep="egrep --color=auto" \
+	diff="diff --color=auto" \
+	ls="lsd -a --group-dirs first" \
+	mc="mc --nocolor" \
+	ping="grc --colour=auto ping -c 5" \
+	traceroute="grc --colour=auto traceroute" \
+	make="grc --colour=auto make" \
+	diff="grc --colour=auto diff" \
+	cvs="grc --colour=auto cvs" \
+	netstat="grc --colour=auto netstat" \
+
+# dnf shortcuts
+alias \
+	dnfin="sudo dnf install" \
+	dnfrm="sudo dnf remove" \
+	dnfup="sudo dnf upgrade" \
+	dnfsr="dnf search" \
+	dnfsl="dnf list installed | grep" \
+	dnfcl="sudo dnf clean" \
+	dnfmc="sudo dnf makecache" \
