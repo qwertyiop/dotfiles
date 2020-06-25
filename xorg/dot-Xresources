@@ -1,0 +1,51 @@
+! Dracula Xresources palette
+*.foreground: #F8F8F2
+*.background: #292a29
+*.color0:     #000000
+*.color8:     #4D4D4D
+*.color1:     #FF5555
+*.color9:     #FF6E67
+*.color2:     #50FA7B
+*.color10:    #5AF78E
+*.color3:     #F1FA8C
+*.color11:    #F4F99D
+*.color4:     #BD93F9
+*.color12:    #CAA9FA
+*.color5:     #FF79C6
+*.color13:    #FF92D0
+*.color6:     #8BE9FD
+*.color14:    #9AEDFE
+*.color7:     #BFBFBF
+*.color15:    #E6E6E6
+
+XTerm*faceName: Roboto Mono for Powerline
+XTerm*faceSize: 10
+XTerm*renderFont: true
+XTerm.vt100*allow_bold: true
+
+XTerm.vt100.saveLines: 4096
+XTerm*scrollBar: false
+XTerm*vt100*geometry: 130x32
+
+!------------- copy-paste ----------------------!
+XTerm.vt100*selectToClipboard: true
+XTerm.vt100*translations: #override \
+        Ctrl Alt <Key>C: copy-selection(CLIPBOARD) \n\
+        Ctrl Alt <Key>V: insert-selection(CLIPBOARD) \n\
+        Ctrl <Key> minus: smaller-vt-font() \n\
+        Ctrl <Key> plus: larger-vt-font() \n\
+        Ctrl <Key> 0: set-vt-font(d)
+
+! double-click to select whole URLs
+xterm*charClass: 33:48,36-47:48,58-59,48,61:48,63-64:48,95:48,126:48
+
+! Every shell is a login shell by default
+xterm*loginShell: true
+
+Xft.dpi: 96
+Xft.antialias: true      
+Xft.hinting: true
+Xft.rgba: rgb 
+Xft.autohint: false
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
