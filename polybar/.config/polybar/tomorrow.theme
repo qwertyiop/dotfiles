@@ -1,0 +1,37 @@
+[color]
+fg = #EAEAEA
+bg = #000000
+selection = #424242
+comment = #969896
+
+#
+color0 = #000000
+color8 = #666666
+
+# red
+color1 = #D54E53
+color9 = #CC6666
+
+# green
+color2 = #B9CA4A
+color10 = #B5BD68
+
+# yellow
+color3 = #E7C547
+color11 = #F0C674
+
+# blue
+color4 = #7AA6DA
+color12 = #81A2BE
+
+# pink
+color5 = #C397D8
+color13 = #B294BB
+
+# cyan
+color6 = #BABEB7
+color14 = #8ABEB7
+
+#
+color7 = #929593
+color15 = #ECEBEC
