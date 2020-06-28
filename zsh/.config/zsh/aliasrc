@@ -14,7 +14,7 @@ alias \
 	egrep="egrep --color=auto" \
 	diff="diff --color=auto" \
 	ls="lsd -a --group-dirs first" \
-#	mc="mc --nocolor" \
+	mc="mc --nocolor" \
 	ping="grc --colour=auto ping -c 5" \
 	traceroute="grc --colour=auto traceroute" \
 	make="grc --colour=auto make" \
