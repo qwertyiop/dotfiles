@@ -103,7 +103,7 @@
     <!-- Launch apps -->
     <keybind key="A-t">
       <action name="Execute">
-        <command>lxterminal</command>
+        <command>alacritty</command>
       </action>
     </keybind>
     <keybind key="W-r">

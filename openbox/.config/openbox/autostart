@@ -12,7 +12,6 @@
 # Desktop environment
 
 xbindkeys &
-numlockx &
 pcmanfm --desktop &
 lxpolkit &
 redshift &

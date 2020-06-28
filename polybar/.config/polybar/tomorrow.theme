@@ -1,37 +1,37 @@
 [color]
-fg = #EAEAEA
+fg = #e4e4e4
 bg = #000000
 selection = #424242
 comment = #969896
 
-#
+# black
 color0 = #000000
-color8 = #666666
+color8 = #808080
 
 # red
-color1 = #D54E53
-color9 = #CC6666
+color1 = #ff5f5f
+color9 = #ff8787
 
 # green
-color2 = #B9CA4A
-color10 = #B5BD68
+color2 = #5fff5f
+color10 = #87ff87
 
 # yellow
-color3 = #E7C547
-color11 = #F0C674
+color3 = #ffa95e
+color11 = #ffd787
 
 # blue
-color4 = #7AA6DA
-color12 = #81A2BE
+color4 = #5fafff
+color12 = #87afff
 
 # pink
-color5 = #C397D8
-color13 = #B294BB
+color5 = #ff5faf
+color13 = #ff87af
 
 # cyan
-color6 = #BABEB7
-color14 = #8ABEB7
+color6 = #5fffff
+color14 = #87ffff
 
-#
-color7 = #929593
-color15 = #ECEBEC
+# white
+color7 = #c0c0c0
+color15 = #e4e4e4

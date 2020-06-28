@@ -1,34 +1,51 @@
-! Tomorrow Night Bright
-*foreground:   #eaeaea
-*background:   #000000
-*cursorColor:  #aeafad
-*color0:       #000000
-*color1:       #666666
-*color2:       #b9ca4a
-*color3:       #e7c547
-*color4:       #7aa6da
-*color5:       #c397d8
-*color6:       #babeb7
-*color7:       #929593
-*color8:       #666666
-*color9:       #cc6666
-*color10:      #b5bd68
-*color11:      #f0c674
-*color12:      #81a2be
-*color13:      #b294bb
-*color14:      #8abeb7
-*color15:      #ecebec
+! tomorrow-256 theme
+! special
+*.foreground:   #e4e4e4
+*.background:   #000000
+*.cursorColor:  #e4e4e4
 
-XTerm*faceName: Droid Sans Mono for Powerline Plus Nerd File Types Mono
+! black
+*.color0:       #000000
+*.color8:       #808080
+
+! red
+*.color1:       #ff5f5f
+*.color9:       #ff8787
+
+! green
+*.color2:       #5fff5f
+*.color10:      #87ff87
+
+! yellow
+*.color3:       #ffa95e
+*.color11:      #ffd787
+
+! blue
+*.color4:       #5fafff
+*.color12:      #87afff
+
+! magenta
+*.color5:       #ff5faf
+*.color13:      #ff87af
+
+! cyan
+*.color6:       #5fffff
+*.color14:      #87ffff
+
+! white
+*.color7:       #c0c0c0
+*.color15:      #e4e4e4
+
+XTerm*faceName: Source Code Pro
 XTerm*faceSize: 10
 XTerm*renderFont: true
-XTerm.vt100*allow_bold: true
-
-XTerm.vt100.saveLines: 4096
 XTerm*scrollBar: false
+
+XTerm.vt100*allow_bold: true
+XTerm.vt100.saveLines: 4096
 XTerm*vt100*geometry: 130x32
 
-!------------- copy-paste ----------------------!
+!----------------- copy-paste ----------------------!
 XTerm.vt100*selectToClipboard: true
 XTerm.vt100*translations: #override \
         Ctrl Alt <Key>C: copy-selection(CLIPBOARD) \n\
@@ -37,10 +54,10 @@ XTerm.vt100*translations: #override \
         Ctrl <Key> plus: larger-vt-font() \n\
         Ctrl <Key> 0: set-vt-font(d)
 
-! double-click to select whole URLs
+!------- double-click to select whole URLs ---------!
 xterm*charClass: 33:48,36-47:48,58-59,48,61:48,63-64:48,95:48,126:48
 
-! Every shell is a login shell by default
+!---- Every shell is a login shell by default ------!
 xterm*loginShell: true
 
 Xft.dpi: 96
