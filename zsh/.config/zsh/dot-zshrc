@@ -37,12 +37,13 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Enable plugins
-plugins=(git extract history-substring-search colored-man-pages command-not-found)
+plugins=(git history-substring-search command-not-found systemd)
 source $ZSH/oh-my-zsh.sh
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Dirstack 
+# see https://wiki.archlinux.org/index.php/zsh#Dirstack
 autoload -Uz add-zsh-hook
 
 DIRSTACKFILE="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/dirs"
@@ -55,7 +56,7 @@ chpwd_dirstack() {
 }
 add-zsh-hook -Uz chpwd chpwd_dirstack
 
-DIRSTACKSIZE='100'
+DIRSTACKSIZE='30'
 
 setopt AUTO_PUSHD PUSHD_SILENT PUSHD_TO_HOME PUSHD_IGNORE_DUPS PUSHD_MINUS
 
@@ -78,8 +79,32 @@ echo "'$1' не является допустимым файлом"
 fi
 }
 
+# same for extracting
+# https://wiki.archlinux.org/index.php/Zsh_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)#%D0%A0%D0%B0%D1%81%D0%BF%D0%B0%D0%BA%D0%BE%D0%B2%D0%BA%D0%B0_%D0%B0%D1%80%D1%85%D0%B8%D0%B2%D0%B0
+ex () {
+ if [ -f $1 ] ; then
+   case $1 in
+     *.tar.bz2) tar xvjf $1   ;;
+     *.tar.gz)  tar xvzf $1   ;;
+     *.tar.xz)  tar xvfJ $1   ;;
+     *.bz2)     bunzip2 $1    ;;
+     *.rar)     unrar x $1    ;;
+     *.gz)      gunzip $1     ;;
+     *.tar)     tar xvf $1    ;;
+     *.tbz2)    tar xvjf $1   ;;
+     *.tgz)     tar xvzf $1   ;;
+     *.zip)     unzip $1      ;;
+     *.Z)       uncompress $1 ;;
+     *.7z)      7z x $1       ;;
+     *)         echo "'$1' не может быть распакован при помощи >ex<" ;;
+   esac
+ else
+   echo "'$1' не является допустимым файлом"
+ fi
+}
+
 # keybindings
-bindkey -v
+bindkey -e
 
 # load aliases
 [ -f "$HOME/.config/zsh/aliasrc" ] && source "$HOME/.config/zsh/aliasrc"

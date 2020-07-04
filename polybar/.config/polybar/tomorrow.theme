@@ -1,8 +1,6 @@
 [color]
 fg = #e4e4e4
 bg = #000000
-selection = #424242
-comment = #969896
 
 # black
 color0 = #000000
