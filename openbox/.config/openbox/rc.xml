@@ -238,7 +238,7 @@
     </keybind>
     
     <!-- 4x4 vertical split -->
-    <keybind key="A-S-f">
+    <keybind key="A-S-d">
       <action name="Unmaximize"/>
       <action name="MoveResizeTo">
 		<x>-1%</x>
@@ -256,7 +256,7 @@
         <height>48%</height>
       </action>
     </keybind>
-    <keybind key="A-S-d">
+    <keybind key="A-S-f">
       <action name="Unmaximize"/>
       <action name="MoveResizeTo">
         <x>-1%</x>
