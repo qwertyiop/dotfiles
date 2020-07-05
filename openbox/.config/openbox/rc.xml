@@ -106,16 +106,28 @@
         <command>alacritty</command>
       </action>
     </keybind>
-    <keybind key="W-r">
+    <keybind key="A-d">
       <action name="Execute">
-        <command>rofi -show run -theme ~/.config/rofi/rofi.rasi - font "Droid Sans 10"</command>
+        <command>rofi -show run -theme ~/.config/rofi/drun.rasi -font "Droid Sans 10"</command>
       </action>
     </keybind>
+    <!-- exit openbox -->
+    <keybind key="A-S-e">
+      <action name="Execute">
+        <command>oblogout</command>
+      </action>
+    </keybind>
+    <!-- log out -->
+    <keybind key="A-S-r">
+      <action name="Execute">
+        <command>openbox --exit</command>
+      </action>
+    </keybind>  
     <!-- Take screenshot -->
     <keybind key="Print">
-     <action name="Execute">
-      <command>~/.config/openbox/screenshot</command>
-     </action>
+      <action name="Execute">
+        <command>~/.config/userscripts/screenshot</command>
+      </action>
     </keybind>
     <!-- keybindings to manupulate desktops. Mod1 - compose, mod2 - shift -->
     <keybind key="W-Tab">
@@ -167,16 +179,11 @@
         <to>4</to>
       </action>
     </keybind>
-    <keybind key="A-q">
+    <keybind key="A-S-q">
       <action name="Close"/>
     </keybind>
-    <keybind key="A-Escape">
-      <action name="Lower"/>
-      <action name="FocusToBottom"/>
-      <action name="Unfocus"/>
-    </keybind>
-    
-    <keybind key="A-w">
+    <!-- maximize window -->
+    <keybind key="A-f">
       <action name="Unmaximize"/>
       <action name="MoveResizeTo">
         <x>1%</x>
@@ -185,7 +192,7 @@
         <width>98%</width>
       </action>
     </keybind>
-
+    <!-- switch between windows -->
     <keybind key="A-Tab">
       <action name="NextWindow">
         <finalactions>
@@ -195,87 +202,110 @@
         </finalactions>
       </action>
     </keybind>
+
+    <!--
+
+		Bindings for slit modes:
+
+		2x2 vertical		    2x2 horizontal           4x4 window split 
+
+	┌───────────╥───────┐  ┌─────────────────────┐   ┌─────────────╥─────────┐
+	│           ║       │  │                     │   │             ║         │
+	│           ║       │  │     Alt + H   d     │   │   Alt+V d   ║ Alt+H f │
+	│  Alt + V  ║  Alt  │  │                     │   │             ║         │
+	│           ║  + V  │  ╞═════════════════════╡   ╞═════════════╬═════════╡
+	│     a     ║   f   │  │                     │   │             ║         │
+	│           ║       │  │     Alt + H   s     │   │   Alt+H a   ║ Alt+V s │
+	│           ║       │  │                     │   │             ║         │
+	└───────────╨───────┘  └─────────────────────┘   └─────────────╨─────────┘
+
+    -->
     
-    <!-- 2x2 vertical split -->
-    <keybind key="A-a">
-      <action name="Unmaximize"/>
-      <action name="MoveResizeTo">
-        <x>1%</x>
-        <y>2%</y>
-        <height>96%</height>
-        <width>58%</width>
-      </action>
-    </keybind>
-    <keybind key="A-f">
-      <action name="Unmaximize"/>
-      <action name="MoveResizeTo">
-        <x>-1%</x>
-        <y>2%</y>
-        <height>96%</height>
-        <width>39%</width>
-      </action>
+    <!-- vertical split -->
+    <keybind key="A-v">
+      <keybind key="a">
+        <action name="Unmaximize"/>
+        <action name="MoveResizeTo">
+          <x>1%</x>
+          <y>2%</y>
+          <height>96%</height>
+          <width>58%</width>
+        </action>
+      </keybind>
+      <keybind key="f">
+        <action name="Unmaximize"/>
+        <action name="MoveResizeTo">
+          <x>-1%</x>
+          <y>2%</y>
+          <height>96%</height>
+          <width>39%</width>
+        </action>
+      </keybind>
+      <keybind key="s">
+        <action name="Unmaximize"/>
+        <action name="MoveResizeTo">
+		  <x>-1%</x>
+          <y>-2%</y>
+          <width>39%</width>
+          <height>47%</height>
+        </action>
+      </keybind>
+      <keybind key="d">
+        <action name="Unmaximize"/>
+        <action name="MoveResizeTo">
+          <x>1%</x>
+          <y>2%</y>
+          <width>58%</width>
+          <height>48%</height>
+        </action>
+      </keybind>
     </keybind>
 
-    <!-- 2x2 horizontal split -->
-    
-    <keybind key="A-d">
-      <action name="Unmaximize"/>
-      <action name="MoveResizeTo">
-        <x>1%</x>
-        <y>2%</y>
-        <width>98%</width>
-        <height>48%</height>
-      </action>
-    </keybind>
-    <keybind key="A-s">
-      <action name="Unmaximize"/>
-      <action name="MoveResizeTo">
-        <x>1%</x>
-        <y>-2%</y>
-        <width>98%</width>
-        <height>47%</height>
-      </action>
-    </keybind>
-    
-    <!-- 4x4 vertical split -->
-    <keybind key="A-S-d">
-      <action name="Unmaximize"/>
-      <action name="MoveResizeTo">
-		<x>-1%</x>
-        <y>-2%</y>
-        <width>39%</width>
-        <height>47%</height>
-      </action>
-    </keybind>
-    <keybind key="A-S-a">
-      <action name="Unmaximize"/>
-      <action name="MoveResizeTo">
-        <x>1%</x>
-        <y>2%</y>
-        <width>58%</width>
-        <height>48%</height>
-      </action>
-    </keybind>
-    <keybind key="A-S-f">
-      <action name="Unmaximize"/>
-      <action name="MoveResizeTo">
-        <x>-1%</x>
-        <y>2%</y>
-        <width>39%</width>
-        <height>48%</height>
-      </action>
-    </keybind>
-    <keybind key="A-S-s">
-      <action name="Unmaximize"/>
-      <action name="MoveResizeTo">
-        <x>1%</x>
-        <y>-2%</y>
-        <width>58%</width>
-        <height>47%</height>
-      </action>
+    <!-- horizontal split -->
+    <keybind key="A-h">
+      <keybind key="d">
+        <action name="Unmaximize"/>
+        <action name="MoveResizeTo">
+          <x>1%</x>
+          <y>2%</y>
+          <width>98%</width>
+          <height>48%</height>
+        </action>
+      </keybind>
+      <keybind key="s">
+        <action name="Unmaximize"/>
+        <action name="MoveResizeTo">
+          <x>1%</x>
+          <y>-2%</y>
+          <width>98%</width>
+          <height>47%</height>
+        </action>
+      </keybind>
+      <keybind key="f">
+        <action name="Unmaximize"/>
+        <action name="MoveResizeTo">
+          <x>-1%</x>
+          <y>2%</y>
+          <width>39%</width>
+          <height>48%</height>
+        </action>
+      </keybind>
+      <keybind key="a">
+        <action name="Unmaximize"/>
+        <action name="MoveResizeTo">
+          <x>1%</x>
+          <y>-2%</y>
+          <width>58%</width>
+          <height>47%</height>
+        </action>
+      </keybind>
     </keybind>
     
-    <!-- place a raised focused window of a fixed fize in the center of the screen -->
+    <!-- 
+    place a raised focused window of a fixed fize 
+    in the center of the screen 
+    -->
+    
     <keybind key="A-space">
       <action name="Focus"/>
       <action name="Raise"/>
@@ -287,6 +317,17 @@
         <y>center</y>
       </action>
     </keybind>
+
+    <!--
+    send a window to the background
+    -->
+
+    <keybind key="A-Escape">
+      <action name="Lower"/>
+      <action name="FocusToBottom"/>
+      <action name="Unfocus"/>
+    </keybind>
+    
   </keyboard>
   <mouse>
     <dragThreshold>1</dragThreshold>

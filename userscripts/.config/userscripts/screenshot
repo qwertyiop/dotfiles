@@ -1,6 +1,6 @@
 #!/bin/bash
 
-path=~/Изображения/screenshots/
+path=$HOME/Изображения/screenshots/
 name=Снимок-$(date +%s).png
 
 maim $path$name -u -f png -m 2
