@@ -1,4 +1,4 @@
-include-file = $HOME/.config/polybar/themes/tomorrow256.colors.cnf
+include-file = $HOME/.config/polybar/themes/default.colors.cnf
 include-file = $HOME/.config/polybar/modules.cnf
 
 #####################################################################
