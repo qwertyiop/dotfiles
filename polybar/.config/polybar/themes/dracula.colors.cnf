@@ -1,0 +1,11 @@
+# Dracula color theme
+
+[color]
+
+bg = #000000 
+bg_alt = #BD93F9
+fg = #000000
+fg_alt = #F8F8F2
+
+warning = #FF5555
+normal = #50FA7B

@@ -11,14 +11,14 @@ ramp-signal-4 = 󰤨
 ramp-signal-padding = 1
 
 format-connected = <ramp-signal>
-format-connected-background = ${color.color4}
+format-connected-background = ${color.bg_alt}
 format-connected-suffix = 
-format-connected-suffix-background = ${color.color4}
+format-connected-suffix-background = ${color.bg_alt}
 
 format-packetloss = <ramp-signal>
-format-packetloss-background = ${color.color4}
+format-packetloss-background = ${color.bg_alt}
 format-packetloss-suffix = 
-format-packetloss-suffix-background = ${color.color4}
+format-packetloss-suffix-background = ${color.bg_alt}
 
 format-disconnected = <label-disconnected>
 
@@ -37,14 +37,14 @@ label-connected-padding = 2
 label-disconnected-padding = 2
 
 format-connected = <label-connected>
-format-connected-background = ${color.color4}
+format-connected-background = ${color.bg_alt}
 format-connected-suffix = 
-format-connected-suffix-background = ${color.color4}
+format-connected-suffix-background = ${color.bg_alt}
 
 format-disconnected = <label-disconnected>
-format-disconnected-background = ${color.color4}
+format-disconnected-background = ${color.bg_alt}
 format-disconnected-suffix = 
-format-disconnected-suffix-background = ${color.color4}
+format-disconnected-suffix-background = ${color.bg_alt}
 
 #####################################################################
 
@@ -57,18 +57,18 @@ label-volume = "󰕾 %percentage%%"
 
 format-volume = <label-volume>
 format-volume-padding = 1
-format-volume-background = ${color.color4}
+format-volume-background = ${color.bg_alt}
 format-volume-prefix = 
 format-volume-prefix-padding-right = 1
-format-volume-prefix-background = ${color.color4}
+format-volume-prefix-background = ${color.bg_alt}
 
 label-muted = 󰖁
 format-muted = <label-muted>
 format-muted-padding = 1
-format-muted-background = ${color.color4}
+format-muted-background = ${color.bg_alt}
 format-muted-prefix = 
 format-muted-prefix-padding-right = 1
-format-muted-prefix-background = ${color.color4}
+format-muted-prefix-background = ${color.bg_alt}
 
 #####################################################################
 
@@ -76,23 +76,11 @@ format-muted-prefix-background = ${color.color4}
 type = internal/xwindow
 
 format = <label>
-format-foreground = ${color.color15}
+format-foreground = ${color.fg_alt}
 
 label = %title:0:120:...%
 label-empty = 
 
-#####################################################################
-#
-# [module/menu-apps]
-# type = custom/text
-# content = "  󰣛  Приложения 󰍝"
-#
-# content-background = ${color.color4}
-# content-prefix = 
-# content-suffix = " "
-#
-# click-left = ~/.config/rofi/menu_full
-#
 #####################################################################
 
 [module/date]
@@ -102,13 +90,12 @@ interval = 2
 
 label = "󰃭 %output%"
 label-padding = 2
-#click-left = "~/.config/userscripts/popup-calendar.sh --popup &"
 click-left = "zenity --calendar"
 
 format = <label>
-format-background = ${color.color4}
+format-background = ${color.bg_alt}
 format-prefix = 
-format-prefix-foreground = ${color.color4}
+format-prefix-foreground = ${color.bg_alt}
 format-prefix-background = ${color.bg}
 
 #####################################################################
@@ -118,33 +105,15 @@ type = internal/date
 time = "%R"
 
 label = "󰀠  %time%"
-label-background = ${color.color4}
+label-background = ${color.bg_alt}
 label-padding = 2
 
 format = <label>
 format-prefix = 
-format-prefix-background = ${color.color4}
+format-prefix-background = ${color.bg_alt}
 format-suffix = 
-format-suffix-background = ${color.color4}
+format-suffix-background = ${color.bg_alt}
 
-#####################################################################
-#
-# [module/logout]
-# type  = custom/text
-#
-# content = " 󰐥 Выйти 󰍝"
-# content-padding = 0
-# content-background = ${color.color1}
-#
-# click-left = oblogout &
-#
-# content-prefix = 
-# content-prefix-foreground = ${color.color1}
-# content-prefix-background = ${color.bg}
-#
-# content-suffix = 
-# content-suffix-background = ${color.color1}
-#
 #####################################################################
 
 [module/xkeyboard]
@@ -171,15 +140,15 @@ label-indicator-on-capslock = 󰯲
 label-indicator-on-capslock-padding-left = 1
 
 format = <label-indicator><label-layout>
-format-foreground = ${color.color0}
-format-background = ${color.color4}
+format-foreground = ${color.fg}
+format-background = ${color.bg_alt}
 
 format-prefix = 
-format-prefix-foreground = ${color.color4}
+format-prefix-foreground = ${color.bg_alt}
 format-prefix-background = ${color.bg}
 
 format-suffix = 
-format-suffix-background = ${color.color4}
+format-suffix-background = ${color.bg_alt}
 
 #####################################################################
 
@@ -190,19 +159,19 @@ enable-click = true
 
 label-active = 󰄯
 label-active-padding = 1
-label-active-background = ${color.color4}
+label-active-background = ${color.bg_alt}
 
 label-occupied = 󰺕
 label-occupied-padding = 1
-label-occupied-background = ${color.color4}
+label-occupied-background = ${color.bg_alt}
 
 label-urgent = 󰐾
 label-urgent-padding = 1
-label-urgent-background = ${color.color4}
+label-urgent-background = ${color.bg_alt}
 
 label-empty = 󰄰
 label-empty-padding = 1
-label-empty-background = ${color.color4}
+label-empty-background = ${color.bg_alt}
 
 #####################################################################
 
@@ -210,7 +179,7 @@ label-empty-background = ${color.color4}
 type = custom/text
 
 content = 
-content-foreground = ${color.color4}
+content-foreground = ${color.bg_alt}
 
 #####################################################################
 
@@ -218,7 +187,7 @@ content-foreground = ${color.color4}
 type = custom/text
 
 content = 
-content-background = ${color.color4}
+content-background = ${color.bg_alt}
 
 #####################################################################
 
@@ -241,14 +210,16 @@ animation-discharging-padding-left = 1
 animation-discharging-framerate = 500
 
 format-discharging = <animation-discharging><label-discharging>
-format-discharging-background = ${color.color1}
+format-discharging-background = ${color.warning}
+format-discharging-foreground = ${color.fg_alt}
 
 format-discharging-prefix = 
-format-discharging-prefix-foreground = ${color.color1}
+format-discharging-prefix-foreground = ${color.warning}
 format-discharging-prefix-background = ${color.bg}
 
 format-discharging-suffix = 
-format-discharging-suffix-background = ${color.color1}
+format-discharging-suffix-background = ${color.warning}
+format-discharging-suffix-foreground = ${color.bg}
 
 label-charging = %percentage%%
 label-charging-padding-right = 2
@@ -261,14 +232,16 @@ animation-charging-padding-left = 1
 animation-charging-framerate = 500
 
 format-charging = <animation-charging><label-charging>
-format-charging-background = ${color.color2}
+format-charging-background = ${color.normal}
+format-charging-foreground = ${color.fg_alt}
 
 format-charging-prefix = 
-format-charging-prefix-foreground = ${color.color2}
+format-charging-prefix-foreground = ${color.normal}
 format-charging-prefix-background = ${color.bg}
 
 format-charging-suffix = 
-format-charging-suffix-background = ${color.color2}
+format-charging-suffix-background = ${color.normal}
+format-charging-suffix-foreground = ${color.bg}
 
 label-full =
 format-full = <label-full>
@@ -293,14 +266,15 @@ label =
 label-warn-padding-right = 2
 
 format-warn = <ramp><label-warn>
-format-warn-background = ${color.color1}
+format-warn-background = ${color.warning}
+format-warn-foreground = ${color.fg_alt}
 
 format-warn-prefix = 
-format-warn-prefix-foreground = ${color.color1}
+format-warn-prefix-foreground = ${color.warning}
 format-warn-prefix-background = ${color.bg}
 
 format-warn-suffix = 
-format-warn-suffix-background = ${color.color1}
+format-warn-suffix-background = ${color.warning}
 format-warn-suffix-foreground = ${color.bg}
 
 [module/gpu-temp]
@@ -329,10 +303,10 @@ label = "󰆧 %output% "
 label-padding = 1
 
 format = <label>
-format-background = ${color.color4}
+format-background = ${color.bg_alt}
 
 format-suffix = 
-format-suffix-background = ${color.color4}
+format-suffix-background = ${color.bg_alt}
 
 #####################################################################
 
@@ -357,66 +331,65 @@ icon-next = 󰙢
 
 format-online = "<icon-prev> <icon-play> <icon-pause> <icon-stop> <icon-next>  <label-time>  <label-song>"
 ;format-online-padding-right = 1
-format-online-background = ${color.color4}
+format-online-background = ${color.bg_alt}
 format-online-prefix = 
 format-online-prefix-padding-right = 1
-format-online-prefix-background = ${color.color4}
+format-online-prefix-background = ${color.bg_alt}
 
 format-offline = <label-offline>
-format-offline-background = ${color.color4}
-format-offline-foreground = ${color.color0}
+format-offline-background = ${color.bg_alt}
 format-offline-prefix = 
 format-offline-prefix-padding-right = 1
-format-offline-prefix-background = ${color.color4}
+format-offline-prefix-background = ${color.bg_alt}
 
 #####################################################################
 
-; application launchers
+# application launchers
 
 [module/terminal]
 type = custom/text
 content = 󰆍
-content-underline = ${color.color4}
-content-foreground = ${color.color15}
+content-underline = ${color.fg_alt}
+content-foreground = ${color.fg_alt}
 content-margin = 1
 click-left = alacritty &
 
 [module/filemanager]
 type = custom/text
 content = 󰉋
-content-underline = ${color.color4}
-content-foreground = ${color.color15}
+content-underline = ${color.fg_alt}
+content-foreground = ${color.fg_alt}
 content-margin = 1
 click-left = pcmanfm &
 
 [module/browser]
 type = custom/text
 content = 󰈹
-content-underline = ${color.color4}
-content-foreground = ${color.color15}
+content-underline = ${color.fg_alt}
+content-foreground = ${color.fg_alt}
 content-margin = 1
 click-left = firefox &
 
 [module/mailclient]
 type = custom/text
 content = 󰇮
-content-underline = ${color.color4}
-content-foreground = ${color.color15}
+content-underline = ${color.fg_alt}
+content-foreground = ${color.fg_alt}
 content-margin = 1
 click-left = thunderbird &
 
 [module/passwdmanager]
 type = custom/text
 content = 󰌋
-content-underline = ${color.color4}
-content-foreground = ${color.color15}
+content-underline = ${color.fg_alt}
+content-foreground = ${color.fg_alt}
 content-margin = 1
 click-left = keepassxc &
 
 [module/calc]
 type = custom/text
 content = 󰃬
-content-underline = ${color.color4}
-content-foreground = ${color.color15}
+content-underline = ${color.fg_alt}
+content-foreground = ${color.fg_alt}
 content-margin = 1
 click-left = galculator &

@@ -1,5 +1,5 @@
-include-file = ~/.config/polybar/tomorrow.theme
-include-file = ~/.config/polybar/modules.conf
+include-file = $HOME/.config/polybar/themes/tomorrow256.colors.cnf
+include-file = $HOME/.config/polybar/modules.cnf
 
 #####################################################################
 
@@ -11,7 +11,7 @@ font-2 = "Powerline Extra Symbols:size=14;4"
 locale = ru_RU.UTF8
 	
 background = ${color.bg}
-foreground = ${color.color0}
+foreground = ${color.fg}
 line-size = 2
 
 #####################################################################
@@ -42,4 +42,4 @@ override-redirect = true
 tray-position = right
 tray-maxsize = 16
 tray-padding = 2
-tray-background = ${color.color4}
+tray-background = ${color.bg}

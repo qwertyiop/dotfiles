@@ -100,12 +100,13 @@
   </dock>
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
-    <!-- Launch apps -->
+    <!-- show terminal -->
     <keybind key="A-t">
       <action name="Execute">
         <command>alacritty</command>
       </action>
     </keybind>
+    <!-- Show rofi -->
     <keybind key="A-d">
       <action name="Execute">
         <command>rofi -show run -theme ~/.config/rofi/drun.rasi -font "Droid Sans 10"</command>
@@ -129,56 +130,49 @@
         <command>~/.config/userscripts/screenshot</command>
       </action>
     </keybind>
-    <!-- keybindings to manupulate desktops. Mod1 - compose, mod2 - shift -->
-    <keybind key="W-Tab">
-      <action name="GoToDesktop">
-        <to>next</to>
-      </action>
-    </keybind>
-    <keybind key="W-d">
-      <action name="ToggleShowDesktop"/>
-    </keybind>
-    <keybind key="W-1">
-      <action name="GoToDesktop">
-        <to>1</to>
-      </action>
-    </keybind>
-    <keybind key="W-2">
-      <action name="GoToDesktop">
-        <to>2</to>
-      </action>
-    </keybind>
-    <keybind key="W-3">
-      <action name="GoToDesktop">
-        <to>3</to>
-      </action>
-    </keybind>
-    <keybind key="W-4">
-      <action name="GoToDesktop">
-        <to>4</to>
-      </action>
-    </keybind>
-    <!-- Keybindings to manupulate windows. Mod1 - Alt, mod2 - Shift -->
+    <!-- switch workspaces -->
     <keybind key="A-1">
-      <action name="SendToDesktop">
+      <action name="GoToDesktop">
         <to>1</to>
       </action>
     </keybind>
     <keybind key="A-2">
-      <action name="SendToDesktop">
+      <action name="GoToDesktop">
         <to>2</to>
       </action>
     </keybind>
     <keybind key="A-3">
-      <action name="SendToDesktop">
+      <action name="GoToDesktop">
         <to>3</to>
       </action>
     </keybind>
     <keybind key="A-4">
+      <action name="GoToDesktop">
+        <to>4</to>
+      </action>
+    </keybind>
+    <!-- move window to another workspace -->
+    <keybind key="A-S-1">
+      <action name="SendToDesktop">
+        <to>1</to>
+      </action>
+    </keybind>
+    <keybind key="A-S-2">
+      <action name="SendToDesktop">
+        <to>2</to>
+      </action>
+    </keybind>
+    <keybind key="A-S-3">
+      <action name="SendToDesktop">
+        <to>3</to>
+      </action>
+    </keybind>
+    <keybind key="A-S-4">
       <action name="SendToDesktop">
         <to>4</to>
       </action>
     </keybind>
+    <!-- close window -->
     <keybind key="A-S-q">
       <action name="Close"/>
     </keybind>
@@ -192,7 +186,7 @@
         <width>98%</width>
       </action>
     </keybind>
-    <!-- switch between windows -->
+    <!-- cycle windows -->
     <keybind key="A-Tab">
       <action name="NextWindow">
         <finalactions>

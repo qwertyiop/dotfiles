@@ -1,23 +1,13 @@
-#
-# These things are run when an Openbox X Session is started.
-# You may place a similar script in $HOME/.config/openbox/autostart
-# to run user-specific things.
-#
-
-# autostart programs
-
-# Monitor switcher
-# ~/.userscripts/dual-head.sh &
-
 # Desktop environment
 
 xbindkeys &
+numlockx &
 pcmanfm --desktop &
 lxpolkit &
 redshift &
 compton --config ~/.config/compton/compton.conf -b &
-polybar -c ~/.config/polybar/polybar.conf top &
-polybar -c ~/.config/polybar/polybar.conf bottom &
+polybar -c ~/.config/polybar/polybar.cnf top &
+polybar -c ~/.config/polybar/polybar.cnf bottom &
 
 # User-defined applications
 
