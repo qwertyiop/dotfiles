@@ -3,8 +3,8 @@ env:
 
 window:
   dimensions:
-    columns: 130
-    lines: 36
+    columns: 120
+    lines: 30
 
   title: Alacritty
 
@@ -48,37 +48,37 @@ colors:
 font:
 
   normal:
-    family: Droid Sans Mono for Powerline Plus Nerd File Types Mono
+    family: MesloLGM Nerd Font Mono
     style: Regular
 
   bold:
-    family: Droid Sans Mono for Powerline Plus Nerd File Types Mono
+    family: MesloLGM Nerd Font Mono
     style: Bold
 
   italic:
-    family: Droid Sans Mono for Powerline Plus Nerd File Types Mono
+    family: MesloLGM Nerd Font Mono
     style: Italic
 
-  size: 11
+  size: 12
 
 selection:
   save_to_clipboard: true
   dynamic_title: true
 
 cursor:
-  style: Block
+  style: Underline
 
 live_config_reload: true
 
 key_bindings:
-  - { key: V,        mods: Shift|Alt,     action: Paste            }
-  - { key: C,        mods: Shift|Alt,     action: Copy             }
-  - { key: Insert,   mods: Shift,         action: PasteSelection   }
-  - { key: Key0,     mods: Control,       action: ResetFontSize    }
-  - { key: Equals,   mods: Control,       action: IncreaseFontSize }
-  - { key: Add,      mods: Control,       action: IncreaseFontSize }
-  - { key: Subtract, mods: Control,       action: DecreaseFontSize }
-  - { key: Minus,    mods: Control,       action: DecreaseFontSize }
+  - { key: V,           mods: Shift|Alt,     action: Paste            }
+  - { key: C,           mods: Shift|Alt,     action: Copy             }
+  - { key: Insert,      mods: Shift,         action: PasteSelection   }
+  - { key: Divide,      mods: Control,       action: ResetFontSize    }
+  - { key: Equals,      mods: Control,       action: IncreaseFontSize }
+  - { key: Add,         mods: Control,       action: IncreaseFontSize }
+  - { key: Subtract,    mods: Control,       action: DecreaseFontSize }
+  - { key: Minus,       mods: Control,       action: DecreaseFontSize }
 
 debug:
   log_level: Warn

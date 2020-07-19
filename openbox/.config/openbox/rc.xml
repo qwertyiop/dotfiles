@@ -24,38 +24,38 @@
     <keepBorder>yes</keepBorder>
     <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
-      <name>Droid Sans</name>
-      <size>10</size>
+      <name>Roboto</name>
+      <size>11</size>
       <weight>Bold</weight>
       <slant>Normal</slant>
     </font>
     <font place="InactiveWindow">
-      <name>Droid Sans</name>
-      <size>10</size>
+      <name>Roboto</name>
+      <size>11</size>
       <weight>Bold</weight>
       <slant>Normal</slant>
     </font>
     <font place="MenuHeader">
-      <name>Droid Sans</name>
-      <size>10</size>
+      <name>Roboto</name>
+      <size>11</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="MenuItem">
-      <name>Droid Sans</name>
-      <size>10</size>
+      <name>Roboto</name>
+      <size>11</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="ActiveOnScreenDisplay">
-      <name>Droid Sans</name>
-      <size>10</size>
+      <name>Roboto</name>
+      <size>11</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="InactiveOnScreenDisplay">
-      <name>Droid Sans</name>
-      <size>10</size>
+      <name>Roboto</name>
+      <size>11</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
@@ -100,26 +100,34 @@
   </dock>
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
+    <!--
+		Here I tried to mimic the controls of i3wm with few exeptions:
+		 - keybindings are adapted for left-hand use (considering the right is on the mouse) - 
+		   that's why I use asdf to move windows around, not jkl;
+		 - terminal is launched by Alt + t for the same reason
+		 - Win + Tab cycles windows instead of Alt+Tab just for consistency
+		 - Mod1 is Win key otherwise the keybindings would interfere with zsh emacs mode
+    -->
     <!-- show terminal -->
-    <keybind key="A-t">
+    <keybind key="W-t">
       <action name="Execute">
         <command>alacritty</command>
       </action>
     </keybind>
     <!-- Show rofi -->
-    <keybind key="A-d">
+    <keybind key="W-d">
       <action name="Execute">
         <command>rofi -show run -theme ~/.config/rofi/drun.rasi -font "Droid Sans 10"</command>
       </action>
     </keybind>
     <!-- exit openbox -->
-    <keybind key="A-S-e">
+    <keybind key="W-S-e">
       <action name="Execute">
         <command>oblogout</command>
       </action>
     </keybind>
     <!-- log out -->
-    <keybind key="A-S-r">
+    <keybind key="W-S-r">
       <action name="Execute">
         <command>openbox --exit</command>
       </action>
@@ -131,53 +139,53 @@
       </action>
     </keybind>
     <!-- switch workspaces -->
-    <keybind key="A-1">
+    <keybind key="W-1">
       <action name="GoToDesktop">
         <to>1</to>
       </action>
     </keybind>
-    <keybind key="A-2">
+    <keybind key="W-2">
       <action name="GoToDesktop">
         <to>2</to>
       </action>
     </keybind>
-    <keybind key="A-3">
+    <keybind key="W-3">
       <action name="GoToDesktop">
         <to>3</to>
       </action>
     </keybind>
-    <keybind key="A-4">
+    <keybind key="W-4">
       <action name="GoToDesktop">
         <to>4</to>
       </action>
     </keybind>
     <!-- move window to another workspace -->
-    <keybind key="A-S-1">
+    <keybind key="W-S-1">
       <action name="SendToDesktop">
         <to>1</to>
       </action>
     </keybind>
-    <keybind key="A-S-2">
+    <keybind key="W-S-2">
       <action name="SendToDesktop">
         <to>2</to>
       </action>
     </keybind>
-    <keybind key="A-S-3">
+    <keybind key="W-S-3">
       <action name="SendToDesktop">
         <to>3</to>
       </action>
     </keybind>
-    <keybind key="A-S-4">
+    <keybind key="W-S-4">
       <action name="SendToDesktop">
         <to>4</to>
       </action>
     </keybind>
     <!-- close window -->
-    <keybind key="A-S-q">
+    <keybind key="W-S-q">
       <action name="Close"/>
     </keybind>
     <!-- maximize window -->
-    <keybind key="A-f">
+    <keybind key="W-f">
       <action name="Unmaximize"/>
       <action name="MoveResizeTo">
         <x>1%</x>
@@ -187,7 +195,7 @@
       </action>
     </keybind>
     <!-- cycle windows -->
-    <keybind key="A-Tab">
+    <keybind key="W-Tab">
       <action name="NextWindow">
         <finalactions>
           <action name="Focus"/>
@@ -204,17 +212,17 @@
 
 	┌───────────╥───────┐  ┌─────────────────────┐   ┌─────────────╥─────────┐
 	│           ║       │  │                     │   │             ║         │
-	│           ║       │  │     Alt + H   d     │   │   Alt+V d   ║ Alt+H f │
-	│  Alt + V  ║  Alt  │  │                     │   │             ║         │
+	│           ║       │  │     Win + H   d     │   │   Win+V d   ║ Win+H f │
+	│  Win + V  ║  Alt  │  │                     │   │             ║         │
 	│           ║  + V  │  ╞═════════════════════╡   ╞═════════════╬═════════╡
 	│     a     ║   f   │  │                     │   │             ║         │
-	│           ║       │  │     Alt + H   s     │   │   Alt+H a   ║ Alt+V s │
+	│           ║       │  │     Win + H   s     │   │   Win+H a   ║ Win+V s │
 	│           ║       │  │                     │   │             ║         │
 	└───────────╨───────┘  └─────────────────────┘   └─────────────╨─────────┘
 
     -->
     <!-- vertical split -->
-    <keybind key="A-v">
+    <keybind key="W-v">
       <keybind key="a">
         <action name="Unmaximize"/>
         <action name="MoveResizeTo">
@@ -253,7 +261,7 @@
       </keybind>
     </keybind>
     <!-- horizontal split -->
-    <keybind key="A-h">
+    <keybind key="W-h">
       <keybind key="d">
         <action name="Unmaximize"/>
         <action name="MoveResizeTo">
@@ -295,7 +303,7 @@
     place a raised focused window of a fixed fize 
     in the center of the screen 
     -->
-    <keybind key="A-space">
+    <keybind key="W-space">
       <action name="Focus"/>
       <action name="Raise"/>
       <action name="Unmaximize"/>
@@ -309,7 +317,7 @@
     <!--
     send a window to the background
     -->
-    <keybind key="A-Escape">
+    <keybind key="W-Escape">
       <action name="Lower"/>
       <action name="FocusToBottom"/>
       <action name="Unfocus"/>

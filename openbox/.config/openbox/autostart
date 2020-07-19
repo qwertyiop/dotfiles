@@ -5,7 +5,7 @@ numlockx &
 pcmanfm --desktop &
 lxpolkit &
 redshift &
-compton --config ~/.config/compton/compton.conf -b &
+picom --config ~/.config/picom/picom.cnf -b &
 polybar -c ~/.config/polybar/polybar.cnf top &
 polybar -c ~/.config/polybar/polybar.cnf bottom &
 

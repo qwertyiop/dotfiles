@@ -14,11 +14,13 @@ format-connected = <ramp-signal>
 format-connected-background = ${color.bg_alt}
 format-connected-suffix = 
 format-connected-suffix-background = ${color.bg_alt}
+format-connected-suffix-foreground = ${color.bg}
 
 format-packetloss = <ramp-signal>
 format-packetloss-background = ${color.bg_alt}
 format-packetloss-suffix = 
 format-packetloss-suffix-background = ${color.bg_alt}
+format-packetloss-suffix-foreground = ${color.bg}
 
 format-disconnected = <label-disconnected>
 
@@ -40,11 +42,13 @@ format-connected = <label-connected>
 format-connected-background = ${color.bg_alt}
 format-connected-suffix = 
 format-connected-suffix-background = ${color.bg_alt}
+format-connected-suffix-foreground = ${color.bg}
 
 format-disconnected = <label-disconnected>
 format-disconnected-background = ${color.bg_alt}
 format-disconnected-suffix = 
 format-disconnected-suffix-background = ${color.bg_alt}
+format-disconnected-suffix-foreground = ${color.bg}
 
 #####################################################################
 
@@ -61,6 +65,7 @@ format-volume-background = ${color.bg_alt}
 format-volume-prefix = 
 format-volume-prefix-padding-right = 1
 format-volume-prefix-background = ${color.bg_alt}
+format-volume-prefix-foreground = ${color.bg}
 
 label-muted = 󰖁
 format-muted = <label-muted>
@@ -69,6 +74,7 @@ format-muted-background = ${color.bg_alt}
 format-muted-prefix = 
 format-muted-prefix-padding-right = 1
 format-muted-prefix-background = ${color.bg_alt}
+format-muted-prefix-foreground = ${color.bg}
 
 #####################################################################
 
@@ -111,8 +117,11 @@ label-padding = 2
 format = <label>
 format-prefix = 
 format-prefix-background = ${color.bg_alt}
+format-prefix-foreground = ${color.bg}
+
 format-suffix = 
 format-suffix-background = ${color.bg_alt}
+format-suffix-foreground = ${color.bg}
 
 #####################################################################
 
@@ -149,6 +158,7 @@ format-prefix-background = ${color.bg}
 
 format-suffix = 
 format-suffix-background = ${color.bg_alt}
+format-suffix-foreground = ${color.bg}
 
 #####################################################################
 
@@ -188,6 +198,7 @@ type = custom/text
 
 content = 
 content-background = ${color.bg_alt}
+content-foreground = ${color.bg}
 
 #####################################################################
 
@@ -307,6 +318,7 @@ format-background = ${color.bg_alt}
 
 format-suffix = 
 format-suffix-background = ${color.bg_alt}
+format-suffix-foreground = ${color.bg}
 
 #####################################################################
 
@@ -335,61 +347,11 @@ format-online-background = ${color.bg_alt}
 format-online-prefix = 
 format-online-prefix-padding-right = 1
 format-online-prefix-background = ${color.bg_alt}
+format-online-prefix-foreground = ${color.bg}
 
 format-offline = <label-offline>
 format-offline-background = ${color.bg_alt}
 format-offline-prefix = 
 format-offline-prefix-padding-right = 1
 format-offline-prefix-background = ${color.bg_alt}
-
-#####################################################################
-
-# application launchers
-
-[module/terminal]
-type = custom/text
-content = 󰆍
-content-underline = ${color.fg_alt}
-content-foreground = ${color.fg_alt}
-content-margin = 1
-click-left = alacritty &
-
-[module/filemanager]
-type = custom/text
-content = 󰉋
-content-underline = ${color.fg_alt}
-content-foreground = ${color.fg_alt}
-content-margin = 1
-click-left = pcmanfm &
-
-[module/browser]
-type = custom/text
-content = 󰈹
-content-underline = ${color.fg_alt}
-content-foreground = ${color.fg_alt}
-content-margin = 1
-click-left = firefox &
-
-[module/mailclient]
-type = custom/text
-content = 󰇮
-content-underline = ${color.fg_alt}
-content-foreground = ${color.fg_alt}
-content-margin = 1
-click-left = thunderbird &
-
-[module/passwdmanager]
-type = custom/text
-content = 󰌋
-content-underline = ${color.fg_alt}
-content-foreground = ${color.fg_alt}
-content-margin = 1
-click-left = keepassxc &
-
-[module/calc]
-type = custom/text
-content = 󰃬
-content-underline = ${color.fg_alt}
-content-foreground = ${color.fg_alt}
-content-margin = 1
-click-left = galculator &
+format-offline-suffix-foreground = ${color.bg}
