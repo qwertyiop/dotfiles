@@ -30,4 +30,3 @@ alias \
 	dnfsr="dnf search" \
 	dnfsl="dnf list installed | grep" \
 	dnfcl="sudo dnf clean" \
-	dnfmc="sudo dnf makecache" \
