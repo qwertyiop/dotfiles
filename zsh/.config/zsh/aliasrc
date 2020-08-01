@@ -6,6 +6,7 @@ alias e="$EDITOR"
 
 alias shutdown="shutdown -h now"
 alias starttmux="tmux -f $HOME/.config/tmux/tmux.conf new -s default"
+alias visudo="sudo visudo"
 
 # colorize all the things
 alias \
@@ -13,7 +14,7 @@ alias \
 	fgrep="fgrep --color=auto" \
 	egrep="egrep --color=auto" \
 	diff="diff --color=auto" \
-	ls="lsd -a --group-dirs first" \
+	ls="lsd -al --group-dirs first" \
 	mc="mc --nocolor" \
 	ping="grc --colour=auto ping -c 5" \
 	traceroute="grc --colour=auto traceroute" \
@@ -21,6 +22,10 @@ alias \
 	diff="grc --colour=auto diff" \
 	cvs="grc --colour=auto cvs" \
 	netstat="grc --colour=auto netstat" \
+	lspci="grc --colour=auto lspci" \
+	lsblk="grc --colour=auto lsblk" \
+	lsof="grc --colour=auto lsof" \
+	lsmod="grc --colour=auto lsmod" \
 
 # dnf shortcuts
 alias \

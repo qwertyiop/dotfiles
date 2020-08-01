@@ -117,7 +117,7 @@
     <!-- Show rofi -->
     <keybind key="W-d">
       <action name="Execute">
-        <command>rofi -show run -theme ~/.config/rofi/drun.rasi -font "Droid Sans 10"</command>
+        <command>rofi -show run -theme ~/.config/rofi/drun.rasi -font "Roboro 11"</command>
       </action>
     </keybind>
     <!-- exit openbox -->
@@ -206,7 +206,7 @@
     </keybind>
     <!--
 
-		Bindings for slit modes:
+		Bindings for split modes:
 
 		2x2 vertical		    2x2 horizontal           4x4 window split 
 
@@ -358,36 +358,6 @@
         <action name="Lower"/>
         <action name="FocusToBottom"/>
         <action name="Unfocus"/>
-      </mousebind>
-      <mousebind button="A-Up" action="Click">
-        <action name="GoToDesktop">
-          <to>previous</to>
-        </action>
-      </mousebind>
-      <mousebind button="A-Down" action="Click">
-        <action name="GoToDesktop">
-          <to>next</to>
-        </action>
-      </mousebind>
-      <mousebind button="C-A-Up" action="Click">
-        <action name="GoToDesktop">
-          <to>previous</to>
-        </action>
-      </mousebind>
-      <mousebind button="C-A-Down" action="Click">
-        <action name="GoToDesktop">
-          <to>next</to>
-        </action>
-      </mousebind>
-      <mousebind button="A-S-Up" action="Click">
-        <action name="SendToDesktop">
-          <to>previous</to>
-        </action>
-      </mousebind>
-      <mousebind button="A-S-Down" action="Click">
-        <action name="SendToDesktop">
-          <to>next</to>
-        </action>
       </mousebind>
     </context>
     <context name="Titlebar">
@@ -581,7 +551,7 @@
         <action name="Close"/>
       </mousebind>
     </context>
-    <context name="Desktop">
+    <context name="Desktop"><!--
       <mousebind button="Up" action="Click">
         <action name="GoToDesktop">
           <to>previous</to>
@@ -601,7 +571,7 @@
         <action name="GoToDesktop">
           <to>next</to>
         </action>
-      </mousebind>
+      </mousebind>-->
       <mousebind button="C-A-Up" action="Click">
         <action name="GoToDesktop">
           <to>previous</to>

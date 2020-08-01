@@ -1,5 +1,6 @@
 # Desktop environment
 
+$HOME/.config/userscripts/dual-head.sh &
 xbindkeys &
 numlockx &
 pcmanfm --desktop &

@@ -354,4 +354,4 @@ format-offline-background = ${color.bg_alt}
 format-offline-prefix = 
 format-offline-prefix-padding-right = 1
 format-offline-prefix-background = ${color.bg_alt}
-format-offline-suffix-foreground = ${color.bg}
+format-offline-prefix-foreground = ${color.bg}
