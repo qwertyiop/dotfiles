@@ -1,4 +1,5 @@
 # Defaults
 
-export EDITOR="micro"
+export VISUAL="nano"
+export EDITOR="nano"
 export FILE="mc"

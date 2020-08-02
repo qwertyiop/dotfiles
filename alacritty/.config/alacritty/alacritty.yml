@@ -48,15 +48,15 @@ colors:
 font:
 
   normal:
-    family: MesloLGM Nerd Font Mono
+    family: Meslo LGM Nerd Font Mono
     style: Regular
 
   bold:
-    family: MesloLGM Nerd Font Mono
+    family: Meslo LGM Nerd Font Mono
     style: Bold
 
   italic:
-    family: MesloLGM Nerd Font Mono
+    family: Meslo LGM Nerd Font Mono
     style: Italic
 
   size: 12
