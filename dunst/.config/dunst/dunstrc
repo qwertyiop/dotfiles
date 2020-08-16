@@ -12,7 +12,7 @@
     separator_color = frame
     sort = yes
     idle_threshold = 120
-    font = Droid Sans Regular 10
+    font = Roboto Regular 11
     line_height = 1
     markup = full
     format = "<b>%s</b>\n%b"

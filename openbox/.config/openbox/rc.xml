@@ -156,7 +156,7 @@
       </action>
     </keybind>
     <keybind key="W-3">
-      <action name="GoToDeFsktop">
+      <action name="GoToDesktop">
         <to>3</to>
       </action>
     </keybind>
