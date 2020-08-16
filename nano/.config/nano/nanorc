@@ -1,5 +1,7 @@
+# General
 include */usr/share/nano/*.nanorc*
 include ~/.config/nano/highlighting/*.nanorc*
+set morespace
 set linenumbers
 set constantshow
 set mouse
@@ -8,3 +10,42 @@ set autoindent
 set softwrap
 set tabsize 2
 set tabstospaces
+set afterends
+set matchbrackets "(<[{)>]}"
+set noconvert
+set speller "hunspell"
+
+# Keybindings
+
+unbind ^K main
+unbind ^U all
+unbind ^W main
+unbind ^Y all
+unbind ^N main
+
+bind ^O insert main
+bind ^S writeout main
+bind ^Q exit all
+bind ^H help all
+
+bind ^P prevword main
+bind ^N nextword main
+bind ^B firstline main
+bind ^E lastline main
+bind ^L curpos main
+bind ^J gotoline main
+
+bind ^Space mark main
+bind ^X cut all
+bind ^C copy main
+bind ^V paste all
+
+bind ^F whereis all
+bind ^G findnext all
+bind ^D findprevious all
+bind ^R replace main
+
+bind ^Z undo main
+bind ^Y redo main
+
+bind M-A nohelp main
