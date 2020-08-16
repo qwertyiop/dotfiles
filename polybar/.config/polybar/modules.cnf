@@ -3,11 +3,11 @@ type = internal/network
 interface = wlan0
 interval = 1
 
-ramp-signal-0 = 󰤯 
-ramp-signal-1 = 󰤟 
-ramp-signal-2 = 󰤢 
-ramp-signal-3 = 󰤥 
-ramp-signal-4 = 󰤨 
+ramp-signal-0 = 󰤯
+ramp-signal-1 = 󰤟
+ramp-signal-2 = 󰤢
+ramp-signal-3 = 󰤥
+ramp-signal-4 = 󰤨
 ramp-signal-padding = 1
 
 format-connected = <ramp-signal>
@@ -34,7 +34,7 @@ interface = enp14s0
 interval = 1
 
 label-connected = 󰌘
-label-disconnected = 
+label-disconnected =
 label-connected-padding = 2
 label-disconnected-padding = 2
 
@@ -85,14 +85,14 @@ format = <label>
 format-foreground = ${color.fg_alt}
 
 label = %title:0:120:...%
-label-empty = 
+label-empty =
 
 #####################################################################
 
 [module/date]
 type = custom/script
 exec = "/usr/bin/date '+%a, %d %B'"
-interval = 2 
+interval = 2
 
 label = "󰃭 %output%"
 label-padding = 2

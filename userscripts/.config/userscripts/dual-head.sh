@@ -11,10 +11,10 @@ MONITOR="$int"
 
 # switch from LVDS1 to HDMI and vice versa
 function ActivateMultihead {
-	xrandr --output "$int" --auto --output "$ext" --primary --left-of "$int" --auto
+	xrandr --output "$int" --primary --auto --output "$ext" --auto --right-of "$int"
 }
 function DeactivateMultihead {
-	xrandr --output "$ext" --off --output "$int" --auto --primary
+	xrandr --output "$ext" --off --output "$int" --primary --auto
 }
 
 # check if HDMI is connected and in use

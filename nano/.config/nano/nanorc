@@ -1,4 +1,5 @@
 include */usr/share/nano/*.nanorc*
+include ~/.config/nano/highlighting/*.nanorc*
 set linenumbers
 set constantshow
 set mouse

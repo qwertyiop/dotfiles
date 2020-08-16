@@ -34,4 +34,3 @@ alias \
 	dnfup="sudo dnf upgrade" \
 	dnfsr="dnf search" \
 	dnfsl="dnf list installed | grep" \
-	dnfcl="sudo dnf clean" \

@@ -132,6 +132,12 @@
         <command>openbox --exit</command>
       </action>
     </keybind>
+    <!-- lock -->
+    <keybind key="W-S-l">
+      <action name="Execute">
+        <command>dm-tool lock</command>
+      </action>
+    </keybind>
     <!-- Take screenshot -->
     <keybind key="Print">
       <action name="Execute">
@@ -150,13 +156,25 @@
       </action>
     </keybind>
     <keybind key="W-3">
-      <action name="GoToDesktop">
+      <action name="GoToDeFsktop">
         <to>3</to>
       </action>
     </keybind>
     <keybind key="W-4">
       <action name="GoToDesktop">
         <to>4</to>
+      </action>
+    </keybind>
+    <!-- move window to monitor 1 -->
+    <keybind key="W-S-a">
+      <action name="MoveResizeTo">
+        <monitor>1</monitor>
+      </action>
+    </keybind>
+    <!-- move window to monitor 2 -->
+    <keybind key="W-S-f">
+      <action name="MoveResizeTo">
+        <monitor>2</monitor>
       </action>
     </keybind>
     <!-- move window to another workspace -->
