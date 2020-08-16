@@ -569,7 +569,8 @@
         <action name="Close"/>
       </mousebind>
     </context>
-    <context name="Desktop"><!--
+    <context name="Desktop">
+      <!--
       <mousebind button="Up" action="Click">
         <action name="GoToDesktop">
           <to>previous</to>
