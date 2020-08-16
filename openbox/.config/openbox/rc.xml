@@ -102,7 +102,7 @@
     <chainQuitKey>C-g</chainQuitKey>
     <!--
 		Here I tried to mimic the controls of i3wm with few exeptions:
-		 - keybindings are adapted for left-hand use (considering the right is on the mouse) - 
+		 - keybindings are adapted for left-hand use (considering the right is on the mouse) -
 		   that's why I use asdf to move windows around, not jkl;
 		 - terminal is launched by Alt + t for the same reason
 		 - Win + Tab cycles windows instead of Alt+Tab just for consistency
@@ -226,7 +226,7 @@
 
 		Bindings for split modes:
 
-		2x2 vertical		    2x2 horizontal           4x4 window split 
+		2x2 vertical		    2x2 horizontal           4x4 window split
 
 	┌───────────╥───────┐  ┌─────────────────────┐   ┌─────────────╥─────────┐
 	│           ║       │  │                     │   │             ║         │
@@ -317,9 +317,9 @@
         </action>
       </keybind>
     </keybind>
-    <!-- 
-    place a raised focused window of a fixed fize 
-    in the center of the screen 
+    <!--
+    place a raised focused window of a fixed fize
+    in the center of the screen
     -->
     <keybind key="W-space">
       <action name="Focus"/>
@@ -570,7 +570,6 @@
       </mousebind>
     </context>
     <context name="Desktop">
-      <!--
       <mousebind button="Up" action="Click">
         <action name="GoToDesktop">
           <to>previous</to>
