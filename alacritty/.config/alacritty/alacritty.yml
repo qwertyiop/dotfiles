@@ -23,7 +23,7 @@ colors:
 
   cursor:
     text: '#e4e4e4'
-#   cursor: '#e4e4e4'
+#    cursor: '#e4e4e4'
 
   normal:
     black:   '#000000'
