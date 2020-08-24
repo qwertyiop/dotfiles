@@ -96,7 +96,7 @@ interval = 2
 
 label = "󰃭 %output%"
 label-padding = 2
-click-left = "zenity --calendar"
+click-left = "~/.config/userscripts/popup-calendar.sh --popup &"
 
 format = <label>
 format-background = ${color.bg_alt}
