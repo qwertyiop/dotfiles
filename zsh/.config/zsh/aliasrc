@@ -2,11 +2,34 @@
 
 # Aliases
 
-alias e="$EDITOR"
+# general
+alias \
+  e="$EDITOR" \
+  shutdown="shutdown -h now" \
+  visudo="sudo visudo" \
+  wifi="sudo wifi" \
+  wget="wget -c" \
+  mkdir="mkdir -p" \
+  sudo="sudo " \
 
-alias shutdown="shutdown -h now"
-alias starttmux="tmux -f $HOME/.config/tmux/tmux.conf new -s default"
-alias visudo="sudo visudo"
+# systemd
+alias \
+  sc-enable="sudo systemctl enable" \
+  sc-disable="sudo systemctl disable" \
+  sc-restart="sudo systemctl restart" \
+  sc-start="sudo systemctl start" \
+  sc-stop="sudo systemctl stop" \
+  sc-mask="sudo systemctl mask" \
+
+# failsaves
+alias \
+  rm="rm -I --preserve-root" \
+  mv="mv -i" \
+  cp="cp -i" \
+  ln="ln -i" \
+  chown="chown --preserve-root" \
+  chmod="chmod --preserve-root" \
+  chgrp="chgrp --preserve-root" \
 
 # colorize all the things
 alias \
@@ -29,8 +52,64 @@ alias \
 
 # dnf shortcuts
 alias \
+  dnfarm="sudo dnf autoremove" \
 	dnfin="sudo dnf install" \
 	dnfrm="sudo dnf remove" \
 	dnfup="sudo dnf upgrade" \
+	dnfcm="sudo dnf config-manager" \
 	dnfsr="dnf search" \
 	dnfsl="dnf list installed | grep" \
+
+# random
+alias \
+  starttmux="tmux -f $HOME/.config/tmux/tmux.conf new -s default" \
+
+# archive files easily
+# see https://wiki.archlinux.org/index.php/Zsh_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)#%D0%A3%D0%BF%D0%B0%D0%BA%D0%BE%D0%B2%D0%BA%D0%B0_%D0%B2_%D0%B0%D1%80%D1%85%D0%B8%D0%B2
+function pk () {
+  if [ $1 ] ; then
+    case $1 in
+      tbz)       tar cjvf $2.tar.bz2 $2      ;;
+      tgz)       tar czvf $2.tar.gz  $2       ;;
+      tar)      tar cpvf $2.tar  $2       ;;
+      bz2)    bzip $2 ;;
+      gz)        gzip -c -9 -n $2 > $2.gz ;;
+      zip)       zip -r $2.zip $2   ;;
+      7z)        7z a $2.7z $2    ;;
+      *)         echo "'$1' не может быть упакован с помощью pk()" ;;
+    esac
+  else
+    echo "'$1' не является допустимым файлом"
+  fi
+}
+
+# same for extracting
+# https://wiki.archlinux.org/index.php/Zsh_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)#%D0%A0%D0%B0%D1%81%D0%BF%D0%B0%D0%BA%D0%BE%D0%B2%D0%BA%D0%B0_%D0%B0%D1%80%D1%85%D0%B8%D0%B2%D0%B0
+function ex () {
+  if [ -f $1 ] ; then
+    case $1 in
+      *.tar.bz2) tar xvjf $1   ;;
+      *.tar.gz)  tar xvzf $1   ;;
+      *.tar.xz)  tar xvfJ $1   ;;
+      *.bz2)     bunzip2 $1    ;;
+      *.rar)     unrar x $1    ;;
+      *.gz)      gunzip $1     ;;
+      *.tar)     tar xvf $1    ;;
+      *.tbz2)    tar xvjf $1   ;;
+      *.tgz)     tar xvzf $1   ;;
+      *.zip)     unzip $1      ;;
+      *.Z)       uncompress $1 ;;
+      *.7z)      7z x $1       ;;
+      *)         echo "'$1' не может быть распакован при помощи >ex<" ;;
+    esac
+  else
+    echo "'$1' не является допустимым файлом"
+ fi
+}
+
+# reload zsh config
+function reload () {
+       source $ZDOTDIR/.zshrc
+       source $ZDOTDIR/.zprofile
+       source $ZDOTDIR/aliasrc
+   }
