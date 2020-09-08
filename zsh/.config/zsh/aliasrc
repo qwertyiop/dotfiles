@@ -5,21 +5,24 @@
 # general
 alias \
   e="$EDITOR" \
+  sudo="sudo " \
   shutdown="shutdown -h now" \
   visudo="sudo visudo" \
   wifi="sudo wifi" \
   wget="wget -c" \
   mkdir="mkdir -p" \
-  sudo="sudo " \
+  ping="ping -c 5" \
+  t="(tmux has-session 2>/dev/null && tmux attach) || (tmux -f $HOME/.config/tmux/tmux.conf new -s default)" \
 
 # systemd
 alias \
-  sc-enable="sudo systemctl enable" \
-  sc-disable="sudo systemctl disable" \
-  sc-restart="sudo systemctl restart" \
-  sc-start="sudo systemctl start" \
-  sc-stop="sudo systemctl stop" \
-  sc-mask="sudo systemctl mask" \
+  systemctl="grc --colour=auto" \
+  sc-enable="sudo grc --colour=auto systemctl enable" \
+  sc-disable="sudo --colour=auto systemctl disable" \
+  sc-restart="sudo --colour=auto systemctl restart" \
+  sc-start="sudo --colour=auto systemctl start" \
+  sc-stop="sudo --colour=auto systemctl stop" \
+  sc-mask="sudo --colour=auto systemctl mask" \
 
 # failsaves
 alias \
@@ -60,23 +63,35 @@ alias \
 	dnfsr="dnf search" \
 	dnfsl="dnf list installed | grep" \
 
-# random
+# git
 alias \
-  starttmux="tmux -f $HOME/.config/tmux/tmux.conf new -s default" \
+  gaa="git add --all" \
+  gc="git commit -a" \
+  gpom="git push -u origin master" \
+
+# improved cd
+alias \
+  ..="cd .." \
+  .2="cd ../../" \
+  .3="cd ../../../" \
+  .4="cd ../../../../" \
+  .5="cd ../../../../../" \
+
+# Functions
 
 # archive files easily
 # see https://wiki.archlinux.org/index.php/Zsh_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)#%D0%A3%D0%BF%D0%B0%D0%BA%D0%BE%D0%B2%D0%BA%D0%B0_%D0%B2_%D0%B0%D1%80%D1%85%D0%B8%D0%B2
 function pk () {
   if [ $1 ] ; then
     case $1 in
-      tbz)       tar cjvf $2.tar.bz2 $2      ;;
-      tgz)       tar czvf $2.tar.gz  $2       ;;
-      tar)      tar cpvf $2.tar  $2       ;;
-      bz2)    bzip $2 ;;
-      gz)        gzip -c -9 -n $2 > $2.gz ;;
-      zip)       zip -r $2.zip $2   ;;
-      7z)        7z a $2.7z $2    ;;
-      *)         echo "'$1' не может быть упакован с помощью pk()" ;;
+      tbz)  tar cjvf $2.tar.bz2 $2   ;;
+      tgz)  tar czvf $2.tar.gz  $2   ;;
+      tar)  tar cpvf $2.tar  $2      ;;
+      bz2)  bzip $2                  ;;
+      gz)   gzip -c -9 -n $2 > $2.gz ;;
+      zip)  zip -r $2.zip $2         ;;
+      7z)   7z a $2.7z $2            ;;
+      *)    echo "'$1' не может быть упакован с помощью pk()" ;;
     esac
   else
     echo "'$1' не является допустимым файлом"
@@ -109,7 +124,28 @@ function ex () {
 
 # reload zsh config
 function reload () {
-       source $ZDOTDIR/.zshrc
-       source $ZDOTDIR/.zprofile
-       source $ZDOTDIR/aliasrc
-   }
+  source $ZDOTDIR/.zshrc
+  source $ZDOTDIR/.zprofile
+  source $ZDOTDIR/aliasrc
+}
+
+# mkcd command
+# This is an improvised version of the mkcd command at http://superuser.com/questions/152794/is-there-a-shortcut-to-mkdir-foo-and-immediately-cd-into-it
+# This function has to be added to the ~/.bashrc file
+# After that you can run command like: mkdir abc, mkdir -p one/two/three
+# see https://gist.github.com/rajeshg/712300
+function mkcd {
+  last=$(eval "echo \$$#")
+  if [ ! -n "$last" ]; then
+    echo "Введите имя папки"
+  elif [ -d $last ]; then
+    echo "Папка \`$last' уже существует"
+  else
+    mkdir -pv $@ && cd $last
+  fi
+}
+
+# backup file
+function backup () {
+  cp -- "$1"{,.bak};
+}

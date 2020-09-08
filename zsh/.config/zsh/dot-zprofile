@@ -2,4 +2,5 @@
 
 export VISUAL="nano"
 export EDITOR="nano"
+export SUDO_EDITOR="nano"
 export FILE="mc"
