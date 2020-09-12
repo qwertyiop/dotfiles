@@ -1,8 +1,8 @@
 # Shadow
 shadow = true;
 shadow-radius = 2;
-shadow-offset-x = 2;
-shadow-offset-y = 2;
+shadow-offset-x = 5;
+shadow-offset-y = 5;
 shadow-opacity = 0.3;
 shadow-exclude = [
 	"class_g = 'VirtualBox Machine'",
@@ -14,7 +14,7 @@ shadow-exclude = [
 ];
 
 # Opacity
-opacity-rule = [ 
+opacity-rule = [
 #	"70:class_g *?= 'rofi'",
 ];
 inactive-dim = 0.15;
@@ -37,7 +37,7 @@ dbe = false;
 unredir-if-possible = true;
 # unredir-if-possible-delay = 5000;
 # unredir-if-possible-exclude = [ ];
-focus-exclude = [ 
+focus-exclude = [
 	"class_g = 'mpv'",
 	"class_g = 'VirtualBox Machine'",
 	"class_g = 'Kodi'",

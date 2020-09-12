@@ -6,6 +6,7 @@
 alias \
   e="$EDITOR" \
   sudo="sudo " \
+  s="sudo" \
   shutdown="shutdown -h now" \
   visudo="sudo visudo" \
   wifi="sudo wifi" \
@@ -13,16 +14,13 @@ alias \
   mkdir="mkdir -p" \
   ping="ping -c 5" \
   t="(tmux has-session 2>/dev/null && tmux attach) || (tmux -f $HOME/.config/tmux/tmux.conf new -s default)" \
+  wtf="journalctl" \
 
 # systemd
 alias \
-  systemctl="grc --colour=auto" \
-  sc-enable="sudo grc --colour=auto systemctl enable" \
-  sc-disable="sudo --colour=auto systemctl disable" \
-  sc-restart="sudo --colour=auto systemctl restart" \
-  sc-start="sudo --colour=auto systemctl start" \
-  sc-stop="sudo --colour=auto systemctl stop" \
-  sc-mask="sudo --colour=auto systemctl mask" \
+  sc="grc --colour=auto systemctl" \
+  scu="grc --colour=auto systemctl --user" \
+  unfuck="sudo systemctl reload" \
 
 # failsaves
 alias \
