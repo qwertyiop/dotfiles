@@ -13,8 +13,8 @@ alias \
   wget="wget -c" \
   mkdir="mkdir -p" \
   ping="ping -c 5" \
-  t="(tmux has-session 2>/dev/null && tmux attach) || (tmux -f $HOME/.config/tmux/tmux.conf new -s default)" \
   wtf="journalctl" \
+  btctl="bluetoothctl" \
 
 # systemd
 alias \
@@ -61,10 +61,16 @@ alias \
 	dnfsr="dnf search" \
 	dnfsl="dnf list installed | grep" \
 
+# tmux
+alias \
+  t="(tmux has-session 2>/dev/null && tmux attach) || (tmux -f $HOME/.config/tmux/tmux.conf new -s default)" \
+  tks="tmux kill-ses" \
+
 # git
 alias \
   gaa="git add --all" \
-  gc="git commit -a" \
+  gcma="git commit -a" \
+  gcl="git clone" \
   gpom="git push -u origin master" \
 
 # improved cd
