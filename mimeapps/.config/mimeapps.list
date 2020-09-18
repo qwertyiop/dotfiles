@@ -1,0 +1,21 @@
+[Added Associations]
+image/svg+xml=viewnior.desktop;
+image/gif=viewnior.desktop;
+image/jpeg=viewnior.desktop;
+image/png=viewnior.desktop;
+application/pdf=org.pwmt.zathura.desktop;xreader.desktop;
+text/plain=leafpad.desktop;
+font/ttf=org.gnome.FontViewer.desktop;
+font/otf=org.gnome.FontViewer.desktop;
+image/webp=pinta.desktop;viewnior.desktop;
+image/vnd.djvu+multipage=org.pwmt.zathura.desktop;
+
+[Default Applications]
+image/svg+xml=viewnior.desktop
+image/gif=viewnior.desktop
+image/png=viewnior.desktop
+application/pdf=org.pwmt.zathura.desktop
+text/plain=leafpad.desktop
+font/ttf=org.gnome.FontViewer.desktop
+font/otf=org.gnome.FontViewer.desktop
+image/vnd.djvu+multipage=org.pwmt.zathura.desktop

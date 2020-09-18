@@ -1,7 +1,1 @@
-# Defaults
 
-export VISUAL="nano"
-export EDITOR="nano"
-export SUDO_EDITOR="nano"
-export FILE="mc"
-export DOTS="$HOME/Files/git-repos/dots"

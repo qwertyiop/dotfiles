@@ -1,0 +1,8 @@
+# Defaults
+
+export LC_COLLATE=C
+export VISUAL="nano"
+export EDITOR="nano"
+export SUDO_EDITOR="nano"
+export FILE="lf"
+export DOTS="$HOME/Files/git-repos/dots"
