@@ -7,7 +7,7 @@ application/pdf=org.pwmt.zathura.desktop;xreader.desktop;
 text/plain=leafpad.desktop;
 font/ttf=org.gnome.FontViewer.desktop;
 font/otf=org.gnome.FontViewer.desktop;
-image/webp=pinta.desktop;viewnior.desktop;
+image/webp=viewnior.desktop;
 image/vnd.djvu+multipage=org.pwmt.zathura.desktop;
 
 [Default Applications]
