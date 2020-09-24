@@ -23,7 +23,6 @@ colors:
 
   cursor:
     text: '#e4e4e4'
-#    cursor: '#e4e4e4'
 
   normal:
     black:   '#000000'
@@ -71,8 +70,8 @@ cursor:
 live_config_reload: true
 
 key_bindings:
-  - { key: V,           mods: Shift|Alt,     action: Paste            }
-  - { key: C,           mods: Shift|Alt,     action: Copy             }
+  - { key: V,           mods: Control,       action: Paste            }
+  - { key: C,           mods: Control,       action: Copy             }
   - { key: Insert,      mods: Shift,         action: PasteSelection   }
   - { key: Divide,      mods: Control,       action: ResetFontSize    }
   - { key: Equals,      mods: Control,       action: IncreaseFontSize }

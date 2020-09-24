@@ -4,8 +4,9 @@ syntax "Conf" "\.c[o]?nf$"
 ## Possible errors and parameters
 ## Strings
 icolor white ""(\\.|[^"])*""
+color brightyellow "^[[:space:]]*\[.*\]$"
 ## Comments
-icolor brightblue "^[[:space:]]*#.*$"
+icolor cyan "^[[:space:]]*#.*$"
 icolor cyan "^[[:space:]]*##.*$"
 ## Trailing spaces
 color ,green "[[:space:]]+$"

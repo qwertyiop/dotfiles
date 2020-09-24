@@ -4,9 +4,11 @@
 #
 
 # To set your language for displaying messages and time/date formats, use the following:
-LANG=ru_RU.UTF8
+LANG=ru_RU.UTF-8
 
 # To set your keyboard layout, you need to modify your X config:
 # http://www.google.com/search?q=how+to+set+keyboard+layout+xorg
+
+setxkbmap -option terminate:ctrl_alt_bksp,compose:menu
 
 export QT_QPA_PLATFORMTHEME="qt5ct"

@@ -15,7 +15,7 @@ alias \
   ping="ping -c 5" \
   wtf="journalctl" \
   btctl="bluetoothctl" \
-  cls="clear" \
+  ka="kill -a" \
 
 # systemd
 alias \
@@ -132,7 +132,6 @@ function reload () {
   source $ZDOTDIR/.zshenv
   source $ZDOTDIR/.zprofile
   source $ZDOTDIR/.zshrc
-  source $ZDOTDIR/aliasrc
 }
 
 # mkcd command

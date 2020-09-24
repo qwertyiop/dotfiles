@@ -13,7 +13,7 @@
     sort = yes
     idle_threshold = 120
     font = Roboto Regular 11
-    line_height = 1
+    line_height = 2
     markup = full
     format = "<b>%s</b>\n%b"
     alignment = left

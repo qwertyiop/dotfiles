@@ -5,9 +5,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-autoload -U compinit
-compinit
-
 setopt autocd beep extendedglob nomatch notify correctall
 
 ENABLE_AUTO_CORRECTION="true"
@@ -20,11 +17,15 @@ autoload -U url-quote-magic
 zle -N self-insert url-quote-magic
 
 # completion options
+autoload -U compinit
+compinit
 zmodload zsh/complist
 zstyle ':completion:*' menu select=1 _complete _ignored _approximate
 zstyle ':completion::complete:*' gain-privileges 1
 setopt completealiases
 _comp_options+=(globdots)
+zstyle ":completion:*:*:kill:*:processes" list-colors "=(#b) #([0-9]#)*=0=01;31"
+zstyle ":completion:*:kill:*" command "ps -u $USER -o pid,%cpu,tty,cputime,cmd"
 
 # zsh history settings
 setopt appendhistory HIST_IGNORE_DUPS HIST_IGNORE_SPACE HIST_REDUCE_BLANKS HIST_NO_STORE share_history
@@ -61,7 +62,7 @@ DIRSTACKSIZE='30'
 setopt AUTO_PUSHD PUSHD_SILENT PUSHD_TO_HOME PUSHD_IGNORE_DUPS PUSHD_MINUS
 
 # keybindings
-bindkey -e
+
 
 # load aliases
 [ -f "$HOME/.config/zsh/aliasrc" ] && source "$HOME/.config/zsh/aliasrc"

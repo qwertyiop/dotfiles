@@ -80,11 +80,3 @@
 # Отключить звук
 "pactl set-sink-mute @DEFAULT_SINK@ toggle"
    XF86AudioMute
-
-# Увеличить яркость
-"xbacklight -inc 10"
-   XF86MonBrightnessUp
-
-# Уменьшить яркость
-"xbacklight -dec 10"
-   XF86MonBrightnessDown

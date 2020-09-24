@@ -2,9 +2,9 @@
 
 [color]
 
-# color.bg sets the default background color for the bar. 
+# color.bg sets the default background color for the bar.
 # It also sets the backgound for the suffixes and the prefixes
-# which extend their background, as well as the foreground of 
+# which extend their background, as well as the foreground of
 # the dividers.
 bg = #000000
 

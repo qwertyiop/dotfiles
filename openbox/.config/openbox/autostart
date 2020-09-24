@@ -8,7 +8,7 @@ lxpolkit &
 redshift &
 picom --config ~/.config/picom/picom.cnf -b &
 polybar -c ~/.config/polybar/polybar.cnf top &
-polybar -c ~/.config/polybar/polybar.cnf bottom &
+$HOME/.config/xob/pulse-volume-watcher.py | xob -c $HOME/.config/xob/styles.cfg -s default -m 100 &
 
 # User-defined applications
 

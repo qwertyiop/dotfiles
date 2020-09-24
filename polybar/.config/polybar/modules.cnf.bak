@@ -1,0 +1,357 @@
+[module/wireless]
+type = internal/network
+interface = wlan0
+interval = 1
+
+ramp-signal-0 = 󰤯
+ramp-signal-1 = 󰤟
+ramp-signal-2 = 󰤢
+ramp-signal-3 = 󰤥
+ramp-signal-4 = 󰤨
+ramp-signal-padding = 1
+
+format-connected = <ramp-signal>
+format-connected-background = ${color.bg_alt}
+format-connected-suffix = 
+format-connected-suffix-background = ${color.bg_alt}
+format-connected-suffix-foreground = ${color.bg}
+
+format-packetloss = <ramp-signal>
+format-packetloss-background = ${color.bg_alt}
+format-packetloss-suffix = 
+format-packetloss-suffix-background = ${color.bg_alt}
+format-packetloss-suffix-foreground = ${color.bg}
+
+format-disconnected = <label-disconnected>
+
+label-disconnected =
+
+#####################################################################
+
+[module/wired]
+type = internal/network
+interface = enp14s0
+interval = 1
+
+label-connected = 󰌘
+label-disconnected =
+label-connected-padding = 2
+label-disconnected-padding = 2
+
+format-connected = <label-connected>
+format-connected-background = ${color.bg_alt}
+format-connected-suffix = 
+format-connected-suffix-background = ${color.bg_alt}
+format-connected-suffix-foreground = ${color.bg}
+
+format-disconnected = <label-disconnected>
+format-disconnected-background = ${color.bg_alt}
+format-disconnected-suffix = 
+format-disconnected-suffix-background = ${color.bg_alt}
+format-disconnected-suffix-foreground = ${color.bg}
+
+#####################################################################
+
+[module/pulseaudio]
+type = internal/pulseaudio
+sink = alsa_output.pci-0000_00_1b.0.analog-stereo
+interval = 2
+
+label-volume = "󰕾 %percentage%%"
+
+format-volume = <label-volume>
+format-volume-padding = 1
+format-volume-background = ${color.bg_alt}
+format-volume-prefix = 
+format-volume-prefix-padding-right = 1
+format-volume-prefix-background = ${color.bg_alt}
+format-volume-prefix-foreground = ${color.bg}
+
+label-muted = 󰖁
+format-muted = <label-muted>
+format-muted-padding = 1
+format-muted-background = ${color.bg_alt}
+format-muted-prefix = 
+format-muted-prefix-padding-right = 1
+format-muted-prefix-background = ${color.bg_alt}
+format-muted-prefix-foreground = ${color.bg}
+
+#####################################################################
+
+[module/title]
+type = internal/xwindow
+
+format = <label>
+format-foreground = ${color.fg_alt}
+
+label = %title:0:120:...%
+label-empty =
+
+#####################################################################
+
+[module/date]
+type = custom/script
+exec = "/usr/bin/date '+%a, %d %B'"
+interval = 2
+
+label = "󰃭 %output%"
+label-padding = 2
+click-left = "~/.config/userscripts/popup-calendar.sh --popup &"
+
+format = <label>
+format-background = ${color.bg_alt}
+format-prefix = 
+format-prefix-foreground = ${color.bg_alt}
+format-prefix-background = ${color.bg}
+
+#####################################################################
+
+[module/time]
+type = internal/date
+time = "%R"
+
+label = "󰀠  %time%"
+label-background = ${color.bg_alt}
+label-padding = 2
+
+format = <label>
+format-prefix = 
+format-prefix-background = ${color.bg_alt}
+format-prefix-foreground = ${color.bg}
+
+format-suffix = 
+format-suffix-background = ${color.bg_alt}
+format-suffix-foreground = ${color.bg}
+
+#####################################################################
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = scroll lock
+
+label-layout = %icon%
+layout-icon-default =
+layout-icon-0 = "us;ENG"
+layout-icon-1 = "ru;РУС"
+label-layout-padding-left = 1
+label-layout-padding-right = 2
+
+label-indicator-on-numlock = 󰰓
+label-indicator-on-numlock-padding-left = 1
+
+label-indicator-off-numlock = 󰰔
+label-indicator-off-numlock-padding-left = 1
+
+label-indicator-off-capslock = 󰯳
+label-indicator-off-capslock-padding-left = 1
+
+label-indicator-on-capslock = 󰯲
+label-indicator-on-capslock-padding-left = 1
+
+format = <label-indicator><label-layout>
+format-foreground = ${color.fg}
+format-background = ${color.bg_alt}
+
+format-prefix = 
+format-prefix-foreground = ${color.bg_alt}
+format-prefix-background = ${color.bg}
+
+format-suffix = 
+format-suffix-background = ${color.bg_alt}
+format-suffix-foreground = ${color.bg}
+
+#####################################################################
+
+[module/workspaces]
+type = internal/xworkspaces
+pin-workspaces = false
+enable-click = true
+
+label-active = 󰄯
+label-active-padding = 1
+label-active-background = ${color.bg_alt}
+
+label-occupied = 󰺕
+label-occupied-padding = 1
+label-occupied-background = ${color.bg_alt}
+
+label-urgent = 󰐾
+label-urgent-padding = 1
+label-urgent-background = ${color.bg_alt}
+
+label-empty = 󰄰
+label-empty-padding = 1
+label-empty-background = ${color.bg_alt}
+
+#####################################################################
+
+[module/suffix]
+type = custom/text
+
+content = 
+content-foreground = ${color.bg_alt}
+
+#####################################################################
+
+[module/prefix]
+type = custom/text
+
+content = 
+content-background = ${color.bg_alt}
+content-foreground = ${color.bg}
+
+#####################################################################
+
+[module/battery]
+type = internal/battery
+full-at = 100
+battery = BAT0
+adapter = AC0
+
+poll-interval = 1
+
+label-discharging = %percentage%%
+label-discharging-padding-right = 2
+label-discharging-padding-left = 1
+
+animation-discharging-0 = 󱊡
+animation-discharging-1 = 󱊢
+animation-discharging-2 = 󱊣
+animation-discharging-padding-left = 1
+animation-discharging-framerate = 500
+
+format-discharging = <animation-discharging><label-discharging>
+format-discharging-background = ${color.warning}
+format-discharging-foreground = ${color.fg_alt}
+
+format-discharging-prefix = 
+format-discharging-prefix-foreground = ${color.warning}
+format-discharging-prefix-background = ${color.bg}
+
+format-discharging-suffix = 
+format-discharging-suffix-background = ${color.warning}
+format-discharging-suffix-foreground = ${color.bg}
+
+label-charging = %percentage%%
+label-charging-padding-right = 2
+label-charging-padding-left = 1
+
+animation-charging-0 = 󱊤
+animation-charging-1 = 󱊥
+animation-charging-2 = 󱊦
+animation-charging-padding-left = 1
+animation-charging-framerate = 500
+
+format-charging = <animation-charging><label-charging>
+format-charging-background = ${color.normal}
+format-charging-foreground = ${color.fg_alt}
+
+format-charging-prefix = 
+format-charging-prefix-foreground = ${color.normal}
+format-charging-prefix-background = ${color.bg}
+
+format-charging-suffix = 
+format-charging-suffix-background = ${color.normal}
+format-charging-suffix-foreground = ${color.bg}
+
+label-full =
+format-full = <label-full>
+
+#####################################################################
+
+[temperature-global]
+type = internal/temperature
+interval = 1
+
+units = true
+
+base-temperature = 25
+warn-temperature = 85
+
+ramp-0 = 󰔏
+ramp-1 = 󰸅
+ramp-2 = 󰸁
+ramp-padding = 1
+
+label =
+label-warn-padding-right = 2
+
+format-warn = <ramp><label-warn>
+format-warn-background = ${color.warning}
+format-warn-foreground = ${color.fg_alt}
+
+format-warn-prefix = 
+format-warn-prefix-foreground = ${color.warning}
+format-warn-prefix-background = ${color.bg}
+
+format-warn-suffix = 
+format-warn-suffix-background = ${color.warning}
+format-warn-suffix-foreground = ${color.bg}
+
+[module/gpu-temp]
+inherit = temperature-global
+termal-zone = 0
+hwmon-path = /sys/devices/virtual/thermal/thermal_zone0/hwmon1/temp1_input
+
+label-warn = "GPU: %temperature-c%"
+
+
+[module/cpu-temp]
+inherit = temperature-global
+termal-zone = 1
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input
+
+label-warn = "CPU: %temperature-c%"
+
+#####################################################################
+
+[module/updates]
+type = custom/script
+exec = "dnf -q updateinfo --list --updates 2> /dev/null | wc -l"
+interval = 1800
+
+label = "󰆧 %output% "
+label-padding = 1
+
+format = <label>
+format-background = ${color.bg_alt}
+
+format-suffix = 
+format-suffix-background = ${color.bg_alt}
+format-suffix-foreground = ${color.bg}
+
+#####################################################################
+
+[module/mpd]
+type = internal/mpd
+host = 127.0.0.1
+port = 6601
+interval = 2
+
+label-offline = "MPD OFFLINE "
+
+label-song = %artist% - %title%
+label-song-padding-right = 1
+label-song-maxlen = 50
+label-time = %elapsed% / %total%
+
+icon-play = 󰁚
+icon-pause = 󰏦
+icon-stop = 󰙧
+icon-prev = 󰙤
+icon-next = 󰙢
+
+format-online = "<icon-prev> <icon-play> <icon-pause> <icon-stop> <icon-next>  <label-time>  <label-song>"
+;format-online-padding-right = 1
+format-online-background = ${color.bg_alt}
+format-online-prefix = 
+format-online-prefix-padding-right = 1
+format-online-prefix-background = ${color.bg_alt}
+format-online-prefix-foreground = ${color.bg}
+
+format-offline = <label-offline>
+format-offline-background = ${color.bg_alt}
+format-offline-prefix = 
+format-offline-prefix-padding-right = 1
+format-offline-prefix-background = ${color.bg_alt}
+format-offline-prefix-foreground = ${color.bg}

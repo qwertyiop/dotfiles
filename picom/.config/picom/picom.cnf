@@ -60,5 +60,5 @@ use-damage = true;
 # Window type settings
 wintypes:
 {
-#  tooltip = { fade = true; shadow = false; opacity = 1; focus = true; };
+  tooltip = { fade = true; shadow = false; opacity = 1; focus = true; };
 };
