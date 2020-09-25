@@ -10,14 +10,14 @@
 <menu id="root-menu" label="Openbox">
 
   <separator label="Быстрый запуск"/>
-  
+
   <item label="Терминал" icon="/usr/share/icons/Adwaita/16x16/apps/utilities-terminal-symbolic.symbolic.png">
     <action name="Execute"> <command>alacritty</command> </action>
   </item>
   <item label="Менеджер Файлов" icon="/usr/share/icons/Adwaita/16x16/apps/system-file-manager-symbolic.symbolic.png">
     <action name="Execute"> <command>pcmanfm</command> </action>
   </item>
-  
+
   <separator label="System"/>
 
   <menu id="applications-menu"/>

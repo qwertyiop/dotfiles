@@ -110,18 +110,22 @@ enable-click = true
 label-active = 󰄯
 label-active-padding = 1
 label-active-background = ${color.bg_alt}
+label-active-foreground = ${color.fg_alt}
 
 label-occupied = 󰺕
 label-occupied-padding = 1
 label-occupied-background = ${color.bg_alt}
+label-occupied-foreground = ${color.fg_alt}
 
 label-urgent = 󰐾
 label-urgent-padding = 1
 label-urgent-background = ${color.bg_alt}
+label-urgent-foreground = ${color.fg_alt}
 
 label-empty = 󰄰
 label-empty-padding = 1
 label-empty-background = ${color.bg_alt}
+label-empty-foreground = ${color.fg_alt}
 
 #####################################################################
 
