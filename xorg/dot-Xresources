@@ -37,7 +37,7 @@
 *.color15:      #e4e4e4
 
 XTerm*faceName: Source Code Pro
-XTerm*faceSize: 10
+XTerm*faceSize: 12
 XTerm*renderFont: true
 XTerm*scrollBar: false
 

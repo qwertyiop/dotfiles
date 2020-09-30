@@ -39,8 +39,8 @@
 
 # Examples of commands:
 
-"xbindkeys_show" 
-  control+shift + q
+#"xbindkeys_show" 
+#  control+shift + q
 
 # set directly keycode (here control + f with my keyboard)
 #"xterm"
