@@ -1,0 +1,9 @@
+[Unit]
+Description=MegaCMD Server
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/mega-cmd-server
+
+[Install]
+WantedBy=default.target

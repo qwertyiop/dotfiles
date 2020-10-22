@@ -12,5 +12,3 @@ $HOME/.config/xob/pulse-volume-watcher.py | xob -c $HOME/.config/xob/styles.cfg 
 
 # User-defined applications
 
-mpd &
-mega-cmd-server &

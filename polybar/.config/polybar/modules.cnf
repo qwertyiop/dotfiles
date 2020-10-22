@@ -44,7 +44,7 @@ format-background = ${color.bg_alt}
 format-prefix = 
 format-prefix-foreground = ${color.bg}
 
-label = %title:0:120:...%
+label = %title:0:70:...%
 label-padding = 2
 label-empty =
 
@@ -207,7 +207,7 @@ label-warn = "GPU: %temperature-c%"
 [module/cpu-temp]
 inherit = temperature-global
 termal-zone = 1
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
 
 label-warn = "CPU: %temperature-c%"
 
@@ -222,3 +222,22 @@ label = "󰆧  %output%"
 
 format = <label>
 format-padding = 2
+
+######################################################################
+
+[module/pulseaudio]
+type = internal/pulseaudio
+sink = alsa_output.pci-0000_00_1b.0.analog-stereo
+interval = 2
+
+label-muted = 󰖁
+label-volume = %percentage%
+
+ramp-volume-0 = 󰕿
+ramp-volume-1 = 󰖀
+ramp-volume-2 = 󰕾
+
+format-volume = <ramp-volume> <label-volume>
+click-right = pavucontrol &
+
+format-volume-padding = 1

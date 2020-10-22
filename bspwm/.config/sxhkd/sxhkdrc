@@ -1,0 +1,52 @@
+# Make Fn keys work again
+XF86AudioRaiseVolume
+    pactl set-sink-volume @DEFAULT_SINK@ +1000
+
+XF86AudioLowerVolume
+    pactl set-sink-volume @DEFAULT_SINK@ -1000
+
+# terminal emulator
+super + t
+    alacritty
+
+# program launcher
+super + r
+    rofi -show run -theme ~/.config/rofi/drun.rasi -font "Roboto 11"
+
+# make sxhkd reload its configuration files:
+super + Escape
+    pkill -USR1 -x sxhkd
+
+# Switch focus between the windows of the current desktop
+super + Tab
+    bspc node --focus next.local
+
+# Expand/contract a window by moving one of its side outward/inward
+super + shift + {a,s,d,f}
+    STEP=20; SELECTION={1,2,3,4}; \
+    bspc node --resize $(echo "left -$STEP 0,bottom 0 $STEP,top 0 -$STEP,right $STEP 0" | cut -d',' -f$SELECTION) || \
+    bspc node --resize $(echo "right -$STEP 0,top 0 $STEP,bottom 0 -$STEP,left $STEP 0" | cut -d',' -f$SELECTION)
+
+# Send to desktop
+super + shift + {1-9}
+    bspc node --to-desktop '^{1-9}' --follow
+
+# Switch to desktop
+super + {1-9}
+    bspc desktop --focus '^{1-9}'
+
+# Close window
+super + {_,shift + }q
+    bspc node --{close,kill}
+
+# Rotate tree
+super + {a,f}
+    bspc node @/ --circulate {backward,forward}
+
+# Swap nodes
+super + {s,d}
+    bspc node --swap {last,next}.local --follow
+
+# Send current node to next monitor
+super + ctrl + {f,a}
+    bspc node --to-monitor {next,last} --follow

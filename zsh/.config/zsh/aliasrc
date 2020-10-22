@@ -15,13 +15,13 @@ alias \
   ping="ping -c 5" \
   wtf="journalctl" \
   btctl="bluetoothctl" \
-  ka="kill -a" \
+  k="killall" \
 
 # systemd
 alias \
   sc="grc --colour=auto systemctl" \
   scu="grc --colour=auto systemctl --user" \
-  unfuck="sudo systemctl reload" \
+  unfuck="sudo systemctl restart" \
 
 # failsaves
 alias \

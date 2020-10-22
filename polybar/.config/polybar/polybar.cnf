@@ -23,9 +23,10 @@ height = 20
 top = true
 
 modules-left = workspaces title suffix
-modules-right = cpu-temp gpu-temp battery xkeyboard wired wireless updates date time
+modules-center = date time
+modules-right = cpu-temp gpu-temp battery xkeyboard wired wireless updates pulseaudio
 
-override-redirect = true
+#override-redirect = true
 tray-position = right
 tray-maxsize = 16
 tray-padding = 2

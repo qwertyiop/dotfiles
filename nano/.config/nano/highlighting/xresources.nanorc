@@ -1,4 +1,4 @@
-syntax "Xresources" "X(defaults|resources)$"
+syntax "Xresources" "X(defaults|resources)|xbindkeysrc$"
 
 color green     "^[[:alnum:]]+\*"
 color brightyellow "\*[[:alnum:]]+\:"

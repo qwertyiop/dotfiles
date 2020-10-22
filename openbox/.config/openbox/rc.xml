@@ -226,7 +226,7 @@
 
 		Bindings for split modes:
 
-		2x2 vertical		    2x2 horizontal           4x4 window split
+       2x2 vertical		        2x2 horizontal           4x4 window split
 
 	┌───────────╥───────┐  ┌─────────────────────┐   ┌─────────────╥─────────┐
 	│           ║       │  │                     │   │             ║         │
