@@ -31,7 +31,7 @@ fetch_lyrics_for_current_song_in_background = yes
 # UI
 progressbar_look = "━━━"
 progressbar_color = "black"
-progressbar_elapsed_color = "yellow"
+progressbar_elapsed_color = "cyan"
 
 playlist_display_mode = columns
 autocenter_mode = yes
@@ -44,4 +44,4 @@ clock_display_seconds = no
 display_volume_level = yes
 display_bitrate = yes
 
-song_columns_list_format = "(25)[yellow]{a} (25)[cyan]{brE} (47)[yellow]{t|f} (6f)[cyan]{l}"
+song_columns_list_format = "(25)[blue]{a} (25)[green]{brE} (47)[cyan]{t|f} (6f)[blue]{l}"

@@ -13,6 +13,14 @@ super + t
 super + r
     rofi -show run -theme ~/.config/rofi/drun.rasi -font "Roboto 11"
 
+# Powermenu
+super + shift + e
+    oblogout
+
+# Show off at r/unixporn
+Print
+    $HOME/.config/userscripts/screenshot
+
 # make sxhkd reload its configuration files:
 super + Escape
     pkill -USR1 -x sxhkd
@@ -39,9 +47,13 @@ super + {1-9}
 super + {_,shift + }q
     bspc node --{close,kill}
 
-# Rotate tree
+# Rotate desktop
 super + {a,f}
     bspc node @/ --circulate {backward,forward}
+
+# Rotate root
+super + {_,shift + }r
+    bspc node @/ -R 90
 
 # Swap nodes
 super + {s,d}

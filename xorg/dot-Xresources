@@ -1,7 +1,7 @@
-! tomorrow-256 theme
+! Reversion theme
 ! special
 *.foreground:   #e4e4e4
-*.background:   #000000
+*.background:   #1c1c1c
 *.cursorColor:  #e4e4e4
 
 ! black
@@ -9,32 +9,33 @@
 *.color8:       #808080
 
 ! red
-*.color1:       #ff5f5f
-*.color9:       #ff8787
+*.color1:       #e35b5b
+*.color9:       #e37d7d
 
 ! green
-*.color2:       #5fff5f
-*.color10:      #87ff87
+*.color2:       #5be35b
+*.color10:      #7de37d
 
 ! yellow
-*.color3:       #ffa95e
-*.color11:      #ffd787
+*.color3:       #e39f5b
+*.color11:      #e3ab7d
 
 ! blue
-*.color4:       #5fafff
-*.color12:      #87afff
+*.color4:       #5b9fe3
+*.color12:      #7db5e3
 
 ! magenta
-*.color5:       #ff5faf
-*.color13:      #ff87af
+*.color5:       #e35b9f
+*.color13:      #e37db5
 
 ! cyan
-*.color6:       #5fffff
-*.color14:      #87ffff
+*.color6:       #5be3e3
+*.color14:      #7de3e3
 
 ! white
-*.color7:       #c0c0c0
+*.color7:       #e4e4e4
 *.color15:      #e4e4e4
+
 
 !------------ always start in unicode --------------!
 XTerm*utf8: 1
@@ -60,7 +61,7 @@ Xft.autohint: false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-!------------------ copy-pase ----------------------!
+!------------------ copy-paste ---------------------!
 XTerm.vt100*selectToClipboard: true
 XTerm.vt100*translations: #override \
         Ctrl Alt <Key>C: copy-selection(CLIPBOARD) \n\
@@ -74,3 +75,7 @@ xterm*charClass: 33:48,36-47:48,58-59,48,61:48,63-64:48,95:48,126:48
 
 !---- Every shell is a login shell by default ------!
 xterm*loginShell: true
+
+!----------------- urxvt settings ------------------!
+
+

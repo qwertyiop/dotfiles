@@ -1,13 +1,40 @@
+[module/bspwm]
+type = internal/bspwm
+
+pin-workspaces = true
+enable-click = true
+enable-scroll = false
+
+label-monitor = %name%:
+label-monitor-padding = 1
+
+label-focused = 󰄯
+label-focused-padding = 1
+
+label-occupied = 󰀚
+label-occupied-padding = 1
+
+label-urgent = 󰐾
+label-urgent-padding = 1
+
+label-empty = 󰐽
+label-empty-padding = 1
+
+format = <label-monitor> <label-state>
+format-background = ${color.bg_alt}
+format-foreground = ${color.fg_alt}
+
+######################################################################
+
 [module/wireless]
 type = internal/network
 interface = wlan0
 interval = 1
 
-ramp-signal-0 = 󰤯
-ramp-signal-1 = 󰤟
-ramp-signal-2 = 󰤢
-ramp-signal-3 = 󰤥
-ramp-signal-4 = 󰤨
+ramp-signal-0 = 󰢿
+ramp-signal-1 = 󰢼
+ramp-signal-2 = 󰢽
+ramp-signal-3 = 󰢾
 ramp-signal-padding = 2
 
 format-connected = <ramp-signal>
@@ -44,7 +71,7 @@ format-background = ${color.bg_alt}
 format-prefix = 
 format-prefix-foreground = ${color.bg}
 
-label = %title:0:70:...%
+label = %title:0:60:...%
 label-padding = 2
 label-empty =
 
@@ -156,7 +183,7 @@ animation-discharging-framerate = 500
 format-discharging = <animation-discharging><label-discharging>
 format-discharging-background = ${color.warning}
 format-discharging-foreground = ${color.fg_alt}
-format-discharging-padding = 2
+format-discharging-padding = 1
 
 label-charging = %percentage%%
 
@@ -167,7 +194,7 @@ animation-charging-padding-left = 1
 animation-charging-framerate = 500
 
 format-charging = <animation-charging><label-charging>
-format-charging-padding = 2
+format-charging-padding = 1
 
 label-full =
 format-full = <label-full>
@@ -221,7 +248,7 @@ interval = 1800
 label = "󰆧  %output%"
 
 format = <label>
-format-padding = 2
+format-padding = 1
 
 ######################################################################
 
@@ -240,4 +267,4 @@ ramp-volume-2 = 󰕾
 format-volume = <ramp-volume> <label-volume>
 click-right = pavucontrol &
 
-format-volume-padding = 1
+format-volume-padding = 2

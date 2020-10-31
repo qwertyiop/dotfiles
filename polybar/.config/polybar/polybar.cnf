@@ -1,4 +1,4 @@
-include-file = $HOME/.config/polybar/themes/default.colors.cnf
+include-file = $HOME/.config/polybar/themes/reversion.colors.cnf
 include-file = $HOME/.config/polybar/modules.cnf
 
 #####################################################################
@@ -22,7 +22,7 @@ width = 100%
 height = 20
 top = true
 
-modules-left = workspaces title suffix
+modules-left = bspwm title suffix
 modules-center = date time
 modules-right = cpu-temp gpu-temp battery xkeyboard wired wireless updates pulseaudio
 

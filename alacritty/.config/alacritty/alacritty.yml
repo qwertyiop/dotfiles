@@ -17,32 +17,37 @@ scrolling:
     multiplier: 3
 
 colors:
-  primary:
-    background: '#000000'
-    foreground: '#e4e4e4'
+
+# Reversion color theme
 
   cursor:
     text: '#e4e4e4'
 
-  normal:
-    black:   '#000000'
-    red:     '#ff5f5f'
-    green:   '#5fff5f'
-    yellow:  '#ffa95e'
-    blue:    '#5fafff'
-    magenta: '#ff5faf'
-    cyan:    '#5fffff'
-    white:   '#eaeaea'
+  primary:
+    background: '0x1c1c1c'
+    foreground: '0xe4e4e4'
 
+  # Normal colors
+  normal:
+    black:   '0x000000'
+    red:     '0xe35b5b'
+    green:   '0x5be35b'
+    yellow:  '0xe39f5b'
+    blue:    '0x5b9fe3'
+    magenta: '0xe35b9f'
+    cyan:    '0x5be3e3'
+    white:   '0xe4e4e4'
+
+  # Bright colors
   bright:
-    black:   '#808080'
-    red:     '#ff8787'
-    green:   '#87ff87'
-    yellow:  '#ffd787'
-    blue:    '#87afff'
-    magenta: '#ff87af'
-    cyan:    '#87ffff'
-    white:   '#e4e4e4'
+    black:   '0x636363'
+    red:     '0xe37d7d'
+    green:   '0x7de37d'
+    yellow:  '0xe3ab7d'
+    blue:    '0x7db5e3'
+    magenta: '0xe37db5'
+    cyan:    '0x7de3e3'
+    white:   '0xe4e4e4'
 
 font:
 
@@ -65,7 +70,7 @@ selection:
   dynamic_title: true
 
 cursor:
-  style: Underline
+  style: Block
 
 live_config_reload: true
 
