@@ -1,5 +1,11 @@
 # There's no place like `~/`
 
+![Image](1607853085.png)
+
+![Image](1607853005.png)
+
+![Image](1607853070.png)
+
 ## Dependencies
 
 ### Packages
@@ -20,5 +26,17 @@ Clone the repository:
 Use `stow` to install:
 
   `stow -d SOURCE -t TARGET CONFIG --dotfiles`
+
+## Openbox window modes
+
+To do
+
+
+## Openbox keybindings
+
+To do
   
-  
+
+## System config
+
+Samba, systemd-networkd and dnf config files go here
