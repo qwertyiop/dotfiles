@@ -1,14 +1,7 @@
-# Desktop environment
-
-$HOME/.config/userscripts/dual-head.sh &
+~/.config/userscripts/dual-head.sh &
 xbindkeys &
-numlockx &
-pcmanfm --desktop &
-lxpolkit &
+dunst &
 redshift &
+lxpolkit &
 picom --config ~/.config/picom/picom.cnf -b &
-polybar -c ~/.config/polybar/polybar.cnf top &
-$HOME/.config/xob/pulse-volume-watcher.py | xob -c $HOME/.config/xob/styles.cfg -s default -m 100 &
-
-# User-defined applications
-
+polybar LVDS &

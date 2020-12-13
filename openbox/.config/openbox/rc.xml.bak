@@ -83,10 +83,10 @@
     </popupFixedPosition>
   </resize>
   <margins>
-    <top>40</top>
-    <bottom>20</bottom>
-    <left>20</left>
-    <right>20</right>
+    <top>20</top>
+    <bottom>0</bottom>
+    <left>0</left>
+    <right>0</right>
   </margins>
   <dock>
     <position>TopLeft</position>
@@ -102,12 +102,14 @@
   </dock>
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
-    <!-- Reconfigure openbox -->
-    <keybind key="W-S-r">
-      <action name="Execute">
-        <command>openbox --reconfigure</command>
-      </action>
-    </keybind>
+    <!--
+		Here I tried to mimic the controls of i3wm with few exeptions:
+		 - keybindings are adapted for left-hand use (considering the right is on the mouse) -
+		   that's why I use asdf to move windows around, not jkl;
+		 - terminal is launched by Alt + t for the same reason
+		 - Win + Tab cycles windows instead of Alt+Tab just for consistency
+		 - Mod1 is Win key otherwise the keybindings would interfere with zsh emacs mode
+    -->
     <!-- show terminal -->
     <keybind key="W-t">
       <action name="Execute">
@@ -117,13 +119,19 @@
     <!-- Show rofi -->
     <keybind key="W-d">
       <action name="Execute">
-        <command>rofi -show run -config ~/.config/rofi/config</command>
+        <command>rofi -show run -theme ~/.config/rofi/drun.rasi -font "Roboro 11"</command>
       </action>
     </keybind>
     <!-- exit openbox -->
     <keybind key="W-S-e">
       <action name="Execute">
         <command>oblogout</command>
+      </action>
+    </keybind>
+    <!-- log out -->
+    <keybind key="W-S-r">
+      <action name="Execute">
+        <command>openbox --exit</command>
       </action>
     </keybind>
     <!-- lock -->
@@ -138,9 +146,6 @@
         <command>~/.config/userscripts/screenshot</command>
       </action>
     </keybind>
-    <!--
-        manipulate workspaces
-    -->
     <!-- switch workspaces -->
     <keybind key="W-1">
       <action name="GoToDesktop">
@@ -161,7 +166,7 @@
       <action name="GoToDesktop">
         <to>4</to>
       </action>
-    </keybind>
+    </keybind >
     <keybind key="W-5">
       <action name="GoToDesktop">
         <to>5</to>
@@ -172,6 +177,18 @@
         <to>6</to>
       </action>
    </keybind>
+    <!-- move window to monitor 1 -->
+    <keybind key="W-S-a">
+      <action name="MoveResizeTo">
+        <monitor>1</monitor>
+      </action>
+    </keybind>
+    <!-- move window to monitor 2 -->
+    <keybind key="W-S-f">
+      <action name="MoveResizeTo">
+        <monitor>2</monitor>
+      </action>
+    </keybind>
     <!-- move window to another workspace -->
     <keybind key="W-S-1">
       <action name="SendToDesktop">
@@ -193,16 +210,6 @@
         <to>4</to>
       </action>
     </keybind>
-    <keybind key="W-S-5">
-      <action name="SendToDesktop">
-        <to>5</to>
-      </action>
-    </keybind>
-    <keybind key="W-S-6">
-      <action name="SendToDesktop">
-        <to>6</to>
-      </action>
-    </keybind>
     <!-- close window -->
     <keybind key="W-S-q">
       <action name="Close"/>
@@ -211,27 +218,13 @@
     <keybind key="W-f">
       <action name="Unmaximize"/>
       <action name="MoveResizeTo">
-        <x>0%</x>
-        <y>0%</y>
-        <height>100%</height>
-        <width>100%</width>
+        <x>1%</x>
+        <y>2%</y>
+        <height>96%</height>
+        <width>98%</width>
       </action>
     </keybind>
-    <!-- move window to monitor 1 -->
-    <keybind key="W-S-a">
-      <action name="MoveResizeTo">
-        <monitor>1</monitor>
-      </action>
-    </keybind>
-    <!-- move window to monitor 2 -->
-    <keybind key="W-S-f">
-      <action name="MoveResizeTo">
-        <monitor>2</monitor>
-      </action>
-    </keybind>
-    <!--
-        cycle windows
-    -->
+    <!-- cycle windows -->
     <keybind key="W-Tab">
       <action name="NextWindow">
         <finalactions>
@@ -242,44 +235,58 @@
       </action>
     </keybind>
     <!--
-          equal split
+
+		Bindings for split modes:
+
+       2x2 vertical		        2x2 horizontal           4x4 window split
+
+	┌───────────╥───────┐  ┌─────────────────────┐   ┌─────────────╥─────────┐
+	│           ║       │  │                     │   │             ║         │
+	│           ║       │  │     Win + H   d     │   │   Win+V d   ║ Win+H f │
+	│  Win + V  ║  Alt  │  │                     │   │             ║         │
+	│           ║  + V  │  ╞═════════════════════╡   ╞═════════════╬═════════╡
+	│     a     ║   f   │  │                     │   │             ║         │
+	│           ║       │  │     Win + H   s     │   │   Win+H a   ║ Win+V s │
+	│           ║       │  │                     │   │             ║         │
+	└───────────╨───────┘  └─────────────────────┘   └─────────────╨─────────┘
+
     -->
     <!-- vertical split -->
     <keybind key="W-v">
       <keybind key="a">
         <action name="Unmaximize"/>
         <action name="MoveResizeTo">
-          <x>0%</x>
-          <y>0%</y>
-          <height>100%</height>
-          <width>50%</width>
+          <x>1%</x>
+          <y>2%</y>
+          <height>96%</height>
+          <width>58%</width>
         </action>
       </keybind>
       <keybind key="f">
         <action name="Unmaximize"/>
         <action name="MoveResizeTo">
-          <x>-0%</x>
-          <y>0%</y>
-          <height>100%</height>
-          <width>49%</width>
+          <x>-1%</x>
+          <y>2%</y>
+          <height>96%</height>
+          <width>39%</width>
         </action>
       </keybind>
       <keybind key="s">
         <action name="Unmaximize"/>
         <action name="MoveResizeTo">
-          <x>-0%</x>
-          <y>-0%</y>
-          <width>49%</width>
-          <height>49%</height>
+          <x>-1%</x>
+          <y>-2%</y>
+          <width>39%</width>
+          <height>47%</height>
         </action>
       </keybind>
       <keybind key="d">
         <action name="Unmaximize"/>
         <action name="MoveResizeTo">
-          <x>0%</x>
-          <y>0%</y>
-          <width>50%</width>
-          <height>49%</height>
+          <x>1%</x>
+          <y>2%</y>
+          <width>58%</width>
+          <height>48%</height>
         </action>
       </keybind>
     </keybind>
@@ -288,124 +295,43 @@
       <keybind key="d">
         <action name="Unmaximize"/>
         <action name="MoveResizeTo">
-          <x>0%</x>
-          <y>0%</y>
-          <width>100%</width>
-          <height>49%</height>
+          <x>1%</x>
+          <y>2%</y>
+          <width>98%</width>
+          <height>48%</height>
         </action>
       </keybind>
       <keybind key="s">
         <action name="Unmaximize"/>
         <action name="MoveResizeTo">
-          <x>0%</x>
-          <y>-0%</y>
-          <width>100%</width>
-          <height>49%</height>
+          <x>1%</x>
+          <y>-2%</y>
+          <width>98%</width>
+          <height>47%</height>
         </action>
       </keybind>
       <keybind key="f">
         <action name="Unmaximize"/>
         <action name="MoveResizeTo">
-          <x>-0%</x>
-          <y>0%</y>
-          <width>49%</width>
-          <height>49%</height>
+          <x>-1%</x>
+          <y>2%</y>
+          <width>39%</width>
+          <height>48%</height>
         </action>
       </keybind>
       <keybind key="a">
         <action name="Unmaximize"/>
         <action name="MoveResizeTo">
-          <x>0%</x>
-          <y>-0%</y>
-          <width>50%</width>
-          <height>49%</height>
+          <x>1%</x>
+          <y>-2%</y>
+          <width>58%</width>
+          <height>47%</height>
         </action>
       </keybind>
     </keybind>
     <!--
-        unequal split
-    -->
-    <!-- vertical split -->
-    <keybind key="W-v">
-      <keybind key="C-a">
-        <action name="Unmaximize"/>
-        <action name="MoveResizeTo">
-          <x>0%</x>
-          <y>0%</y>
-          <height>100%</height>
-          <width>59%</width>
-        </action>
-      </keybind>
-      <keybind key="C-f">
-        <action name="Unmaximize"/>
-        <action name="MoveResizeTo">
-          <x>-0%</x>
-          <y>0%</y>
-          <height>100%</height>
-          <width>40%</width>
-        </action>
-      </keybind>
-      <keybind key="C-s">
-        <action name="Unmaximize"/>
-        <action name="MoveResizeTo">
-          <x>-0%</x>
-          <y>-0%</y>
-          <width>40%</width>
-          <height>20%</height>
-        </action>
-      </keybind>
-      <keybind key="C-d">
-        <action name="Unmaximize"/>
-        <action name="MoveResizeTo">
-          <x>0%</x>
-          <y>0%</y>
-          <width>59%</width>
-          <height>78%</height>
-        </action>
-      </keybind>
-    </keybind>
-    <!-- horizontal split -->
-    <keybind key="W-h">
-      <keybind key="C-d">
-        <action name="Unmaximize"/>
-        <action name="MoveResizeTo">
-          <x>0%</x>
-          <y>0%</y>
-          <width>100%</width>
-          <height>78%</height>
-        </action>
-      </keybind>
-      <keybind key="C-s">
-        <action name="Unmaximize"/>
-        <action name="MoveResizeTo">
-          <x>0%</x>
-          <y>-0%</y>
-          <width>100%</width>
-          <height>20%</height>
-        </action>
-      </keybind>
-      <keybind key="C-f">
-        <action name="Unmaximize"/>
-        <action name="MoveResizeTo">
-          <x>-0%</x>
-          <y>0%</y>
-          <width>40%</width>
-          <height>78%</height>
-        </action>
-      </keybind>
-      <keybind key="C-a">
-        <action name="Unmaximize"/>
-        <action name="MoveResizeTo">
-          <x>0%</x>
-          <y>-0%</y>
-          <width>59%</width>
-          <height>20%</height>
-        </action>
-      </keybind>
-    </keybind>
-    <!--
-        place a raised focused window of a fixed fize
-        in the center of the screen
+    place a raised focused window of a fixed fize
+    in the center of the screen
     -->
     <keybind key="W-space">
       <action name="Focus"/>
@@ -419,47 +345,12 @@
       </action>
     </keybind>
     <!--
-        send a window to the background
+    send a window to the background
     -->
     <keybind key="W-Escape">
       <action name="Lower"/>
       <action name="FocusToBottom"/>
       <action name="Unfocus"/>
-    </keybind>
-    <!--
-        move window without resizing it
-    -->
-    <keybind key="W-s">
-      <keybind key="a">
-        <action name="MoveResizeTo">
-          <x>0%</x>
-          <y>0%</y>
-        </action>
-      </keybind>
-      <keybind key="s">
-        <action name="MoveResizeTo">
-          <x>0%</x>
-          <y>-0%</y>
-        </action>
-      </keybind>
-      <keybind key="d">
-        <action name="MoveResizeTo">
-          <x>-0%</x>
-          <y>0%</y>
-        </action>
-      </keybind>
-      <keybind key="f">
-        <action name="MoveResizeTo">
-          <x>-0%</x>
-          <y>-0%</y>
-        </action>
-      </keybind>
-      <keybind key="c">
-        <action name="MoveResizeTo">
-          <x>center</x>
-          <y>center</y>
-        </action>
-      </keybind>
     </keybind>
   </keyboard>
   <mouse>
@@ -752,17 +643,8 @@
     <application class="*VirtualBox*">
       <decor>yes</decor>
     </application>
-    <application class="IceCat">
+    <application class="Firefox">
       <desktop>3</desktop>
-      <focus>yes</focus>
-      <size>
-        <height>100%</height>
-        <width>100%</width>
-      </size>
-      <position force="yes">
-        <x>center</x>
-        <y>center</y>
-      </position>
     </application>
     <application class="Thunderbird">
       <desktop>4</desktop>

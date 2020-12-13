@@ -1,12 +1,63 @@
+[color]
+bg = #991c1c1c
+bg_alt = #000000
+fg = #e4e4e4
+fg_alt = #e4e4e4
+warning = #e35b5b
+normal = #5be35b
+
+#####################################################################
+
+[global]
+font-0 = "Roboto:weight=bold:size=11;2"
+font-1 = "Material Design Icons Desktop:size=14;4"
+font-2 = "Powerline Extra Symbols:size=14;4"
+
+locale = ru_RU.UTF-8
+
+background = ${color.bg}
+foreground = ${color.fg}
+line-size = 2
+
+#####################################################################
+
+[bar/LVDS]
+monitor = LVDS-1
+inherit = global
+width = 100%
+height = 20
+top = true
+
+modules-left = workspaces title suffix
+modules-center = date time
+modules-right = xkeyboard wired wireless updates pulseaudio
+
+tray-position = right
+tray-maxsize = 16
+tray-padding = 2
+tray-background = ${color.bg}
+
+#####################################################################
+
+[bar/HDMI]
+monitor = HDMI-1
+inherit = global
+width = 100%
+height = 20
+top = true
+
+modules-left = workspaces title suffix
+modules-center = date time
+modules-right = xkeyboard wired wireless updates pulseaudio
+
+#####################################################################
+
 [module/bspwm]
 type = internal/bspwm
 
 pin-workspaces = true
 enable-click = true
 enable-scroll = false
-
-label-monitor = %name%:
-label-monitor-padding = 1
 
 label-focused = 󰄯
 label-focused-padding = 1
@@ -20,7 +71,8 @@ label-urgent-padding = 1
 label-empty = 󰐽
 label-empty-padding = 1
 
-format = <label-monitor> <label-state>
+format = <label-state>
+format-padding = 1
 format-background = ${color.bg_alt}
 format-foreground = ${color.fg_alt}
 
@@ -68,8 +120,6 @@ type = internal/xwindow
 format = <label>
 format-foreground = ${color.fg_alt}
 format-background = ${color.bg_alt}
-format-prefix = 
-format-prefix-foreground = ${color.bg}
 
 label = %title:0:60:...%
 label-padding = 2
@@ -109,7 +159,7 @@ label-layout = %icon%
 layout-icon-default =
 layout-icon-0 = "us;ENG"
 layout-icon-1 = "ru;РУС"
-label-layout-padding-left = 1
+label-layout-padding = 1
 
 label-indicator-on-numlock = 󰰓
 label-indicator-on-numlock-padding-left = 1
@@ -124,7 +174,6 @@ label-indicator-on-capslock = 󰯲
 label-indicator-on-capslock-padding-left = 1
 
 format = <label-indicator><label-layout>
-format-foreground = ${color.fg}
 format-padding = 2
 
 #####################################################################
@@ -139,7 +188,7 @@ label-active-padding = 1
 label-active-background = ${color.bg_alt}
 label-active-foreground = ${color.fg_alt}
 
-label-occupied = 󰺕
+label-occupied = 󰀚
 label-occupied-padding = 1
 label-occupied-background = ${color.bg_alt}
 label-occupied-foreground = ${color.fg_alt}
@@ -164,91 +213,15 @@ content-foreground = ${color.bg_alt}
 
 #####################################################################
 
-[module/battery]
-type = internal/battery
-full-at = 100
-battery = BAT0
-adapter = AC0
-
-poll-interval = 1
-
-label-discharging = %percentage%%
-
-animation-discharging-0 = 󱊡
-animation-discharging-1 = 󱊢
-animation-discharging-2 = 󱊣
-animation-discharging-padding-left = 1
-animation-discharging-framerate = 500
-
-format-discharging = <animation-discharging><label-discharging>
-format-discharging-background = ${color.warning}
-format-discharging-foreground = ${color.fg_alt}
-format-discharging-padding = 1
-
-label-charging = %percentage%%
-
-animation-charging-0 = 󱊤
-animation-charging-1 = 󱊥
-animation-charging-2 = 󱊦
-animation-charging-padding-left = 1
-animation-charging-framerate = 500
-
-format-charging = <animation-charging><label-charging>
-format-charging-padding = 1
-
-label-full =
-format-full = <label-full>
-
-#####################################################################
-
-[temperature-global]
-type = internal/temperature
-interval = 1
-
-units = true
-
-base-temperature = 25
-warn-temperature = 85
-
-ramp-0 = 󰔏
-ramp-1 = 󰸅
-ramp-2 = 󰸁
-ramp-padding = 1
-
-label =
-
-format-warn = <ramp><label-warn>
-format-warn-background = ${color.warning}
-format-warn-foreground = ${color.fg_alt}
-format-warn-padding = 2
-
-
-[module/gpu-temp]
-inherit = temperature-global
-termal-zone = 0
-hwmon-path = /sys/devices/virtual/thermal/thermal_zone0/hwmon1/temp1_input
-
-label-warn = "GPU: %temperature-c%"
-
-
-[module/cpu-temp]
-inherit = temperature-global
-termal-zone = 1
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
-
-label-warn = "CPU: %temperature-c%"
-
-#####################################################################
-
 [module/updates]
 type = custom/script
 exec = "dnf -q updateinfo --list --updates 2> /dev/null | wc -l"
 interval = 1800
 
-label = "󰆧  %output%"
+label = "󰆧 %output%"
 
 format = <label>
-format-padding = 1
+format-padding = 2
 
 ######################################################################
 
@@ -257,7 +230,9 @@ type = internal/pulseaudio
 sink = alsa_output.pci-0000_00_1b.0.analog-stereo
 interval = 2
 
-label-muted = 󰖁
+label-muted = 󰖁 %percentage%
+label-muted-padding = 2
+label-muted-background = ${color.warning}
 label-volume = %percentage%
 
 ramp-volume-0 = 󰕿

@@ -12,6 +12,7 @@ MONITOR="$int"
 # switch from LVDS1 to HDMI and vice versa
 function ActivateMultihead {
 	xrandr --output "$int" --primary --auto --output "$ext" --auto --right-of "$int"
+	polybar HDMI
 }
 function DeactivateMultihead {
 	xrandr --output "$ext" --off --output "$int" --primary --auto

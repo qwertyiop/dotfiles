@@ -3,19 +3,19 @@ syntax "yaml" "\.ya?ml$"
 header "^---" "%YAML"
 
 # Values
-color green "(:|^|\s)+\S+"
+color cyan "(:|^|\s)+\S+"
 
 # Keys
-color cyan "(^|\s+).*+\s*:(\s|$)"
+color green "(^|\s+).*+\s*:(\s|$)"
 
 # Special values
-color yellow "[:-]\s+(true|false|null)\s*$"
-color yellow "[:-]\s+[0-9]+\.?[0-9]*(\s*($|#))"
-color yellow "(^| )!!(binary|bool|float|int|map|null|omap|seq|set|str) "
+color white "[:-]\s+(true|false|null)\s*$"
+color white "[:-]\s+[0-9]+\.?[0-9]*(\s*($|#))"
+color white "(^| )!!(binary|bool|float|int|map|null|omap|seq|set|str) "
 
 # Separator
 color brightwhite "^\s+-"
 color brightwhite ":(\s|\t|$)"
 
 # Comments
-color brightblue "(^|[[:space:]])#.*$"
+color blue "(^|[[:space:]])#.*$"

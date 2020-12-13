@@ -1,4 +1,5 @@
 [global]
+    startup_notification = false
     geometry = "300x30-5+25"
     indicate_hidden = yes
     shrink = no

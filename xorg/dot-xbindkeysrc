@@ -39,7 +39,7 @@
 
 # Examples of commands:
 
-#"xbindkeys_show" 
+#"xbindkeys_show"
 #  control+shift + q
 
 # set directly keycode (here control + f with my keyboard)
@@ -69,14 +69,25 @@
 # End of xbindkeys configuration #
 ##################################
 
-# Увеличить громкость звука
+# Make Fn Keys work again
+
 "pactl set-sink-volume @DEFAULT_SINK@ +1000"
    XF86AudioRaiseVolume
 
-# Уменьшить громкость звука
 "pactl set-sink-volume @DEFAULT_SINK@ -1000"
    XF86AudioLowerVolume
 
-# Отключить звук
 "pactl set-sink-mute @DEFAULT_SINK@ toggle"
    XF86AudioMute
+
+"mpc next"
+  XF86AudioNext
+
+"mpc toggle"
+  XF86AudioPlay
+
+"mpc stop"
+  XF86AudioStop
+
+"mpc prev"
+  XF86AudioPrev

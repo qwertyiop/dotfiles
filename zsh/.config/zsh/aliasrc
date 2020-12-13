@@ -16,6 +16,7 @@ alias \
   wtf="journalctl" \
   btctl="bluetoothctl" \
   k="killall" \
+  cls="clear" \
 
 # systemd
 alias \

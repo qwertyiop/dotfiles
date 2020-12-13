@@ -10,5 +10,3 @@ LANG=ru_RU.UTF-8
 # http://www.google.com/search?q=how+to+set+keyboard+layout+xorg
 
 setxkbmap -option terminate:ctrl_alt_bksp,compose:menu
-
-export QT_QPA_PLATFORMTHEME="qt5ct"
