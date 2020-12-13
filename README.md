@@ -1,7 +1,5 @@
 # There's no place like `~/`
 
-![Image](1607853085.png)
-
 ![Image](1607853005.png)
 
 ![Image](1607853070.png)
