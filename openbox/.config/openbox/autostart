@@ -4,4 +4,4 @@ dunst &
 redshift &
 lxpolkit &
 picom --config ~/.config/picom/picom.cnf -b &
-polybar LVDS &
+polybar LVDS

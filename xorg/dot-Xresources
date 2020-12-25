@@ -36,22 +36,7 @@
 *.color7:       #e4e4e4
 *.color15:      #e4e4e4
 
-
-!------------ always start in unicode --------------!
-XTerm*utf8: 1
-
-!----------------- General settings ----------------!
-XTerm.vt100.saveLines: 4096
-XTerm*vt100*geometry: 130x32
-XTerm*scrollBar: false
-XTerm*SkrollKey: true
-XTerm*selectToClipboard: true
-
-! --------------------- fonts ----------------------!
-XTerm*faceName: Meslo LGM Nerd Font Mono
-XTerm*faceSize: 12
-XTerm*renderFont: true
-XTerm.vt100*allow_bold: true
+!-- font rendering --!
 
 Xft.dpi: 96
 Xft.antialias: true
@@ -61,21 +46,10 @@ Xft.autohint: false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-!------------------ copy-paste ---------------------!
-XTerm.vt100*selectToClipboard: true
-XTerm.vt100*translations: #override \
-        Ctrl Alt <Key>C: copy-selection(CLIPBOARD) \n\
-        Ctrl Alt <Key>V: insert-selection(CLIPBOARD) \n\
-        Ctrl <Key> minus: smaller-vt-font() \n\
-        Ctrl <Key> plus: larger-vt-font() \n\
-        Ctrl <Key> 0: set-vt-font(d)
+!-- urxvt settings --!
 
-!------- double-click to select whole URLs ---------!
-xterm*charClass: 33:48,36-47:48,58-59,48,61:48,63-64:48,95:48,126:48
-
-!---- Every shell is a login shell by default ------!
-xterm*loginShell: true
-
-!----------------- urxvt settings ------------------!
-
-
+URxvt*saveline: 10000
+URxvt*termname: rxvt-256color
+URxvt*depth: 32
+URxvt*scrollbar: false
+URxvt*scrollbar_right: false

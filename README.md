@@ -4,6 +4,7 @@
 
 ![Image](1607853070.png)
 
+
 ## Dependencies
 
 ### Packages
@@ -25,12 +26,15 @@ Use `stow` to install:
 
   `stow -d SOURCE -t TARGET CONFIG --dotfiles`
 
-## Openbox window modes
+
+## Openbox 
+
+### Window modes
 
 To do
 
 
-## Openbox keybindings
+### Keybindings
 
 To do
   
