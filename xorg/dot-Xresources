@@ -45,11 +45,3 @@ Xft.rgba: rgb
 Xft.autohint: false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
-
-!-- urxvt settings --!
-
-URxvt*saveline: 10000
-URxvt*termname: rxvt-256color
-URxvt*depth: 32
-URxvt*scrollbar: false
-URxvt*scrollbar_right: false
