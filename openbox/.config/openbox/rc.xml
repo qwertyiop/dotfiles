@@ -135,7 +135,7 @@
     <!-- Take screenshot -->
     <keybind key="Print">
       <action name="Execute">
-        <command>~/screenshot.sh full</command>
+        <command>screenshot full</command>
       </action>
     </keybind>
     <!--

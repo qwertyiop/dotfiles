@@ -1,8 +1,9 @@
-# There's no place like `~/`
+# There's no place like ~/
 
 ![Image](1607853005.png)
 
 ![Image](1607853070.png)
+
 
 ## Dependencies
 
@@ -38,6 +39,7 @@ Use `stow` to install:
 
   `stow -d [SOURCE] -t $HOME --ignore=\.bak --dotfiles [CONFIG]`
 
+
 ## Openbox window modes
 
 To do
@@ -46,11 +48,12 @@ To do
 ## Openbox keybindings
 
 To do
-  
+
 
 ## System config
 
 Samba, systemd-networkd and dnf config files go here
+
 
 ## ToDo
 

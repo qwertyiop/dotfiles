@@ -1,7 +1,0 @@
-#!/bin/bash
-
-path=$HOME/Изображения/screenshots/
-name=Снимок-$(date +%s).png
-
-maim $path$name -u -f png -m 2
-notify-send "Снимок экрана сохранен" --urgency=low

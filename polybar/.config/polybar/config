@@ -133,7 +133,7 @@ exec = "/usr/bin/date '+%a, %d %B'"
 interval = 2
 
 label = "󰃭  %output%"
-click-left = "~/.config/userscripts/popup-calendar.sh --popup &"
+click-left = "popup-calendar --popup &"
 
 format = <label>
 format-padding = 2

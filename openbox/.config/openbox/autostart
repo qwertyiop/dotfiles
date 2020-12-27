@@ -1,4 +1,4 @@
-~/.config/userscripts/dual-head.sh &
+dual-head &
 xbindkeys &
 dunst &
 redshift &

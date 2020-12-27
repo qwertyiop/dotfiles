@@ -1,8 +1,0 @@
-[Unit]
-Description=Numlock Daemon
-
-[Service]
-ExecStart=/usr/bin/numlockx
-
-[Install]
-WantedBy=default.target
