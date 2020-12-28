@@ -1,15 +1,25 @@
 # Defaults
 
 export PATH="/bin:/sbin:$HOME/.bin"
+
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_DIRS="/usr/local/share:/usr/share"
+export XDG_CONFIG_DIR="/etc/xdg"
+
 export XDG_PICTURES_DIR="$HOME/Изображения"
+
+# Attempting to clean up home folder
+export GNUPGHOME="$XDG_DATA_HOME/gnupg"
+export PARALLEL_HOME="$XDG_CONFIG_HOME/parallel"
+export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
 
 export EDITOR="/usr/bin/nano"
 export VISUAL="/usr/bin/nano"
 export SUDO_EDITOR="/usr/bin/nano"
 export FILE="/usr/bin/lf"
+
 export DOTS="$HOME/Files/git-repos/dots"
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export MPD_PORT="6601"
