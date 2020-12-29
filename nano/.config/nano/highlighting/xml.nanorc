@@ -7,11 +7,11 @@ magic "(XML|SGML) (sub)?document"
 comment "<!--|-->"
 
 color white "^.+$"
-color green  start="<" end=">"
-color cyan   "<[^> ]+"
-color cyan   ">"
-color yellow start="<!DOCTYPE" end="[/]?>"
-color yellow start="<!--" end="-->"
+color cyan  start="<" end=">"
+color green   "<[^> ]+"
+color green   ">"
+color blue start="<!DOCTYPE" end="[/]?>"
+color blue start="<!--" end="-->"
 color red    "&[^;]*;"
 
 ## Trailing spaces
