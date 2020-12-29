@@ -171,7 +171,7 @@
       <action name="GoToDesktop">
         <to>6</to>
       </action>
-   </keybind>
+    </keybind>
     <!-- move window to another workspace -->
     <keybind key="W-S-1">
       <action name="SendToDesktop">
