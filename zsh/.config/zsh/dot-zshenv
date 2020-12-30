@@ -1,6 +1,6 @@
 # Defaults
 
-export PATH="/bin:/sbin:$HOME/.bin"
+export PATH="/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:$HOME/.local/bin"
 
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CONFIG_HOME="$HOME/.config"
