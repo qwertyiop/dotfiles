@@ -9,7 +9,7 @@
 
 ### Packages
 
-`alacritty` `dunst` `git` `grc` `lf` `lightdm-gtk` `lsd` `mpd` `mpc` `npmpcpp` `nano` `openbox` `PackageKit-command-not-found` `pcmanfm` `picom` `polybar` `qt5ct` `redshift` `rofi` `stow` `tmux` `zsh` `zsh-autosuggestions` `zsh-syntax-highlighting` `xbindkeys`
+`alacritty` `dunst` `git` `grc` `lf` `lightdm-gtk` `lsd` `mpd` `mpc` `npmpcpp` `nano` `openbox` `PackageKit-command-not-found` `pcmanfm` `picom` `polybar` `qt5ct` `redshift` `rofi` `stow` `tmux` `zsh` `zsh-autosuggestions` `zsh-syntax-highlighting`
 
 Custom scripts rely on:
 

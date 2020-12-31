@@ -30,7 +30,7 @@
     icon_path = /usr/share/icons/Numix/16/status/:/usr/share/icons/Numix/16/devices/
     sticky_history = yes
     history_length = 20
-    browser = /usr/bin/firefox -new-tab
+    browser = /usr/bin/icecat-x11 -new-tab
     always_run_script = true
     title = Dunst
     class = Dunst
