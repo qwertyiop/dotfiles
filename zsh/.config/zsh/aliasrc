@@ -11,7 +11,7 @@ alias \
   shutdown="shutdown -h now" \
   visudo="sudo visudo" \
   wifi="sudo wifi" \
-  wget="wget -c" \
+  wget="wget -c --hsts-file='$XDG_CACHE_HOME/wget-hsts'" \
   mkdir="mkdir -p" \
   ping="ping -c 5" \
   wtf="journalctl" \
