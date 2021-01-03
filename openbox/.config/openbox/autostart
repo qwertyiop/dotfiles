@@ -1,6 +1,6 @@
 dual-head &
 dunst &
-redshift &
+redshift -O 4500 &
 lxpolkit &
 picom --config ~/.config/picom/picom.cnf -b &
 polybar LVDS
