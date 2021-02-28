@@ -30,7 +30,7 @@ top = true
 
 modules-left = workspaces title suffix
 modules-center = date time
-modules-right = xkeyboard wired wireless updates pulseaudio
+modules-right = cpu-temp gpu-temp xkeyboard wired wireless updates pulseaudio
 
 tray-position = right
 tray-maxsize = 16
@@ -243,3 +243,36 @@ format-volume = <ramp-volume> <label-volume>
 click-right = pavucontrol &
 
 format-volume-padding = 2
+
+#####################################################################
+
+[temperature-global]
+type = internal/temperature
+interval = 1
+units = true
+
+base-temperature = 25
+warn-temperature = 85
+
+ramp-0 = 󰔏
+ramp-1 = 󰸅
+ramp-2 = 󰸁
+
+label =
+
+format = <ramp> <label>
+#format-warn-background = ${color.warning}
+format-foreground = ${color.fg_alt}
+format-padding = 2
+
+[module/gpu-temp]
+inherit = temperature-global
+termal-zone = 0
+hwmon-path = /sys/devices/virtual/thermal/thermal_zone0/hwmon1/temp1_input
+label = "GPU: %temperature-c%"
+
+[module/cpu-temp]
+inherit = temperature-global
+termal-zone = 1
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp2_input
+label = "CPU: %temperature-c%"
