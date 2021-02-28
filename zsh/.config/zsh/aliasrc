@@ -8,6 +8,7 @@ alias \
   p="$PAGER" \
   sudo="sudo " \
   s="sudo" \
+  se="sudoedit" \
   shutdown="shutdown -h now" \
   visudo="sudo visudo" \
   wifi="sudo wifi" \
