@@ -65,6 +65,13 @@ alias \
 	dnfsr="dnf search" \
 	dnfsl="dnf list installed | grep" \
 
+# flatpak shortcuts
+alias \
+  fp="flatpak" \
+  fpup="flatpak update" \
+  fpin="flatpak install --user" \
+  fprm="flatpak uninstall" \
+
 # tmux
 alias \
   t="(tmux has-session 2>/dev/null && tmux attach) || (tmux -f $HOME/.config/tmux/tmux.conf new -s default)" \
