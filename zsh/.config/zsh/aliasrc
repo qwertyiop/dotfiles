@@ -75,6 +75,8 @@ alias \
 # tmux
 alias \
   t="(tmux has-session 2>/dev/null && tmux attach) || (tmux -f $HOME/.config/tmux/tmux.conf new -s default)" \
+  ta="tmux attatch" \
+  td="tmux detach" \
   tks="tmux kill-ses" \
 
 # git

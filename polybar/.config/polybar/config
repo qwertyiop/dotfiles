@@ -30,7 +30,7 @@ top = true
 
 modules-left = workspaces title suffix
 modules-center = date time
-modules-right = xkeyboard wired wireless updates pulseaudio
+modules-right = xkeyboard wired wireless dnf_updates flatpak_updates pulseaudio
 
 tray-position = right
 tray-maxsize = 16
@@ -48,7 +48,7 @@ top = true
 
 modules-left = workspaces title suffix
 modules-center = date time
-modules-right = xkeyboard wired wireless updates pulseaudio
+modules-right = xkeyboard wired wireless dnf_updates flatpak_updates pulseaudio
 
 #####################################################################
 
@@ -213,12 +213,24 @@ content-foreground = ${color.bg_alt}
 
 #####################################################################
 
-[module/updates]
+[module/dnf_updates]
 type = custom/script
 exec = "dnf -q updateinfo --list --updates 2> /dev/null | wc -l"
 interval = 1800
 
 label = "󰆧 %output%"
+
+format = <label>
+format-padding = 2
+
+######################################################################
+
+[module/flatpak_updates]
+type = custom/script
+exec = "flatpak update 2>/dev/null | tail -n +5 | head -2 | wc -l"
+interval = 1800
+
+label = "󰏖 %output%"
 
 format = <label>
 format-padding = 2
