@@ -8,7 +8,7 @@ mpd_music_dir = ~/Музыка
 
 # Visualizer
 visualizer_in_stereo = "no"
-visualizer_fifo_path = "/tmp/mpd.fifo"
+visualizer_data_source = "/tmp/mpd.fifo"
 visualizer_output_name = "my_fifo"
 visualizer_sync_interval = "20"
 visualizer_type = "spectrum"
@@ -43,5 +43,10 @@ titles_visibility = no
 clock_display_seconds = no
 display_volume_level = yes
 display_bitrate = yes
+
+startup_screen = "playlist"
+startup_slave_screen = "lyrics"
+locked_screen_width_part = 50
+ask_for_locked_screen_width_part = no
 
 song_columns_list_format = "(25)[blue]{a} (25)[green]{brE} (47)[cyan]{t|f} (6f)[blue]{l}"
