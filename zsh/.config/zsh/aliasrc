@@ -63,7 +63,8 @@ alias \
 	dnfup="sudo dnf upgrade" \
 	dnfcm="sudo dnf config-manager" \
 	dnfsr="dnf search" \
-	dnfsl="dnf list installed | grep" \
+	dnfsl="dnf -C list installed | grep" \
+	dnfdg="sudo dnf downgrade --enablerepo=updates-archive" \
 
 # flatpak shortcuts
 alias \
@@ -75,7 +76,7 @@ alias \
 # tmux
 alias \
   t="(tmux has-session 2>/dev/null && tmux attach) || (tmux -f $HOME/.config/tmux/tmux.conf new -s default)" \
-  ta="tmux attatch" \
+  ta="tmux attach" \
   td="tmux detach" \
   tks="tmux kill-ses" \
 
