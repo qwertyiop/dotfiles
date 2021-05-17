@@ -77,9 +77,9 @@ cursor:
 live_config_reload: true
 
 key_bindings:
-  - { key: V,           mods: Shift|Alt,     action: Paste            }
-  - { key: C,           mods: Shift|Alt,     action: Copy             }
-  - { key: Insert,      mods: Shift,         action: PasteSelection   }
+  - { key: V,                 mods: Control,       action: Paste            }
+  - { key: C,                 mods: Control,       action: Copy             }
+  - { key: Insert,            mods: Shift,         action: PasteSelection   }
   - { key: NumpadDivide,      mods: Control,       action: ResetFontSize    }
   - { key: NumpadEquals,      mods: Control,       action: IncreaseFontSize }
   - { key: NumpadAdd,         mods: Control,       action: IncreaseFontSize }
