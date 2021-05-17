@@ -2,8 +2,8 @@
 LANG=ru_RU.UTF-8
 
 # Set keyboard options
-setxkbmap -option terminate:ctrl_alt_bksp,compose:menu
+setxkbmap -option terminate:ctrl_alt_bksp,compose:menu,caps:hyper,shift:both_capslock
 
 # Set desktop session
-export DESKTOP_SESSION=LXDE
+#export DESKTOP_SESSION=LXDE
 
