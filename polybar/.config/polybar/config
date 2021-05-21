@@ -288,3 +288,12 @@ inherit = temperature-global
 termal-zone = 1
 hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input
 label = "CPU: %temperature-c%"
+
+#[module/temp]
+#type = custom/script
+#inherit = temperature-global
+#exec = "sensors|grep temp1|column -t|awk '{print $2}'"
+#interval = 10
+#
+#label = "%output%"
+#format = <label>
