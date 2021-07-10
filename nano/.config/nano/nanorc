@@ -1,11 +1,11 @@
 # General
 include "/usr/share/nano/*.nanorc"
 include "~/.config/nano/highlighting/*.nanorc"
-set morespace
+#set morespace
 set linenumbers
 set constantshow
 set mouse
-set smooth
+#set smooth
 set autoindent
 set softwrap
 set tabsize 2

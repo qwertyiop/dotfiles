@@ -77,13 +77,13 @@ cursor:
 live_config_reload: true
 
 key_bindings:
-  - { key: V,                 mods: Control|Alt,   action: Paste            }
-  - { key: C,                 mods: Control|Alt,   action: Copy             }
-  - { key: Insert,            mods: Shift,         action: PasteSelection   }
-  - { key: NumpadDivide,      mods: Control,       action: ResetFontSize    }
-  - { key: NumpadEquals,      mods: Control,       action: IncreaseFontSize }
-  - { key: NumpadAdd,         mods: Control,       action: IncreaseFontSize }
-  - { key: NumpadSubtract,    mods: Control,       action: DecreaseFontSize }
+  - { key: V,                 mods: Control|Shift,   action: Paste            }
+  - { key: C,                 mods: Control|Shift,   action: Copy             }
+  - { key: Insert,            mods: Shift,           action: PasteSelection   }
+  - { key: NumpadDivide,      mods: Control,         action: ResetFontSize    }
+  - { key: NumpadEquals,      mods: Control,         action: IncreaseFontSize }
+  - { key: NumpadAdd,         mods: Control,         action: IncreaseFontSize }
+  - { key: NumpadSubtract,    mods: Control,         action: DecreaseFontSize }
 
 debug:
   log_level: Warn

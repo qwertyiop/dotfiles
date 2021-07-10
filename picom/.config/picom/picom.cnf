@@ -14,6 +14,10 @@ shadow-exclude = [
 ];
 
 # Opacity
+#active-opacity = 0.95;
+#inactive-opacity = 0.65;
+#frame-opacity = 0.95;
+#menu-opacity = 0.95;
 opacity-rule = [
 	"95:class_g *?= 'rofi'",
 ];

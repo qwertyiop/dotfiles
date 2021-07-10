@@ -3,7 +3,7 @@
     geometry = "300x30-5+25"
     indicate_hidden = yes
     shrink = no
-    transparency = 0
+    transparency = 30
     notification_height = 0
     separator_height = 2
     padding = 8
