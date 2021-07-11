@@ -9,7 +9,7 @@ shadow-exclude = [
 	"name = 'Notification'",
 	"class_g = 'Dunst'",
 	"_GTK_FRAME_EXTENTS@:c",
-	"class_g = 'Firefox' && argb",
+#	"class_g = 'Firefox' && argb",
 	"class_g = 'Polybar'",
 ];
 
