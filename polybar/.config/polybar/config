@@ -227,7 +227,7 @@ format-padding = 2
 
 [module/flatpak_updates]
 type = custom/script
-exec = "flatpak update 2>/dev/null | tail -n +5 | head -2 | wc -l"
+exec = "flatpak update 2> /dev/null | tail -n +5 | head -2 | wc -l"
 interval = 1800
 
 label = "󰏖 %output%"

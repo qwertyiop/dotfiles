@@ -61,15 +61,17 @@
     </font>
   </theme>
   <desktops>
-    <number>6</number>
+    <number>8</number>
     <firstdesk>1</firstdesk>
     <names>
-      <name>Desktop_1</name>
-      <name>Desktop_2</name>
+      <name>Console</name>
       <name>Web</name>
       <name>Email</name>
-      <name>Desktop_5</name>
-      <name>Desktop_6</name>
+      <name>Office</name>
+      <name>Steam</name>
+      <name>VM</name>
+      <name>Unsorted_2</name>
+      <name>Unsorted_3</name>
     </names>
     <popupTime>865</popupTime>
   </desktops>
@@ -178,6 +180,11 @@
         manipulate workspaces
     -->
     <!-- switch workspaces -->
+    <keybind key="W-S-Tab">
+      <action name="GoToDesktop">
+        <to>next</to>
+      </action>
+    </keybind>
     <keybind key="W-1">
       <action name="GoToDesktop">
         <to>1</to>
@@ -206,6 +213,16 @@
     <keybind key="W-6">
       <action name="GoToDesktop">
         <to>6</to>
+      </action>
+    </keybind>
+    <keybind key="W-7">
+      <action name="GoToDesktop">
+        <to>7</to>
+      </action>
+    </keybind>
+    <keybind key="W-8">
+      <action name="GoToDesktop">
+        <to>8</to>
       </action>
     </keybind>
     <!-- move window to another workspace -->
@@ -237,6 +254,16 @@
     <keybind key="W-S-6">
       <action name="SendToDesktop">
         <to>6</to>
+      </action>
+    </keybind>
+    <keybind key="W-S-7">
+      <action name="SendToDesktop">
+        <to>7</to>
+      </action>
+    </keybind>
+    <keybind key="W-S-8">
+      <action name="SendToDesktop">
+        <to>8</to>
       </action>
     </keybind>
     <!-- close window -->
@@ -789,7 +816,7 @@
       <decor>yes</decor>
     </application>
     <application class="Firefox">
-      <desktop>3</desktop>
+      <desktop>2</desktop>
       <focus>yes</focus>
       <size>
         <height>100%</height>
@@ -801,7 +828,13 @@
       </position>
     </application>
     <application class="Thunderbird">
+      <desktop>3</desktop>
+    </application>
+    <application class="*libreoffice*">
       <desktop>4</desktop>
+    </application>
+    <application class="Steam">
+      <desktop>5</desktop>
     </application>
     <application class="*Virt-manager">
       <desktop>6</desktop>
