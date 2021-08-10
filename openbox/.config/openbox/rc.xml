@@ -70,8 +70,8 @@
       <name>Office</name>
       <name>Steam</name>
       <name>VM</name>
+      <name>Unsorted_1</name>
       <name>Unsorted_2</name>
-      <name>Unsorted_3</name>
     </names>
     <popupTime>865</popupTime>
   </desktops>
@@ -830,10 +830,28 @@
     <application class="Thunderbird">
       <desktop>3</desktop>
     </application>
-    <application class="*libreoffice*">
+    <application class="*libreoffice-calc*">
       <desktop>4</desktop>
     </application>
-    <application class="Steam">
+    <application class="*libreoffice-writer*">
+      <desktop>4</desktop>
+    </application>
+    <application class="*libreoffice-startcenter*">
+      <desktop>4</desktop>
+    </application>
+     <application class="*libreoffice-draw*">
+      <desktop>4</desktop>
+    </application>
+    <application class="*libreoffice-math*">
+      <desktop>4</desktop>
+    </application>
+    <application class="*libreoffice-base*">
+      <desktop>4</desktop>
+    </application>
+    <application class="*libreoffice-impress*">
+      <desktop>4</desktop>
+    </application>
+   <application class="Steam">
       <desktop>5</desktop>
     </application>
     <application class="*Virt-manager">
