@@ -15,7 +15,7 @@
     <action name="Execute"> <command>alacritty</command> </action>
   </item>
   <item label="Менеджер Файлов" icon="/usr/share/icons/Adwaita/16x16/apps/system-file-manager-symbolic.symbolic.png">
-    <action name="Execute"> <command>pcmanfm</command> </action>
+    <action name="Execute"> <command>spacefm</command> </action>
   </item>
 
   <separator label="System"/>
