@@ -149,7 +149,7 @@
     <!-- show terminal -->
     <keybind key="W-t">
       <action name="Execute">
-        <command>alacritty</command>
+        <command>/usr/local/bin/st</command>
       </action>
     </keybind>
     <!-- Show rofi -->

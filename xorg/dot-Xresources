@@ -46,3 +46,19 @@ Xft.rgba: rgb
 Xft.autohint: false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
+
+!-- urxvt settings --!
+
+URxvt.font: xft:MesloLGM\ Nerd\ Font\ Mono:style=Regular:size=12
+URxvt.boldFont: xft:MesloLGM\ Nerd\ Font\ Mono:style=Bold:size=12
+URxvt.italicFont: xft:MesloLGM\ Nerd\ Font\ Mono:style=Italic:size=12
+URxvt.boldItalicfont: xft:MesloLGM\ Nerd\ Font\ Mono:style=Bold Italic:size=12
+URxvt.letterSpace: 0
+URxvt.lineSpace: 0
+
+URxvt.geometry: 110x30
+
+URxvt.saveline: 10000
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.scrollWithBuffer: true

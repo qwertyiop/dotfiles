@@ -1,0 +1,47 @@
+#!/usr/bin/sh
+
+sxhkd &
+setxkbmap -option "terminate:ctrl_alt_bksp,compose:menu" &
+dual-head &
+dunst &
+redshift -x && redshift -O 4500 &
+lxpolkit &
+picom --config ~/.config/picom/picom.cnf -b &
+polybar LVDS &
+
+#bspc subscribe node_add | while read -a msg ; do
+#    node_id=${msg[4]}
+#    bspc node "$node_id" -t floating
+#done &
+
+# Source colors from Xresourcees
+FOREGROUND=$(xrdb -query | grep 'foreground:'| awk '{print $NF}')
+BACKGROUND=$(xrdb -query | grep 'background:'| awk '{print $NF}')
+BLACK=$(xrdb -query | grep 'color0:'| awk '{print $NF}')
+RED=$(xrdb -query | grep 'color1:'| awk '{print $NF}')
+GREEN=$(xrdb -query | grep 'color2:'| awk '{print $NF}')
+YELLOW=$(xrdb -query | grep 'color3:'| awk '{print $NF}')
+BLUE=$(xrdb -query | grep 'color4:'| awk '{print $NF}')
+MAGENTA=$(xrdb -query | grep 'color5:'| awk '{print $NF}')
+CYAN=$(xrdb -query | grep 'color6:'| awk '{print $NF}')
+WHITE=$(xrdb -query | grep 'color7:'| awk '{print $NF}')
+
+bspc monitor -d 1 2 3 4 5 6
+
+bspc config border_width                5
+bspc config window_gap                  20
+
+bspc config split_ratio                 0.52
+bspc config borderless_monocle          false
+bspc config gapless_monocle             false
+
+bspc config focused_border_color        "$BLACK"
+bspc config active_border_color         "$BLACK"
+bspc config normal_border_color         "$WHITE"
+
+bspc config remove_disabled_monitors    true
+bspc config remove_unplugged monitors   true
+
+bspc rule -a IceCat                     desktop='^3' follow=on
+bspc rule -a Thunderbird                desktop='^4' follow=on
+bspc rule -a Virt-manager               desktop='^5' state=floating follow=on

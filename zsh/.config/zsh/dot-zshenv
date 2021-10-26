@@ -3,7 +3,7 @@
 # Path
 export PATH="/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:$HOME/.local/bin"
 
-# XDG Base Direectories
+# XDG Base Directories
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
@@ -41,9 +41,14 @@ export GEM_SPEC_CACHE="$XDG_CACHE_HOME/gem"
 # Default applications
 export EDITOR="/usr/bin/nano"
 export SUDO_EDITOR="/usr/bin/nano"
-export FILE="/usr/bin/lf"
+export FILE="/usr/bin/nnn"
 
 # Other variables
 export DOTS="$HOME/Files/git-repos/dots"
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export MPD_PORT="6601"
+
+# nnn config
+export NNN_OPTS="edHgoRUDx"
+export NNN_OPENER="/usr/bin/nano"
+export NNN_ORDER="t:/home/stas/Загрузки"
