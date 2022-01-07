@@ -19,7 +19,7 @@
     <primaryMonitor>1</primaryMonitor>
   </placement>
   <theme>
-    <name>Plata-mod</name>
+    <name>Simplebox</name>
     <titleLayout>NLIC</titleLayout>
     <keepBorder>yes</keepBorder>
     <animateIconify>yes</animateIconify>
@@ -149,7 +149,7 @@
     <!-- show terminal -->
     <keybind key="W-t">
       <action name="Execute">
-        <command>/usr/local/bin/st</command>
+        <command>/usr/bin/urxvt</command>
       </action>
     </keybind>
     <!-- Show rofi -->
@@ -304,7 +304,6 @@
         </finalactions>
       </action>
     </keybind>
-
     <!--
           equal split
     -->
@@ -840,7 +839,7 @@
     <application class="*libreoffice-startcenter*">
       <desktop>4</desktop>
     </application>
-     <application class="*libreoffice-draw*">
+    <application class="*libreoffice-draw*">
       <desktop>4</desktop>
     </application>
     <application class="*libreoffice-math*">
@@ -852,7 +851,7 @@
     <application class="*libreoffice-impress*">
       <desktop>4</desktop>
     </application>
-   <application class="Steam">
+    <application class="Steam">
       <desktop>5</desktop>
     </application>
     <application class="*Virt-manager">

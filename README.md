@@ -1,8 +1,10 @@
 # There's no place like ~/
 
-![Image](1607853005.png)
+![Image](1.png)
 
-![Image](1607853070.png)
+![Image](2.png)
+
+![Image](3.png)
 
 
 ## Dependencies
@@ -23,10 +25,6 @@ Custom scripts rely on:
 `Meslo LGM Nerd Font Mono`— for terminal emulator<br/>
 `Terminus Powerline`— for console<br/>
 `Material Design Icons Desktop` and `Powerline Extra Symbols`— for glyphs in Polybar<br/>
-
-### oh-my-zsh
-
-Should be installed to `~/.oh-my-zsh`
 
 
 ## Installation
@@ -50,16 +48,9 @@ To do
 To do
 
 
-## System config
-
-Samba, systemd-networkd and dnf config files go here
-
-
 ## ToDo
 
 * This README
-
-* Script to automatically switch pulseaudio output to HDMI when the cable is plugged in
 
 * Install scripts
 

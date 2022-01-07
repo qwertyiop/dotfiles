@@ -1,0 +1,8 @@
+set recolor
+set recolor-lightcolor \#272A34
+set recolor-darkcolor \#e4e4e4
+set recolor-keephue
+set recolor-reverse-video
+
+set scroll-page-aware "true"
+set smooth-scroll "true"

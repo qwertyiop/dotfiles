@@ -53,7 +53,7 @@ URxvt.font: xft:MesloLGS\ Nerd\ Font\ Mono:style=Regular:size=12
 URxvt.boldFont: xft:MesloLGS\ Nerd\ Font\ Mono:style=Bold:size=12
 URxvt.italicFont: xft:MesloLGS\ Nerd\ Font\ Mono:style=Italic:size=12
 URxvt.boldItalicfont: xft:MesloLGS\ Nerd\ Font\ Mono:style=Bold Italic:size=12
-URxvt.letterSpace: 0
+!--URxvt.letterSpace: 0--!
 URxvt.lineSpace: 0
 
 URxvt.geometry: 110x30

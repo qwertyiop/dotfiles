@@ -33,5 +33,5 @@ elif [[ "$arg" = "active" ]]; then
 elif [[ "$arg" = "crop" ]]; then
   cropArea
 else
-  notify-send "Не указан аргумент функции!" --urgency=critical -t 1000
+  notify-send "Не указан аргумент функции!" --urgency=critical -t 2000
 fi
