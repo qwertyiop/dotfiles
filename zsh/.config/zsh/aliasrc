@@ -42,7 +42,7 @@ alias \
 	fgrep="fgrep --color=auto" \
 	egrep="egrep --color=auto" \
 	diff="diff --color=auto" \
-	ls="lsd -AlF --group-dirs first --date relative" \
+	ls="lsd -AlF" \
 	mc="mc --nocolor" \
 	ping="grc --colour=auto ping -c 5" \
 	traceroute="grc --colour=auto traceroute" \
