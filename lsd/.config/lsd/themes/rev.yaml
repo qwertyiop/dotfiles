@@ -1,9 +1,9 @@
-user: dark_green
-group: green
+user: green
+group: dark_green
 permission:
   read: dark_cyan
-  write: dark_cyan
-  exec: dark_cyan
+  write: cyan
+  exec: cyan
   exec-sticky: dark_green
   no-access: blue
 date:

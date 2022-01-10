@@ -49,6 +49,6 @@ export QT_QPA_PLATFORMTHEME="qt5ct"
 export MPD_PORT="6601"
 
 # nnn config
-export NNN_OPTS="edHgoRUDx"
+export NNN_OPTS="CedHgoRuUx"
 export NNN_OPENER="/usr/bin/nano"
 export NNN_ORDER="t:/home/stas/Загрузки"
