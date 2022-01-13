@@ -33,6 +33,6 @@ element {
 }
 
 element selected {
-  background-color: #5be3e3;
+  background-color: #737680;
   text-color: #1c1c1c;
 }
