@@ -1,16 +1,16 @@
 ! Reversion theme
 ! special
-*.foreground:   #e4e4e4
+*.foreground:   #c7c7c7
 *.background:   #1c1c1c
-*.cursorColor:  #e4e4e4
+*.cursorColor:  #c7c7c7
 
 ! black
 *.color0:       #000000
 *.color8:       #808080
 
 ! red
-*.color1:       #e38888
-*.color9:       #e39f9f
+*.color1:       #e35b5b
+*.color9:       #eb8d8d
 
 ! green
 *.color2:       #5be36f
@@ -21,12 +21,12 @@
 *.color11:      #e3d888
 
 ! blue
-*.color4:       #88c5e3
-*.color12:      #9fd9e3
+*.color4:       #5bb3e3
+*.color12:      #88d8e3
 
 ! magenta
-*.color5:       #e388e3
-*.color13:      #e3aacc
+*.color5:       #e35be3
+*.color13:      #e388ba
 
 ! cyan
 *.color6:       #5be3e3
@@ -34,7 +34,7 @@
 
 ! white
 *.color7:       #e4e4e4
-*.color15:      #e4e4e4
+*.color15:      #ffffff
 
 
 !-- font rendering --!
