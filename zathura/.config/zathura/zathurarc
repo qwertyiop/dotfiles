@@ -1,6 +1,6 @@
 set recolor
 set recolor-lightcolor \#272A34
-set recolor-darkcolor \#e4e4e4
+set recolor-darkcolor \#c7c7c7
 set recolor-keephue
 set recolor-reverse-video
 

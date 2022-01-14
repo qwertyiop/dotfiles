@@ -5,6 +5,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# dircolors
+test -r "$HOME/.dir_colors" && eval $(dircolors $HOME/.dir_colors)
+
 # General
 setopt AUTO_CD BEEP EXTENDED_GLOB GLOB_DOTS NUMERIC_GLOB_SORT NOMATCH CHECK_RUNNING_JOBS NOTIFY
 

@@ -97,7 +97,7 @@ size: default
 sorting:
   # Specify what to sort by.
   # Possible values: extension, name, time, size, version
-  column: extension
+  column: name
   # Whether to reverse the sorting.
   # Possible values: false, true
   reverse: false
