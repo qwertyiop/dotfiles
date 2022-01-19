@@ -40,6 +40,7 @@ export GEM_SPEC_CACHE="$XDG_CACHE_HOME/gem"
 
 # Default applications
 export EDITOR="/usr/bin/nano"
+export PAGER="/usr/bin/less"
 export SUDO_EDITOR="/usr/bin/nano"
 export FILE="/usr/bin/nnn"
 
