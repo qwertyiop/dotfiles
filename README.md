@@ -31,7 +31,7 @@ Custom scripts rely on:
 
 Clone the repository:
 
-  `git clone https://github.com/qwertyiop/my_fedora_setup.git`
+  `git clone https://github.com/qwertyiop/dotfiles.git`
 
 Use `stow` to install:
 
