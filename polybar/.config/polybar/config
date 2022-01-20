@@ -1,10 +1,10 @@
 [color]
 bg = #991c1c1c
 bg_alt = #000000
-fg = #e4e4e4
-fg_alt = #e4e4e4
-warning = #e35b5b
-normal = #5be35b
+fg = ${xrdb:foreground}
+fg_alt = ${xrdb:foreground}
+warning = ${xrdb:color1}
+normal = ${xrdb:color2}
 
 #####################################################################
 
@@ -49,32 +49,6 @@ top = true
 modules-left = workspaces title suffix
 modules-center = date time
 modules-right = xkeyboard wired wireless dnf_updates flatpak_updates pulseaudio
-
-#####################################################################
-
-[module/bspwm]
-type = internal/bspwm
-
-pin-workspaces = true
-enable-click = true
-enable-scroll = false
-
-label-focused = 󰄯
-label-focused-padding = 1
-
-label-occupied = 󰀚
-label-occupied-padding = 1
-
-label-urgent = 󰐾
-label-urgent-padding = 1
-
-label-empty = 󰐽
-label-empty-padding = 1
-
-format = <label-state>
-format-padding = 1
-format-background = ${color.bg_alt}
-format-foreground = ${color.fg_alt}
 
 ######################################################################
 
@@ -255,45 +229,3 @@ format-volume = <ramp-volume> <label-volume>
 click-right = pavucontrol &
 
 format-volume-padding = 2
-
-#####################################################################
-
-[temperature-global]
-type = internal/temperature
-interval = 1
-units = true
-
-base-temperature = 25
-warn-temperature = 85
-
-ramp-0 = 󰔏
-#ramp-1 = 󰸅
-#ramp-2 = 󰸁
-
-label =
-
-format = <ramp> <label>
-#format-warn-background = ${color.warning}
-format-foreground = ${color.fg_alt}
-format-padding = 2
-
-[module/gpu-temp]
-inherit = temperature-global
-termal-zone = 0
-hwmon-path = /sys/devices/virtual/thermal/thermal_zone0/hwmon1/temp1_input
-label = "GPU: %temperature-c%"
-
-[module/cpu-temp]
-inherit = temperature-global
-termal-zone = 1
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input
-label = "CPU: %temperature-c%"
-
-#[module/temp]
-#type = custom/script
-#inherit = temperature-global
-#exec = "sensors|grep temp1|column -t|awk '{print $2}'"
-#interval = 10
-#
-#label = "%output%"
-#format = <label>
