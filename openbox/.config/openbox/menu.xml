@@ -12,10 +12,14 @@
   <separator label="Быстрый запуск"/>
 
   <item label="Терминал" icon="/usr/share/icons/Adwaita/16x16/apps/utilities-terminal-symbolic.symbolic.png">
-    <action name="Execute"> <command>/usr/local/bin/st</command> </action>
+    <action name="Execute">
+      <command>/usr/bin/urxvt</command>
+    </action>
   </item>
   <item label="Менеджер Файлов" icon="/usr/share/icons/Adwaita/16x16/apps/system-file-manager-symbolic.symbolic.png">
-    <action name="Execute"> <command>pcmanfm</command> </action>
+    <action name="Execute">
+      <command>pcmanfm</command>
+    </action>
   </item>
 
   <separator label="System"/>

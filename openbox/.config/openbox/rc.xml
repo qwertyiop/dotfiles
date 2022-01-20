@@ -765,14 +765,9 @@
     </mousebind>
     <context name="Root">
       <!-- Menus -->
-      <mousebind button="Middle" action="Press">
-        <action name="ShowMenu">
-          <menu>client-list-combined-menu</menu>
-        </action>
-      </mousebind>
       <mousebind button="Right" action="Press">
         <action name="ShowMenu">
-          <menu>root-menu</menu>
+          <menu>client-list-combined-menu</menu>
         </action>
       </mousebind>
     </context>
@@ -799,6 +794,7 @@
       </mousebind>
     </context>
   </mouse>
+  <!--
   <menu>
     <file>menu.xml</file>
     <hideDelay>200</hideDelay>
@@ -808,6 +804,7 @@
     <showIcons>yes</showIcons>
     <manageDesktops>yes</manageDesktops>
   </menu>
+  -->
   <applications>
     <application class="*">
       <decor>no</decor>
