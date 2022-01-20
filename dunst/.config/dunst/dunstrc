@@ -9,7 +9,7 @@
     padding = 8
     horizontal_padding = 8
     frame_width = 2
-    frame_color = "#5b9fe3"
+    frame_color = "#D8DEE9"
     separator_color = frame
     sort = yes
     idle_threshold = 120
@@ -30,7 +30,7 @@
     icon_path = /usr/share/icons/Numix/16/status/:/usr/share/icons/Numix/16/devices/
     sticky_history = yes
     history_length = 20
-    browser = /usr/bin/icecat-x11 -new-tab
+    browser = /usr/bin/firefox -new-tab
     always_run_script = true
     title = Dunst
     class = Dunst
@@ -41,7 +41,7 @@
     mouse_left_click = close_current
     mouse_middle_click = do_action
     mouse_right_click = close_all
-# to have a consistent behaviour across releases.
+
 [experimental]
     per_monitor_dpi = false
 
@@ -52,19 +52,19 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#1c1c1c"
-    foreground = "#E4E4E4"
-    frame_color = "#5be35b"
+    background = "#2E3440"
+    foreground = "#D8DEE9"
+    frame_color = "#A3BE8C"
     timeout = 10
 
 [urgency_normal]
-    background = "#1c1c1c"
-    foreground = "#E4E4E4"
-    frame_color = "#e39f5b"
+    background = "#2E3440"
+    foreground = "#D8DEE9"
+    frame_color = "#EBCB8B"
     timeout = 10
 
 [urgency_critical]
-    background = "#1c1c1c"
-    foreground = "#E4E4E4"
-    frame_color = "#e35b5b"
+    background = "#2E3440"
+    foreground = "#D8DEE9"
+    frame_color = "#BF616A"
     timeout = 0
