@@ -48,7 +48,7 @@
     icon_position = left
     min_icon_size = 0
     max_icon_size = 64
-    icon_path = /usr/share/icons/Numix/16/status/:/usr/share/icons/Numix/16/devices/
+    icon_path = /usr/share/icons/Numix/48/status/:/usr/share/icons/Numix/48/devices/
 
     ### History ###
 
