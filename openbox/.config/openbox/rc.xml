@@ -61,13 +61,12 @@
     </font>
   </theme>
   <desktops>
-    <number>8</number>
+    <number>7</number>
     <firstdesk>1</firstdesk>
     <names>
       <name>Console</name>
       <name>Web</name>
       <name>Email</name>
-      <name>Office</name>
       <name>Steam</name>
       <name>VM</name>
       <name>Unsorted_1</name>
@@ -794,7 +793,6 @@
       </mousebind>
     </context>
   </mouse>
-  <!--
   <menu>
     <file>menu.xml</file>
     <hideDelay>200</hideDelay>
@@ -804,7 +802,6 @@
     <showIcons>yes</showIcons>
     <manageDesktops>yes</manageDesktops>
   </menu>
-  -->
   <applications>
     <application class="*">
       <decor>no</decor>
@@ -827,32 +824,11 @@
     <application class="Thunderbird">
       <desktop>3</desktop>
     </application>
-    <application class="*libreoffice-calc*">
-      <desktop>4</desktop>
-    </application>
-    <application class="*libreoffice-writer*">
-      <desktop>4</desktop>
-    </application>
-    <application class="*libreoffice-startcenter*">
-      <desktop>4</desktop>
-    </application>
-    <application class="*libreoffice-draw*">
-      <desktop>4</desktop>
-    </application>
-    <application class="*libreoffice-math*">
-      <desktop>4</desktop>
-    </application>
-    <application class="*libreoffice-base*">
-      <desktop>4</desktop>
-    </application>
-    <application class="*libreoffice-impress*">
-      <desktop>4</desktop>
-    </application>
     <application class="Steam">
-      <desktop>5</desktop>
+      <desktop>4</desktop>
     </application>
     <application class="*Virt-manager">
-      <desktop>6</desktop>
+      <desktop>5</desktop>
     </application>
   </applications>
 </openbox_config>
