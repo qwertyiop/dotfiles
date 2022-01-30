@@ -5,7 +5,7 @@ include "~/.config/nano/highlighting/*.nanorc"
 set linenumbers
 set constantshow
 set mouse
-#set smooth
+set suspend
 set autoindent
 set softwrap
 set tabsize 2
@@ -14,6 +14,7 @@ set afterends
 set matchbrackets "(<[{)>]}"
 set noconvert
 set speller "hunspell"
+set zap
 
 # Keybindings
 
@@ -45,7 +46,9 @@ bind ^G findnext all
 bind ^D findprevious all
 bind ^R replace main
 
-bind ^Z undo main
-bind ^Y redo main
+bind M-U undo main
+bind M-E redo main
+
+bind ^Z suspend all
 
 bind M-A nohelp main
