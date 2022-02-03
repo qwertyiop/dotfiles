@@ -1,13 +1,18 @@
 * {
-  background-color: #1c1c1c;
-  text-color: #e4e4e4;
+  background-color: transparent;
+  text-color: #d8dee9;
   spacing: 0;
+}
+
+window {
+  background-color: #1c1c1c;
   width: 720px;
+  height: 400px;
 }
 
 inputbar {
   border: 0 0 1px 0;
-  children: [prompt, entry];
+  children: [prompt,entry];
 }
 
 prompt {
@@ -32,7 +37,7 @@ element {
   padding: 16px;
 }
 
-element selected {
+element .selected {
   background-color: #737680;
   text-color: #1c1c1c;
 }

@@ -154,7 +154,7 @@
     <!-- Show rofi -->
     <keybind key="W-d">
       <action name="Execute">
-        <command>rofi -show run -config ~/.config/rofi/config</command>
+        <command>rofi -show combi -combi-modi window,run -config ~/.config/rofi/config</command>
       </action>
     </keybind>
     <!-- exit openbox -->
