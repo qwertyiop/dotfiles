@@ -38,10 +38,10 @@ alias \
 
 # colorize all the things
 alias \
-	grep="grc --color=auto grep" \
-	fgrep="grc --color=auto fgrep" \
-	egrep="grc --color=auto egrep" \
-	diff="grc --color=auto diff" \
+	grep="grc --colour=auto grep" \
+	fgrep="grc --colour=auto fgrep" \
+	egrep="grc --colour=auto egrep" \
+	diff="grc --colour=auto diff" \
 	ls="lsd -AlF" \
 	ping="grc --colour=auto ping -c 5" \
 	traceroute="grc --colour=auto traceroute" \
