@@ -107,7 +107,7 @@ exec = "/usr/bin/date '+%a, %d %B'"
 interval = 2
 
 label = "󰃭  %output%"
-click-left = "popup-calendar --popup &"
+click-left = "~/.config/polybar/scripts/popup-calendar --popup &"
 
 format = <label>
 format-padding = 2

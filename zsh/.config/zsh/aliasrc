@@ -19,6 +19,7 @@ alias \
   btctl="bluetoothctl" \
   k="killall" \
   cls="clear" \
+	ls="lsd -AlF" \
 
 # systemd
 alias \
@@ -38,11 +39,7 @@ alias \
 
 # colorize all the things
 alias \
-	grep="grc --colour=auto grep" \
-	fgrep="grc --colour=auto fgrep" \
-	egrep="grc --colour=auto egrep" \
 	diff="grc --colour=auto diff" \
-	ls="lsd -AlF" \
 	ping="grc --colour=auto ping -c 5" \
 	traceroute="grc --colour=auto traceroute" \
 	make="grc --colour=auto make" \
