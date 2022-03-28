@@ -762,14 +762,15 @@
       <action name="Focus"/>
       <action name="Raise"/>
     </mousebind>
+    <!--
     <context name="Root">
-      <!-- Menus -->
       <mousebind button="Right" action="Press">
         <action name="ShowMenu">
           <menu>client-list-combined-menu</menu>
         </action>
       </mousebind>
     </context>
+    -->
     <context name="MoveResize">
       <mousebind button="Up" action="Click">
         <action name="GoToDesktop">
@@ -809,7 +810,7 @@
     <application class="*VirtualBox*">
       <decor>yes</decor>
     </application>
-    <application class="Firefox">
+    <application class="firefox">
       <desktop>2</desktop>
       <focus>yes</focus>
       <size>

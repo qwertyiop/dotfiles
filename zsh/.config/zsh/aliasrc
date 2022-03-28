@@ -39,6 +39,7 @@ alias \
 
 # colorize all the things
 alias \
+  ip="grc --colour=auto ip" \
 	diff="grc --colour=auto diff" \
 	ping="grc --colour=auto ping -c 5" \
 	traceroute="grc --colour=auto traceroute" \

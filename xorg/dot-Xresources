@@ -69,7 +69,7 @@ URxvt.lineSpace: 0
 
 URxvt.geometry: 110x30
 
-URxvt.saveline: 10000
+URxvt.saveline: 15000
 URxvt.scrollBar: false
 URxvt.scrollBar_right: false
 URxvt.scrollWithBuffer: true
