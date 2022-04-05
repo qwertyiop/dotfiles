@@ -812,7 +812,9 @@
     </application>
     <application class="firefox">
       <desktop>2</desktop>
+      <!--
       <focus>yes</focus>
+      -->
       <size>
         <height>100%</height>
         <width>100%</width>

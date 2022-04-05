@@ -1,6 +1,8 @@
 [color]
 bg = #991c1c1c
 bg_alt = #000000
+#bg = ${xrdb:background}
+#bg_alt = ${xrdb:background}
 fg = ${xrdb:foreground}
 fg_alt = ${xrdb:foreground}
 warning = ${xrdb:color1}

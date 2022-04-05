@@ -21,7 +21,7 @@ export XDG_PICTURES_DIR="$HOME/Изображения"
 export XDG_VIDEOS_DIR="$HOME/Видео"
 
 # Attempting to clean up home folder
-export GNUPGHOME="$XDG_DATA_HOME/gnupg"
+export GNUPGHOME="$XDG_CONFIG_HOME/gnupg"
 export PARALLEL_HOME="$XDG_CONFIG_HOME/parallel"
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
 export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
