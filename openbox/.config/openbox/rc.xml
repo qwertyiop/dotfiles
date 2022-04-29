@@ -810,6 +810,7 @@
     <application class="*VirtualBox*">
       <decor>yes</decor>
     </application>
+
     <application class="firefox">
       <desktop>2</desktop>
       <!--
@@ -824,14 +825,33 @@
         <y>center</y>
       </position>
     </application>
+
+    <application class="Tor Browser">
+      <desktop>2</desktop>
+      <size>
+        <height>100%</height>
+        <width>100%</width>
+      </size>
+      <position force="yes">
+        <x>center</x>
+        <y>center</y>
+      </position>
+    </application>
+
     <application class="Thunderbird">
       <desktop>3</desktop>
     </application>
+
     <application class="Steam">
       <desktop>4</desktop>
     </application>
+
     <application class="*Virt-manager">
       <desktop>5</desktop>
+    </application>
+
+    <application class="Pcmanfm">
+      <desktop>6</desktop>
     </application>
   </applications>
 </openbox_config>

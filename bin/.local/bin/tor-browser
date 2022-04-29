@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+sh -c '"/home/stas/.tor-browser_en-US/Browser/start-tor-browser" --detach || ([ !  -x "/home/stas/.tor-browser_en-US/Browser/start-tor-browser" ] && "$(dirname "$*")"/Browser/start-tor-browser --detach)'
