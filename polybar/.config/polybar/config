@@ -11,8 +11,8 @@ normal = ${xrdb:color2}
 #####################################################################
 
 [global]
-font-0 = "Roboto:weight=bold:size=11;2"
-font-1 = "Material Design Icons Desktop:size=14;4"
+font-0 = "Noto Sans Regular:weight=bold:size=11;3"
+font-1 = "Material Design Icons Desktop:size=14;3"
 font-2 = "Powerline Extra Symbols:size=14;4"
 
 locale = ru_RU.UTF-8

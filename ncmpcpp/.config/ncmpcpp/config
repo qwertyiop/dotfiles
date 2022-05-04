@@ -52,4 +52,4 @@ startup_slave_screen = "lyrics"
 locked_screen_width_part = 50
 ask_for_locked_screen_width_part = no
 
-song_columns_list_format = "(25)[blue]{a} (25)[green]{brE} (47)[cyan]{t|f} (6f)[blue]{l}"
+song_columns_list_format = "(25)[yellow]{a} (25)[green]{brE} (47)[cyan]{t|f} (6f)[yellow]{l}"

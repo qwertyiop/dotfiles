@@ -30,7 +30,7 @@
 
     ### Text ###
 
-    font = Roboto Regular 11
+    font = Noto Sans Regular 11
     line_height = 1
     markup = full
     format = "<b>%s</b>\n%b"

@@ -1,6 +1,6 @@
 configuration {
 	modi:           "window,run,combi";
-	font:           "Roboto 11";
+	font:           "Noto Sans 11";
 	show-icons:     false;
 	matching:       "fuzzy";
 	hide-scrollbar: true;
