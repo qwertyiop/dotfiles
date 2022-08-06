@@ -19,7 +19,7 @@
     <primaryMonitor>1</primaryMonitor>
   </placement>
   <theme>
-    <name>Simplebox</name>
+    <name>openbox-simplebox</name>
     <titleLayout>NLIC</titleLayout>
     <keepBorder>yes</keepBorder>
     <animateIconify>yes</animateIconify>
@@ -266,7 +266,7 @@
       </action>
     </keybind>
     <!-- close window -->
-    <keybind key="W-S-q">
+    <keybind key="W-q">
       <action name="Close"/>
     </keybind>
     <!-- maximize window -->
@@ -810,7 +810,6 @@
     <application class="*VirtualBox*">
       <decor>yes</decor>
     </application>
-
     <application class="firefox">
       <desktop>2</desktop>
       <!--
@@ -825,7 +824,6 @@
         <y>center</y>
       </position>
     </application>
-
     <application class="Tor Browser">
       <desktop>2</desktop>
       <size>
@@ -837,19 +835,15 @@
         <y>center</y>
       </position>
     </application>
-
     <application class="Thunderbird">
       <desktop>3</desktop>
     </application>
-
     <application class="Steam">
       <desktop>4</desktop>
     </application>
-
     <application class="*Virt-manager">
       <desktop>5</desktop>
     </application>
-
     <application class="Pcmanfm">
       <desktop>6</desktop>
     </application>
