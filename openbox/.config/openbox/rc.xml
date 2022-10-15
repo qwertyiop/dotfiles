@@ -84,9 +84,9 @@
     </popupFixedPosition>
   </resize>
   <margins>
-    <top>40</top>
+    <top>50</top>
     <bottom>20</bottom>
-    <left>20</left>
+    <left>105</left>
     <right>20</right>
   </margins>
   <dock>
@@ -835,7 +835,7 @@
         <y>center</y>
       </position>
     </application>
-    <application class="Thunderbird">
+    <application class="thunderbird">
       <desktop>3</desktop>
     </application>
     <application class="Steam">

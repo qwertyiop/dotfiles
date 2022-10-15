@@ -13,7 +13,7 @@ normal = ${xrdb:color2}
 [global]
 font-0 = "Roboto:weight=bold:size=11;2"
 font-1 = "Material Design Icons Desktop:size=14;4"
-font-2 = "Powerline Extra Symbols:size=14;4"
+font-2 = "Powerline Extra Symbols:size=20;4"
 
 locale = ru_RU.UTF-8
 
@@ -27,7 +27,7 @@ line-size = 2
 monitor = LVDS-1
 inherit = global
 width = 100%
-height = 20
+height = 30
 top = true
 
 modules-left = workspaces title suffix
@@ -59,10 +59,10 @@ type = internal/network
 interface = wlan0
 interval = 1
 
-ramp-signal-0 = 󰢿
-ramp-signal-1 = 󰢼
-ramp-signal-2 = 󰢽
-ramp-signal-3 = 󰢾
+ramp-signal-0 = 󰤟
+ramp-signal-1 = 󰤢
+ramp-signal-2 = 󰤥
+ramp-signal-3 = 󰤨
 ramp-signal-padding = 2
 
 format-connected = <ramp-signal>
@@ -71,7 +71,7 @@ format-packetloss = <ramp-signal>
 
 format-disconnected = <label-disconnected>
 
-label-disconnected =
+label-disconnected = 󰤮
 
 #####################################################################
 
@@ -109,7 +109,8 @@ exec = "/usr/bin/date '+%a, %d %B'"
 interval = 2
 
 label = "󰃭  %output%"
-click-left = "~/.config/polybar/scripts/popup-calendar --popup &"
+#click-left = "~/.config/polybar/scripts/popup-calendar --popup &"
+click-left = "eww open --toggle date"
 
 format = <label>
 format-padding = 2

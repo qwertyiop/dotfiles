@@ -4,7 +4,7 @@
     width = 300
     height = 300
     origin = top-right
-    offset = 10x30
+    offset = 20x50
     scale = 0
     notification_limit = 0
 
@@ -16,7 +16,7 @@
     progress_bar_max_width = 300
 
     indicate_hidden = yes
-    transparency = 0
+    transparency = 25
     separator_height = 2
 
     padding = 10
@@ -30,7 +30,7 @@
 
     ### Text ###
 
-    font = Noto Sans Regular 11
+    font = Roboto Regular 11
     line_height = 1
     markup = full
     format = "<b>%s</b>\n%b"
@@ -84,19 +84,19 @@
 
 
 [urgency_low]
-    background = "#2E3440"
+    background = "#1C1C1C"
     foreground = "#D8DEE9"
     timeout = 10
     #default_icon = /path/to/icon
 
 [urgency_normal]
-    background = "#2E3440"
+    background = "#1C1C1C"
     foreground = "#D8DEE9"
     timeout = 10
     #default_icon = /path/to/icon
 
 [urgency_critical]
-    background = "#2E3440"
+    background = "#1C1C1C"
     foreground = "#D8DEE9"
     frame_color = "#BF616A"
     timeout = 0
