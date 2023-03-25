@@ -19,7 +19,7 @@ alias \
   btctl="bluetoothctl" \
   k="killall" \
   cls="clear" \
-	ls="lsd -AlF" \
+  ls="lsd -AlF" \
 
 # systemd
 alias \

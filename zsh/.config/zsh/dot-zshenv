@@ -42,11 +42,12 @@ export GEM_SPEC_CACHE="$XDG_CACHE_HOME/gem"
 export EDITOR="/usr/bin/nano"
 export PAGER="/usr/bin/less"
 export SUDO_EDITOR="/usr/bin/nano"
-export FILE="/usr/bin/nnn"
+export FILE="/usr/local/bin/lf"
 
 # Other variables
-export DOTS="$HOME/Files/git-repos/dots"
-export QT_QPA_PLATFORMTHEME="qt5ct"
+export DOTS="$HOME/git/dotfiles"
+#export QT_QPA_PLATFORMTHEME="qt5ct"
+export QT_STYLE_OVERRIDE="kvantum"
 export MPD_PORT="6601"
 
 # nnn config

@@ -1,3 +1,4 @@
+
 configuration {
 	modi:           "window,run,combi";
 	font:           "Noto Sans 11";

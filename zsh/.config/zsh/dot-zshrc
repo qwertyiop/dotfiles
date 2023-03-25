@@ -42,7 +42,7 @@ HISTSIZE=1000
 SAVEHIST=1000
 
 # Enable plugins
-source $XDG_DATA_HOME/zsh/plugins/history-substring-search/history-substring-search.plugin.zsh
+source $XDG_DATA_HOME/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
 source $XDG_DATA_HOME/zsh/plugins/command-not-found/command-not-found.plugin.zsh
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
