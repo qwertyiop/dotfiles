@@ -8,13 +8,13 @@ sticker_file          "~/.config/mpd/sticker.sql"
 
 # General music daemon options ################################################
 
-#user                             "mpd"
+#user                             "nobody"
 group                             "stas"
-bind_to_address                   "any"
+bind_to_address                   "127.0.0.1"
 #bind_to_address                  "~/.mpd/socket"
 port                              "6601"
 log_level                         "default"
-#gapless_mp3_playback              "no"
+gapless_mp3_playback              "no"
 restore_paused                    "yes"
 save_absolute_paths_in_playlists	"no"
 metadata_to_use                   "artist,album,title,track,name,genre,date"
@@ -25,8 +25,8 @@ follow_inside_symlinks            "yes"
 
 # Zeroconf / Avahi Service Discovery ##########################################
 
-#zeroconf_enabled		"yes"
-#zeroconf_name			"Music Player"
+zeroconf_enabled		"yes"
+zeroconf_name			"Music Player"
 
 # Permissions #################################################################
 #password                        "password@read,add,control,admin"
@@ -47,21 +47,11 @@ input {
 
 # Audio Output ################################################################
 
-#audio_output {
-#
-#	type "pulse"
-#	name "Pulseaudio"
-#
-#}
-
-#audio_output {
-#        type            "Pipewire"
-#        name            "PipeWire Sound Server"
-#}
-
 audio_output {
-        type            "alsa"
-        name            "Alsa"
+
+	type "pipewire"
+	name "Pipewire Sound Server"
+
 }
 
 audio_output {
@@ -76,11 +66,9 @@ audio_output {
 
 # Normalization automatic volume adjustments ##################################
 
-replaygain                  "track"
-replaygain_preamp           "0"
-replaygain_missing_preamp   "0"
-replaygain_limit            "yes"
-volume_normalization        "yes"
+replaygain            "album"
+replaygain_preamp     "0"
+volume_normalization	"yes"
 
 ###############################################################################
 

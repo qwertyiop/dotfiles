@@ -42,7 +42,7 @@ HISTSIZE=1000
 SAVEHIST=1000
 
 # Enable plugins
-source $XDG_DATA_HOME/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
+source $XDG_DATA_HOME/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 source $XDG_DATA_HOME/zsh/plugins/command-not-found/command-not-found.plugin.zsh
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -69,8 +69,10 @@ DIRSTACKSIZE='30'
 setopt AUTO_PUSHD PUSHD_SILENT PUSHD_TO_HOME PUSHD_IGNORE_DUPS PUSHD_MINUS
 
 # Keybindings
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
+#bindkey "^[[A" history-substring-search-up
+#bindkey "^[[B" history-substring-search-down
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcud1]" history-substring-search-down
 
 # load aliases
 [ -f "$HOME/.config/zsh/aliasrc" ] && source "$HOME/.config/zsh/aliasrc"
