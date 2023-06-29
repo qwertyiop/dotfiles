@@ -1,0 +1,8 @@
+[Unit]
+Description=kbackup timer service
+
+[Service]
+ExecStart=/usr/bin/kbackup --autobg /home/stas/.config/kbackup/config_files.kbp &>/dev/null
+
+[Install]
+WantedBy=multi-user.target

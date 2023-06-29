@@ -1,0 +1,11 @@
+[Unit]
+Description=Backup user config files daily
+
+[Timer]
+OnCalendar=*-*-* 20:55:00
+AccuracySec=12h
+Persistent=true
+Unit=cfbackup.service
+
+[Install]
+WantedBy=timers.target

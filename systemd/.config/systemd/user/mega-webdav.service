@@ -1,0 +1,10 @@
+[Unit]
+Description=Serve MEGA root folder via webdav
+Requires=mega-cmd-server.service
+After=mega-cmd-server.service
+
+[Service]
+ExecStart=/usr/bin/mega-webdav /
+
+[Install]
+WantedBy=default.target

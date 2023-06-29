@@ -1,0 +1,9 @@
+[Unit]
+Description=Backup user config files
+
+[Service]
+Type=oneshot
+ExecStart=/home/stas/.local/bin/config_files_backup.sh
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,11 @@
+[Unit]
+Description=Daily backup config files
+
+[Timer]
+OnCalendar=*-*-* 21:02:00
+AccuracySec=12h
+Persistent=true
+Unit=kbackup.service
+
+[Install]
+WantedBy=timers.target

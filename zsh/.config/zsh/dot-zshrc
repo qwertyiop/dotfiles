@@ -1,8 +1,8 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache/}zsh/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache/}zsh/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 # dircolors
@@ -42,7 +42,7 @@ HISTSIZE=1000
 SAVEHIST=1000
 
 # Enable plugins
-source $XDG_DATA_HOME/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+source $XDG_DATA_HOME/zsh/plugins/history-substring-search/history-substring-search.zsh
 source $XDG_DATA_HOME/zsh/plugins/command-not-found/command-not-found.plugin.zsh
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -54,7 +54,7 @@ source $XDG_DATA_HOME/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
 # see https://wiki.archlinux.org/index.php/zsh#Dirstack
 autoload -Uz add-zsh-hook
 
-DIRSTACKFILE="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/dirs"
+DIRSTACKFILE="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/dirstack"
 if [[ -f "$DIRSTACKFILE" ]] && (( ${#dirstack} == 0 )); then
 	dirstack=("${(@f)"$(< "$DIRSTACKFILE")"}")
 	[[ -d "${dirstack[1]}" ]] && cd -- "${dirstack[1]}"
