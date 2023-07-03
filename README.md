@@ -11,13 +11,14 @@
 
 ### Packages
 
-`rxvt-unicode` `dunst` `git` `grc` `nnn` `lightdm-gtk` `lsd` `mpd` `mpc` `npmpcpp` `nano` `openbox` `PackageKit-command-not-found` `pcmanfm` `picom` `polybar` `qt5ct` `redshift` `rofi` `stow` `tmux` `zsh` `zsh-autosuggestions` `zsh-syntax-highlighting`
+`rxvt-unicode` `dunst` `git` `grc` `nnn` `lightdm-gtk` `lsd` `mpd` `mpc` `npmpcpp` `nano` `openbox` `PackageKit-command-not-found` `pcmanfm` `picom` `polybar` `qt5ct` `redshift` `rofi` `stow` `tmux` `zsh` `zsh-autosuggestions` `zsh-syntax-highlighting` `rsync`
 
 Custom scripts rely on:
 
 `maim` `xdotool` `libnotify`— to make screenshots<br/>
 `xrandr`— to automatically switch between dual- and single-head modes<br/>
 `yad`  `xdotool`— for Polybar popup calendar<br/>
+`rsync` — for backups
 
 Dunst needs `numix-icon-theme` for notification icons
 
