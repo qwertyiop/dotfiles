@@ -6,4 +6,4 @@ Type=oneshot
 ExecStart=/home/stas/.local/bin/cfbackup.sh
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target
