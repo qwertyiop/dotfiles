@@ -21,5 +21,10 @@ Trash/***
 *.err
 *.old
 *.bak
-*akonadi*
+*.dat
 gnupg/***
+db_data/***
+db_misc/***
+search_db/***
+file_db_data/***
+KeePassXCrc
