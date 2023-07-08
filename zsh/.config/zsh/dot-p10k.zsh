@@ -2,7 +2,7 @@ unset -m '(POWERLEVEL9K_*|DEFAULT_USER)~POWERLEVEL9K_GITSTATUS_DIR'
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir newline prompt_char)
 
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status nnn command_execution_time background_jobs vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status nnn lf command_execution_time background_jobs vcs)
 (( P9K_SSH             )) && POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS+=(newline context time)
 
 typeset -g POWERLEVEL9K_MODE=ascii
