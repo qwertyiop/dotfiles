@@ -7,7 +7,7 @@ set constantshow
 set mouse
 set suspend
 set autoindent
-set softwrap
+set nowrap
 set tabsize 2
 set tabstospaces
 set afterends
