@@ -1,0 +1,89 @@
+env:
+  TERM: xterm-256color
+
+window:
+  dimensions:
+    columns: 120
+    lines: 30
+
+  title: Alacritty
+
+  class:
+    instance: Alacritty
+    general: Alacritty
+
+scrolling:
+    history: 5000
+    multiplier: 3
+
+colors:
+
+# Reversion color theme
+
+  cursor:
+    text: '#e4e4e4'
+
+colors:
+  # Default colors
+  primary:
+    background: '0x1c1c1c'
+    foreground: '0xe4e4e4'
+
+  # Normal colors
+  normal:
+    black:   '0x000000'
+    red:     '0xe38888'
+    green:   '0x5be36f'
+    yellow:  '0xe3cf5b'
+    blue:    '0x88c5e3'
+    magenta: '0xe388e3'
+    cyan:    '0x5be3e3'
+    white:   '0xe4e4e4'
+
+  # Bright colors
+  bright:
+    black:   '0x808080'
+    red:     '0xe39f9f'
+    green:   '0x88e393'
+    yellow:  '0xe3d888'
+    blue:    '0x9fd9e3'
+    magenta: '0xe3aacc'
+    cyan:    '0x88e3e3'
+    white:   '0xe4e4e4'
+
+font:
+
+  normal:
+    family: Meslo LGM Nerd Font Mono
+    style: Regular
+
+  bold:
+    family: Meslo LGM Nerd Font Mono
+    style: Bold
+
+  italic:
+    family: Meslo LGM Nerd Font Mono
+    style: Italic
+
+  size: 12
+
+selection:
+  save_to_clipboard: true
+  dynamic_title: true
+
+cursor:
+  style: Block
+
+live_config_reload: true
+
+key_bindings:
+  - { key: V,                 mods: Shift|Alt,       action: Paste            }
+  - { key: C,                 mods: Shift|Alt,       action: Copy             }
+  - { key: Insert,            mods: Shift,           action: PasteSelection   }
+  - { key: NumpadDivide,      mods: Control,         action: ResetFontSize    }
+  - { key: NumpadEquals,      mods: Control,         action: IncreaseFontSize }
+  - { key: NumpadAdd,         mods: Control,         action: IncreaseFontSize }
+  - { key: NumpadSubtract,    mods: Control,         action: DecreaseFontSize }
+
+debug:
+  log_level: Warn
