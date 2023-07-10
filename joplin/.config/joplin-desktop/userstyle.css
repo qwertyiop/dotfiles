@@ -1,0 +1,83 @@
+/* For styling the rendered Markdown */
+.code, .inline-code {
+    font-family: "MesloLGS Nerd Font Mono";
+    border: none;
+}
+
+:root {
+  --white: #e9edf0;
+  --yellow-dark: #E7AE1D;
+  --blue: #02A4F1;
+  --purple-dark: #F459F4;
+  --red-dark: #FF1744;
+}
+
+note::before,
+info::before,
+question::before,
+warning::before
+{
+  font-weight: 700;
+  text-shadow: 1px 1px 3px #000000;
+  color: var(--white);
+  margin-right: 0.2rem;
+  position: absolute;
+  width: 2rem;
+  left: 0;
+  top: 0;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+note,
+info,
+question,
+warning
+{
+  display:block;
+  padding: .5rem 1rem .5rem 2.5rem;
+  position: relative;
+  margin: 15px 0;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 10px;
+	overflow: hidden;
+}
+
+note {
+	border-color: var(--blue);
+}
+
+note::before {
+	content: "\266A";
+	background: var(--blue);
+}
+
+info {
+	border-color: var(--yellow-dark);
+}
+
+info::before {
+	content: "\2139";
+	background: var(--yellow-dark);
+}
+
+question {
+	border-color: var(--purple-dark);
+}
+
+question::before {
+	content: "?";
+	background: var(--purple-dark);
+}
+
+warning {
+	border-color: var(--red-dark);
+	font-weight: bold;
+}
+
+warning::before {
+	content: "\26A0";
+	background: var(--red-dark);
+}

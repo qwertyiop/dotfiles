@@ -1,0 +1,6 @@
+/* For styling the entire Joplin app (except the rendered Markdown, which is 
+defined in `userstyle.css`) */
+i.icon-notes {
+	/* sidebar - removes the "All Notes" icon */
+	 display: none;
+}
