@@ -19,7 +19,7 @@ alias \
   btctl="bluetoothctl" \
   k="killall" \
   cls="clear" \
-  ls="lsd -AlF" \
+  ls="lsd -lF" \
 
 # systemd
 alias \
@@ -42,7 +42,7 @@ alias \
   ip="grc --colour=auto ip" \
 	diff="grc --colour=auto diff" \
 	ping="grc --colour=auto ping -c 5" \
-#	traceroute="grc --colour=auto traceroute" \
+	traceroute="grc --colour=auto traceroute" \
 	make="grc --colour=auto make" \
 	diff="grc --colour=auto diff" \
 	cvs="grc --colour=auto cvs" \
