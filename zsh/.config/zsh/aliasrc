@@ -20,6 +20,7 @@ alias \
   k="killall" \
   cls="clear" \
   ls="lsd -lF" \
+  tree="lsd -lF --tree" \
 
 # systemd
 alias \
@@ -40,28 +41,28 @@ alias \
 # colorize all the things
 alias \
   ip="grc --colour=auto ip" \
-	diff="grc --colour=auto diff" \
-	ping="grc --colour=auto ping -c 5" \
-	traceroute="grc --colour=auto traceroute" \
-	make="grc --colour=auto make" \
-	diff="grc --colour=auto diff" \
-	cvs="grc --colour=auto cvs" \
-	netstat="grc --colour=auto netstat" \
-	lspci="grc --colour=auto lspci" \
-	lsblk="grc --colour=auto lsblk" \
-	lsof="grc --colour=auto lsof" \
-	lsmod="grc --colour=auto lsmod" \
+  diff="grc --colour=auto diff" \
+  ping="grc --colour=auto ping -c 5" \
+  traceroute="grc --colour=auto traceroute" \
+  make="grc --colour=auto make" \
+  diff="grc --colour=auto diff" \
+  cvs="grc --colour=auto cvs" \
+  netstat="grc --colour=auto netstat" \
+  lspci="grc --colour=auto lspci" \
+  lsblk="grc --colour=auto lsblk" \
+  lsof="grc --colour=auto lsof" \
+  lsmod="grc --colour=auto lsmod" \
 
 # dnf shortcuts
 alias \
   dnfarm="sudo dnf autoremove" \
-	dnfin="sudo dnf install" \
-	dnfrm="sudo dnf remove" \
-	dnfup="sudo dnf upgrade" \
-	dnfcm="sudo dnf config-manager" \
-	dnfsr="dnf search" \
-	dnfsl="dnf -C list installed | grep" \
-	dnfdg="sudo dnf downgrade --enablerepo=updates-archive" \
+  dnfin="sudo dnf install" \
+  dnfrm="sudo dnf remove" \
+  dnfup="sudo dnf upgrade" \
+  dnfcm="sudo dnf config-manager" \
+  dnfsr="dnf search" \
+  dnfsl="dnf -C list installed | grep" \
+  dnfdg="sudo dnf downgrade --enablerepo=updates-archive" \
 
 # flatpak shortcuts
 alias \
