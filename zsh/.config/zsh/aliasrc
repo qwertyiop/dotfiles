@@ -68,7 +68,7 @@ alias \
 alias \
   fp="flatpak" \
   fpup="flatpak update" \
-  fpin="flatpak install --user" \
+  fpin="flatpak install" \
   fprm="flatpak uninstall" \
 
 # tmux
