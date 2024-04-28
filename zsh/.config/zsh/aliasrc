@@ -61,8 +61,17 @@ alias \
   dnfup="sudo dnf upgrade" \
   dnfcm="sudo dnf config-manager" \
   dnfsr="dnf search" \
-  dnfsl="dnf -C list installed | grep" \
+  dnfsl="dnf -C list installed | grep -i" \
   dnfdg="sudo dnf downgrade --enablerepo=updates-archive" \
+
+# apt shotcuts
+alias \
+  aptarm="sudo apt autoremove" \
+  aptin="sudo apt install" \
+  aptrm="sudo apt remove" \
+  aptup="sudo apt upgrade" \
+  aptsr="apt search" \
+  aptsl="dpkg --list | grep -i" \
 
 # flatpak shortcuts
 alias \
@@ -70,6 +79,7 @@ alias \
   fpup="flatpak update" \
   fpin="flatpak install" \
   fprm="flatpak uninstall" \
+  fpsr="flatpak search" \
 
 # tmux
 alias \

@@ -49,7 +49,7 @@ export FILE="/usr/local/bin/lf"
 # Other variables
 export DOTS="$HOME/git/dotfiles"
 #export QT_QPA_PLATFORMTHEME="qt5ct"
-export QT_STYLE_OVERRIDE="kvantum"
+#export QT_STYLE_OVERRIDE="kvantum"
 export MPD_PORT="6601"
 
 # nnn config

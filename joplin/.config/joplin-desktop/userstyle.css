@@ -1,8 +1,4 @@
 /* For styling the rendered Markdown */
-.code, .inline-code {
-    font-family: "MesloLGS Nerd Font Mono";
-    border: none;
-}
 
 :root {
   --white: #e9edf0;
@@ -10,6 +6,16 @@
   --blue: #02A4F1;
   --purple-dark: #F459F4;
   --red-dark: #FF1744;
+  --fs: 18px;
+}
+
+body {
+  font-size: var(--fs);
+}
+.code, .inline-code {
+  font-family: "MesloLGS Nerd Font Mono";
+  font-size: var(--fs);
+  border: none;
 }
 
 note::before,

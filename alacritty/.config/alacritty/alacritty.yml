@@ -54,18 +54,18 @@ colors:
 font:
 
   normal:
-    family: Meslo LGM Nerd Font Mono
+    family: Meslo LGS Nerd Font Mono
     style: Regular
 
   bold:
-    family: Meslo LGM Nerd Font Mono
+    family: Meslo LGS Nerd Font Mono
     style: Bold
 
   italic:
-    family: Meslo LGM Nerd Font Mono
+    family: Meslo LGS Nerd Font Mono
     style: Italic
 
-  size: 12
+  size: 10
 
 selection:
   save_to_clipboard: true
