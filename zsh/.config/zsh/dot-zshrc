@@ -35,11 +35,14 @@ autoload -U compinit
 compinit
 zmodload zsh/complist
 
-# включаем выпадающее меню выбора команд
+# включаем выпадающее меню выбора команд только если найдено хотя бы 1 совпадение
 zstyle ':completion:*' menu select=1
 
 # 
 zstyle ':completion:*' completer _complete _ignored _approximate
+
+# цветные результаты автокомплита
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 # тоже самое для su и sudo
 zstyle ':completion::complete:*' gain-privileges 1
