@@ -26,26 +26,86 @@ zle -N self-insert url-quote-magic
 autoload -z edit-command-line
 zle -N edit-command-line
 
+####################
 # completion options
+####################
+
+# Подгружаем модули
 autoload -U compinit
 compinit
 zmodload zsh/complist
-zstyle ':completion:*' menu select=1 _complete _ignored _approximate
+
+# включаем выпадающее меню выбора команд
+zstyle ':completion:*' menu select=1
+
+# 
+zstyle ':completion:*' completer _complete _ignored _approximate
+
+# тоже самое для su и sudo
 zstyle ':completion::complete:*' gain-privileges 1
+
+# делаем matcher-list не чувствительным к регистру
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
+# автодополнение для алиасов
 setopt COMPLETE_ALIASES
+
+# дополняем скрытые файлы
 _comp_options+=(globdots)
+
+# ?
 zstyle ':completion:*' accept-exact '*(N)'
+
+# автодополнение для kill/kilall
+zstyle ':completion:*:*:kill:*' menu yes select
 zstyle ":completion:*:*:kill:*:processes" list-colors "=(#b) #([0-9]#)*=0=01;31"
+
+# ?
 zstyle ":completion:*:kill:*" command "ps -u $USER -o pid,%cpu,tty,cputime,cmd"
 
+######################
 # zsh history settings
-setopt APPEND_HISTORY HIST_IGNORE_DUPS HIST_EXPIRE_DUPS_FIRST HIST_FIND_NO_DUPS HIST_SAVE_NO_DUPS HIST_IGNORE_SPACE HIST_REDUCE_BLANKS HIST_NO_STORE SHARE_HISTORY
+######################
+
+# Дополнение файла истории
+setopt APPEND_HISTORY 
+
+# игнорировать повторяющиеся строки
+setopt HIST_IGNORE_DUPS 
+
+# при очистке файла истории первыми удаляются дубликаты
+setopt HIST_EXPIRE_DUPS_FIRST 
+
+# поиск по истории игнорирует дубликаты
+setopt HIST_FIND_NO_DUPS 
+
+# при записи файла истории игнорируются более старые дубликаты
+setopt HIST_SAVE_NO_DUPS 
+
+# игнорировать пустые строки
+setopt HIST_IGNORE_SPACE 
+
+# убирать лишние пробелы из сохраненных команд
+setopt HIST_REDUCE_BLANKS 
+
+# не сохранять команды history и fc -l  в истории
+setopt HIST_NO_STORE 
+
+# общий файл истории для всех терминалов и сессий
+setopt SHARE_HISTORY
+
+# расположение файла истории
 HISTFILE="$XDG_CACHE_HOME/zsh/history"
-HISTSIZE=1000
+
+# объем файла
+HISTSIZE=2000
 SAVEHIST=1000
 
+
+##################
 # Enable plugins
+##################
+
 source $XDG_DATA_HOME/zsh/plugins/history-substring-search/history-substring-search.zsh
 source $XDG_DATA_HOME/zsh/plugins/command-not-found/command-not-found.plugin.zsh
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
