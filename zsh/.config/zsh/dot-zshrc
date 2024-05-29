@@ -2,13 +2,14 @@
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache/}zsh/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache/}zsh/p10k-instant-prompt-${(%):-%n}.zsh"
+#  source "${XDG_CACHE_HOME:-$HOME/.cache/}zsh/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 # dircolors
 test -r "$HOME/.dir_colors" && eval $(dircolors $HOME/.dir_colors)
 
 # General
+# автопереход .... - дополнить описание
 setopt AUTO_CD BEEP EXTENDED_GLOB GLOB_DOTS NUMERIC_GLOB_SORT NOMATCH CHECK_RUNNING_JOBS NOTIFY
 
 # Correction settings
@@ -35,26 +36,26 @@ autoload -U compinit
 compinit
 zmodload zsh/complist
 
-# включаем выпадающее меню выбора команд только если найдено хотя бы 1 совпадение
-zstyle ':completion:*' menu select=1
-
 # 
-zstyle ':completion:*' completer _complete _ignored _approximate
+zstyle ':completion:*' completer _complete _ignored _approximate _correct
 
-# цветные результаты автокомплита
-zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+#
+_comp_options+=(globdots)
+
+# включаем выпадающее меню выбора команд только если найдено хотя бы 1 совпадение
+zstyle ':completion:*' menu yes select=1
 
 # тоже самое для su и sudo
 zstyle ':completion::complete:*' gain-privileges 1
+
+# группировать результаты
+zstyle ':completion:*:matches' group 'yes'  
 
 # делаем matcher-list не чувствительным к регистру
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
 # автодополнение для алиасов
 setopt COMPLETE_ALIASES
-
-# дополняем скрытые файлы
-_comp_options+=(globdots)
 
 # ?
 zstyle ':completion:*' accept-exact '*(N)'
@@ -65,6 +66,22 @@ zstyle ":completion:*:*:kill:*:processes" list-colors "=(#b) #([0-9]#)*=0=01;31"
 
 # ?
 zstyle ":completion:*:kill:*" command "ps -u $USER -o pid,%cpu,tty,cputime,cmd"
+
+########################
+# Подсветка автокомплита
+########################
+
+# команды - зеленый
+zstyle ':completion:*:commands' list-colors '=*=32'
+
+# параметры
+zstyle ':completion:*:parameters' list-colors '=*=90'
+
+# встроенные функции
+zstyle ':completion:*:builtins' list-colors '=*=1;38;5;142'
+
+# алиасы
+zstyle ':completion:*:aliases' list-colors '=*=2;38;5;128'
 
 ######################
 # zsh history settings
