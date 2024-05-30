@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache/}zsh/p10k-instant-prompt-${(%):-%n}.zsh
 fi
 
 # dircolors
-test -r "$HOME/.dir_colors" && eval $(dircolors $HOME/.dir_colors)
+#test -r "$HOME/.dir_colors" && eval $(dircolors $HOME/.dir_colors)
 
 # General
 # автопереход .... - дополнить описание
@@ -27,14 +27,20 @@ zle -N self-insert url-quote-magic
 autoload -z edit-command-line
 zle -N edit-command-line
 
-####################
+
+
+################################################################################################
+#
 # completion options
-####################
+#
+################################################################################################
+
 
 # Подгружаем модули
 autoload -U compinit
 compinit
 zmodload zsh/complist
+zmodload -i zsh/stat
 
 # 
 zstyle ':completion:*' completer _complete _ignored _approximate _correct
@@ -50,6 +56,10 @@ zstyle ':completion::complete:*' gain-privileges 1
 
 # группировать результаты
 zstyle ':completion:*:matches' group 'yes'  
+zstyle ':completion:*' group-name ''
+
+# кастомный формат для названий групп
+zstyle ':completion:*' format 'Completing %d'
 
 # делаем matcher-list не чувствительным к регистру
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
@@ -60,32 +70,48 @@ setopt COMPLETE_ALIASES
 # ?
 zstyle ':completion:*' accept-exact '*(N)'
 
+# Использовать длинный формат листинга файлов как ls -l
+zstyle ':completion:*' file-list all
+
 # автодополнение для kill/kilall
 zstyle ':completion:*:*:kill:*' menu yes select
 zstyle ":completion:*:*:kill:*:processes" list-colors "=(#b) #([0-9]#)*=0=01;31"
 
-# ?
+# то же для ps
 zstyle ":completion:*:kill:*" command "ps -u $USER -o pid,%cpu,tty,cputime,cmd"
 
-########################
-# Подсветка автокомплита
-########################
+# включаем кэш
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path "$XDG_CACHE_HOME/zsh/compinit.cahce"
 
-# команды - зеленый
+# Подсветка автокомплита
+
+# команды
 zstyle ':completion:*:commands' list-colors '=*=32'
 
 # параметры
-zstyle ':completion:*:parameters' list-colors '=*=90'
+zstyle ':completion:*:parameters' list-colors '=*=36'
 
 # встроенные функции
-zstyle ':completion:*:builtins' list-colors '=*=1;38;5;142'
+zstyle ':completion:*:builtins' list-colors '=*=32'
 
 # алиасы
-zstyle ':completion:*:aliases' list-colors '=*=2;38;5;128'
+zstyle ':completion:*:aliases' list-colors '=*=33'
 
-######################
+# функции
+zstyle ':completion:*:functions' list-colors '=*=35'
+
+# опции
+zstyle ':completion:*:options' list-colors '=^(-- *)=36'
+
+
+
+################################################################################################
+#
 # zsh history settings
-######################
+#
+################################################################################################
+
 
 # Дополнение файла истории
 setopt APPEND_HISTORY 
@@ -122,9 +148,13 @@ HISTSIZE=2000
 SAVEHIST=1000
 
 
-##################
+
+################################################################################################
+#
 # Enable plugins
-##################
+#
+################################################################################################
+
 
 source $XDG_DATA_HOME/zsh/plugins/history-substring-search/history-substring-search.zsh
 source $XDG_DATA_HOME/zsh/plugins/command-not-found/command-not-found.plugin.zsh
@@ -134,8 +164,16 @@ source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Set theme
 source $XDG_DATA_HOME/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
 
+
+
+################################################################################################
+#
 # Dirstack
 # see https://wiki.archlinux.org/index.php/zsh#Dirstack
+#
+################################################################################################
+
+
 autoload -Uz add-zsh-hook
 
 DIRSTACKFILE="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/dirstack"
@@ -152,7 +190,15 @@ DIRSTACKSIZE='30'
 
 setopt AUTO_PUSHD PUSHD_SILENT PUSHD_TO_HOME PUSHD_IGNORE_DUPS PUSHD_MINUS
 
+
+
+################################################################################################
+#
 # Keybindings
+#
+################################################################################################
+
+
 #bindkey "^[[A" history-substring-search-up
 #bindkey "^[[B" history-substring-search-down
 bindkey "$terminfo[kcuu1]" history-substring-search-up
