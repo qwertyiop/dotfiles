@@ -79,6 +79,7 @@ alias \
   fpup="flatpak update" \
   fpin="flatpak install" \
   fprm="flatpak uninstall" \
+  fprmdd="flatpak uninstall --delete-data" \
   fpsr="flatpak search" \
 
 # tmux
